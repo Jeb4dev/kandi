@@ -1,0 +1,109 @@
+%%
+%% This is file `minimal_modern.fi.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% uefcsthesis.dtx  (with options: `ex,fi,modern')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright (C) 2018--2022 by Pauli Miettinen <pauli.miettinen@uef.fi>
+%% 
+%% This file may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version.  The latest version of this
+%% license is in:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2006/05/20 or later.
+%% 
+%% 
+%% Tämä on yksinkertainen esimerkki uefcsthesis-luokan käytöstä.
+%% Tämä tiedosto tuottaa pro gradu -tutkielman yksipuoleisella asettelulla.
+%% Tuottaaksesi PDF-tiedoston, käytä joko lualatex- tai xelatex-ohjelmaa.
+%% Esimerkiksi:
+%% $ lualatex minimal_modern.fi.tex
+%% $ biber minimal_modern.fi
+%% $ lualatex minimal_modern.fi.tex
+%% Vaihtoehtoisesti voit käyttää latexmk-ohjelmaa:
+%% $ latexmk -lualatex minimal_modern.fi.tex
+%%
+%% Palautettaessa opinnäytetyö kirjastoon mukaan täytyy liittää lähdekoodi, josta
+%% palautettava PDF on luoto. Helpointa tämä on jos lähdekoodi on ensin tiivistetty
+%% yhteen tiedostoon (+ erilliset kuvatiedostot). Yhdistämiseen voi käyttää latexpand-
+%% ohjelmaa (https://www.ctan.org/pkg/latexpand), joka tulee myös TeX Live- ja
+%% MiKTeX-jakelupakettien mukana. Esimerkkikäyttö:
+%% $ lualatex minimal_modern.en.tex
+%% $ biber minimal_modern.en
+%% $ latexpand --empty-comments --biber minimal_modern.en.bbl \
+%% > minimal_modern.en.tex > flat_thesis.tex
+%% $ lualatex flat_thesis
+%% $ lualatex flat_thesis
+%% joka tuottaa tiedostot flat_thesis.tex ja flat_thesis.pdf, jotka voidaan palauttaa
+%% kirjastoon kuvatiedostojen kanssa.
+%%
+\documentclass[bscthesis,finnish,oneside,biblatex]{uefcsthesis}
+
+%% Korvaa seuraavasta minimal.bib lähdeviitetietokantatiedostosi nimellä.
+\addbibresource{library.bib}
+
+%% Korvaa isolla kirjoitetut tekstit omilla tiedoillasi.
+%% Työn otsikko, päiväys ja avainsanat täytyy antaa myös englanniksi
+\title{OTSIKKO} % Työsi otsikko
+\title[english]{TITLE} % Otsikko englanniksi
+\author{ETUNIMI}{SUKUNIMI} % Nimesi
+\date{\thismonth} % Työsi valmistumiskuukausi ja -vuosi tai \thismonth automaattiseen päiväykseen
+%% \date[english]{MONTH YEAR} % Englanninkielistä päiväystä ei tarvita, jos käytät \thismonth-komentoa, mutta se tarvitaan, jos kirjoitat päivän käsin
+\city{KAUPUNKI} % Joko Kuopio tai Joensuu
+\firstsupervisor{ETUNIMI SUKUNIMI} % Ensimmäisen ohjaajan nimi
+\secondsupervisor{ETUNIMI SUKUNIMI} % Toisen ohjaajan, jos on, nimi
+\keywords{AVAINSANA1\sep AVAINSANA2\sep JNE} % Avainsanat erotetaan \sep-komennolla
+\keywords[english]{KEYWORD1\sep KEYWORD2\sep ETC} % Avainsanat englanniksi
+
+%% ACM:n CCS-luokittelun LaTeX-komennot saa luotua ACM:n työkalulla osoitteessa
+%% https://dl.acm.org/ccs/ccs.cfm
+%% Kopioi työkalun tuottama LaTeX-koodi tähän (alun XML-koodia ei tarvitse
+%% kopioida). Esimerkiksi:
+%% \ccsdesc[500]{Some Class}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+  KIRJOITA SUOMENKIELINEN TIIVISTELMÄSI TÄHÄN
+\end{abstract}
+
+\begin{abstract}[english]
+  KIRJOITA ENGLANNINKIELINEN TIIVISTELMÄSI TÄHÄN
+\end{abstract}
+
+\frontmatter
+\tableofcontents
+\mainmatter
+
+\chapter{Johdanto}
+\label{cha:johdanto}
+
+KIRJOITA JOHDANTOKAPPALEESI TÄHÄN
+
+KIRJOITA LOPUT TYÖSTÄSI TÄHÄN
+
+TÄMÄ ON ESIMERKKI VIITTAUSTEN KÄYTÖSTÄ:
+Verkkogeneraattorit ovat hyödyllisiä \citep{metzler18random}.
+\citet{kalofolias18from} etsivät jälleenkuvausten joukkoja.
+
+Lorem ipsum dolor sit amet\citep{zafari2019survey}
+
+\citet{zafari2019survey} Lorem ipsum dolor sit amet
+
+%% Seuraavaksi tulee viiteluettelo
+\printbibliography[heading=bibintoc]
+
+\backmatter % Älä poista!
+%% Mahdolliset liitteet tulevat tähän
+\end{document}
+\endinput
+%%
+%% End of file `minimal_modern.fi.tex'.
