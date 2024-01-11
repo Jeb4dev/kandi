@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4846132-5e93-46bc-a4db-a48467862bf9" name="Changes" comment="conf files" />
+    <list default="true" id="e4846132-5e93-46bc-a4db-a48467862bf9" name="Changes" comment="conf files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +52,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -83,18 +85,7 @@
         <compiler-arguments />
         <envs />
         <main-file>$PROJECT_DIR$/src/kandi.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="minimal_modern.fi bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBER</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$APPLICATION_HOME_DIR$/jbr/bin</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <aux-dir />
       </texify-bibtex>
       <method v="2" />
     </configuration>
@@ -131,7 +122,7 @@
         <main-file>$PROJECT_DIR$/src/kandi.tex</main-file>
         <output-path>$PROJECT_DIR$/out</output-path>
         <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
+        <compile-twice>true</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
         <has-been-run>true</has-been-run>
@@ -140,37 +131,13 @@
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="minimal_modern.fi" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <sumatra-path />
-        <pdf-viewer>NONE</pdf-viewer>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>PROJECT_SDK</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[BibTeX.minimal_modern.fi bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="BibTeX.kandi bibliography" />
-      <item itemvalue="BibTeX.minimal_modern.fi bibliography" />
       <item itemvalue="LaTeX.kandi" />
-      <item itemvalue="LaTeX.minimal_modern.fi" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="LaTeX.kandi" />
-        <item itemvalue="LaTeX.minimal_modern.fi" />
       </list>
     </recent_temporary>
   </component>
@@ -188,6 +155,8 @@
       <workItem from="1704874837965" duration="103000" />
       <workItem from="1704874957752" duration="4169000" />
       <workItem from="1704941452030" duration="385000" />
+      <workItem from="1704942815298" duration="236000" />
+      <workItem from="1704943060747" duration="363000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -250,5 +219,9 @@
     <MESSAGE value="kysymykset" />
     <MESSAGE value="conf files" />
     <option name="LAST_COMMIT_MESSAGE" value="conf files" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
