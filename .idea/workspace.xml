@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4846132-5e93-46bc-a4db-a48467862bf9" name="Changes" comment="conf files">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kandi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kandi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kandi.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/kandi.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,12 +16,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="7115" />
+    <option name="totalTimeSeconds" value="13482" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/kandi.tex" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -85,7 +98,7 @@
         <compiler-arguments />
         <envs />
         <main-file>$PROJECT_DIR$/src/kandi.tex</main-file>
-        <aux-dir />
+        <aux-dir>$PROJECT_DIR$/out</aux-dir>
       </texify-bibtex>
       <method v="2" />
     </configuration>
@@ -121,10 +134,10 @@
         <envs />
         <main-file>$PROJECT_DIR$/src/kandi.tex</main-file>
         <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <auxil-path>$PROJECT_DIR$/out</auxil-path>
         <compile-twice>true</compile-twice>
         <output-format>PDF</output-format>
-        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <latex-distribution>MIKTEX</latex-distribution>
         <has-been-run>true</has-been-run>
         <bib-run-config>[BibTeX.kandi bibliography]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
@@ -157,6 +170,9 @@
       <workItem from="1704941452030" duration="385000" />
       <workItem from="1704942815298" duration="236000" />
       <workItem from="1704943060747" duration="363000" />
+      <workItem from="1705411702048" duration="312000" />
+      <workItem from="1705412468076" duration="2385000" />
+      <workItem from="1705414902455" duration="3102000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -211,6 +227,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
