@@ -52,16 +52,16 @@
 
 %% Korvaa isolla kirjoitetut tekstit omilla tiedoillasi.
 %% Työn otsikko, päiväys ja avainsanat täytyy antaa myös englanniksi
-\title{IoT-pohjainen sisätilapaikannus: Tehokkaan varastonhallinnan avain} % Työsi otsikko
-\title[english]{IoT-based Indoor Positioning: The Key to Efficient Warehouse Management} % Otsikko englanniksi
+\title{Mobiilisovellusten tietoturvatestaus DevSecOps-prosessissa: Menetelmät, työkalut ja vaikutukset} % Työsi otsikko
+\title[english]{Mobile Application Security Testing in the DevSecOps Process: Methods, Tools, and Implications} % Otsikko englanniksi
 \author{Jesper}{Kauppinen} % Nimesi
 \date{\thismonth} % Työsi valmistumiskuukausi ja -vuosi tai \thismonth automaattiseen päiväykseen
 %% \date[english]{MONTH YEAR} % Englanninkielistä päiväystä ei tarvita, jos käytät \thismonth-komentoa, mutta se tarvitaan, jos kirjoitat päivän käsin
 \city{Kuopio} % Joko Kuopio tai Joensuu
 \firstsupervisor{Marko Jäntti} % Ensimmäisen ohjaajan nimi
-\secondsupervisor{Ville SUKUNIMI} % Toisen ohjaajan, jos on, nimi
-\keywords{Sisätilapaikannus\sep AVAINSANA2\sep JNE} % Avainsanat erotetaan \sep-komennolla
-\keywords[english]{Indoor Positioning\sep KEYWORD2\sep ETC} % Avainsanat englanniksi
+\secondsupervisor{} % Toisen ohjaajan, jos on, nimi
+\keywords{DevSecOps\sep Tietoturvatestaus\sep Mobiilisovellus} % Avainsanat erotetaan \sep-komennolla
+\keywords[english]{DevSecOps\sep Security Testing\sep Mobile Application} % Avainsanat englanniksi
 
 %% ACM:n CCS-luokittelun LaTeX-komennot saa luotua ACM:n työkalulla osoitteessa
 %% https://dl.acm.org/ccs/ccs.cfm
@@ -89,17 +89,13 @@ KIRJOITA ENGLANNINKIELINEN TIIVISTELMÄSI TÄHÄN
 Tutkimuskysymykset:
 
 \begin{description}
-    \item[Pääkysymys:] Miten IoT-pohjainen sisätilapaikannus voi ratkaista varastonhallinnan haasteet ja parantaa sen tehokkuutta?
+    \item[Pääkysymys:] MMiten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
     \begin{description}
-        \item[Alakysymys 1:] Mitkä ovat keskeiset haasteet, joita varastonhallinta kohtaa, ja miten IoT-pohjainen sisätilapaikannus voi auttaa niiden ratkaisemisessa?
-        \item[Alakysymys 2:] Mitkä ovat eri IoT-teknologioiden, kuten RFID:n, Wi-Fi:n, Bluetoothin, UWB:n ja Zigbeen, keskeiset vahvuudet ja heikkoudet sisätilapaikannuksen kontekstissa?
-        \item[Alakysymys 3:] Miten IoT-pohjainen sisätilapaikannusratkaisu toteutetaan käytännössä?
+        \item[Alakysymys 1:] Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?
+        \item[Alakysymys 2:] Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?
+        \item[Alakysymys 3:] Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?
     \end{description}
 \end{description}
-
-lora moduulit:
-LORA: Long Range
-Narrowband IoT
 
 Biblio Authoreiden siivous:
 Etunimen eka kirjain -> etunimi
@@ -115,13 +111,13 @@ Työn rakenne: mitä luvut käsittelevät (1 kappale)
 
 \chapter{Teoria}
 \label{cha:teoria}
-Määritellään käsitteet Sisätilapaikannus, IoT, varastonhallinta
+Määritellään käsitteet DevSecOps, CI/CD, tietoturvatestaus, mobiilisovellus, jne.
 
 \chapter{Menetelmät}
 \label{cha:menetelmat}
 Kuinka aineistoja analysoidaan, mitä aineistoja käytetty
 listataan hakualauseet, joilla aineistoja haettu, include ja exclude
-Valitut aineistot: noin 20 artikkelia
+Valitut aineistot: noin 30 artikkelia
 
 \chapter{Tulokset}
 \label{cha:tulokset}
@@ -130,24 +126,33 @@ Kirjallisuuskatsaus löydökset taulukkona
 
 Mitä artikkeleissa sanottiin...
 
-\section{Mitkä ovat keskeiset haasteet, joita varastonhallinta kohtaa, ja miten IoT-pohjainen sisätilapaikannus voi auttaa niiden ratkaisemisessa?}
+\section{Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt? }
 
-Mitkä ovat keskeiset haasteet, joita varastonhallinta kohtaa, ja miten IoT-pohjainen sisätilapaikannus voi auttaa niiden ratkaisemisessa?
+Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
 
-\section{Mitkä ovat eri IoT-teknologioiden keskeiset vahvuudet ja heikkoudet sisätilapaikannuksen kontekstissa?}
+\section{Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa? }
 
-Mitkä ovat eri IoT-teknologioiden, kuten RFID:n, Wi-Fi:n, Bluetoothin, UWB:n ja Zigbeen, keskeiset vahvuudet ja heikkoudet sisätilapaikannuksen kontekstissa?
+Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?
 
-\section{Miten IoT-pohjainen sisätilapaikannusratkaisu toteutetaan käytännössä? }
+\section{Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa? }
 
-Miten IoT-pohjainen sisätilapaikannusratkaisu toteutetaan käytännössä?
+Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?
 
-\section{Tekninen ratkaisun tarkastelu}
+\subsection{Automatisoidut työkalut}
 
-(voi olla myös analyysi luvussa)
+\subsection{Manuaaliset työkalut}
 
-\subsection{RFID}
+\subsubsection{SAST}
 
+\subsubsection{DAST}
+
+\subsubsection{SCA}
+
+\section{Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon? }
+
+Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?
+
+\subsection{Käyttöönotto}
 
 \chapter{Analyysi}
 \label{cha:analyysi}
