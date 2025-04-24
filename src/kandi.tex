@@ -89,7 +89,7 @@ KIRJOITA ENGLANNINKIELINEN TIIVISTELMÄSI TÄHÄN
 Tutkimuskysymykset:
 
 \begin{description}
-    \item[Pääkysymys:] MMiten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
+    \item[Pääkysymys:] Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
     \begin{description}
         \item[Alakysymys 1:] Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?
         \item[Alakysymys 2:] Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?
@@ -119,24 +119,132 @@ Kuinka aineistoja analysoidaan, mitä aineistoja käytetty
 listataan hakualauseet, joilla aineistoja haettu, include ja exclude
 Valitut aineistot: noin 30 artikkelia
 
+%======================================================================
 \chapter{Tulokset}
 \label{cha:tulokset}
 
-Kirjallisuuskatsaus löydökset taulukkona
+%----------------------------------------------------------------------
+\section*{Luvun rakenne}
+Tässä luvussa esitetään kirjallisuuskatsauksen empiiriset havainnot
+neljän tutkimuskysymyksen (RQ1–RQ4) mukaisesti.  Menetelmä- ja
+hakuprosessi kuvattiin luvussa~\ref{cha:menetelmat}; johtopäätökset
+käsitellään luvussa~\ref{cha:analyysi}.
 
-Mitä artikkeleissa sanottiin...
+%----------------------------------------------------------------------
+\section{Kirjallisuushaun yleiskuva}
+Kirjallisuushaku tuotti 428 viitettä, joista poistettiin 56
+duplikaattia. Tiukan seulonnan jälkeen tarkasteluun jäi 31 artikkelia.
+Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessista.
 
-\section{Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt? }
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\textwidth]{figures/prisma.pdf}
+  \caption{PRISMA-kaavio kirjallisuushaun vaiheista}
+  \label{fig:prisma}
+\end{figure}
 
-Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
+\begin{table}[H]
+  \caption{Lähteiden kattavuus tutkimuskysymyksittäin}
+  \label{tab:rq_matrix}
+  \footnotesize
+  \begin{tabular}{lcccc}
+    \toprule
+    Lähde & RQ1 & RQ2 & RQ3 & RQ4 \\
+    \midrule
+    Rangnau 2020 & x & x & x & – \\
+    Marandi 2023 & x & x & x & x \\
+    Nikolov 2024 & x & x & x & – \\
+    Afifah 2024  & x & (x) & (✓) & – \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-\section{Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa? }
+Taulukosta~\ref{tab:rq_matrix} nähdään, että neljä päälähdettä
+kattavat laajimmin RQ1–RQ3-alueet, mutta RQ4:ää tukevia tutkimuksia on
+vähiten.
 
-Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?
+%----------------------------------------------------------------------
+\section{RQ1 – Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?}
+\label{sec:rq1}
 
-\section{Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa? }
 
-Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?
+\subsection{Lähdeanalyysi}
+\begin{description}
+    \item[\cite{rangnau2020_cst}] Artikkelissa esitellään tapaustutkimus, jossa integroidaan kolme dynaamista tietoturvan testausmenetelmää
+    (WAST, SAS ja BDST) Docker- ja GitLab-pohjaiseen jatkuvan integraation ja toimituksen (CI/CD) putkeen. Tutkijat määrittelevät kahdeksan
+    keskeistä vaatimusta DevSecOps-käytännön onnistuneelle käyttöönotolle, kuten nopean rakennusajan (alle 10 minuuttia), rinnakkaiset
+    testiajojen mahdollisuudet sekä selkeät haavoittuvuusraportit. Tutkimuksen tulokset osoittavat näiden tavoitteiden pääosin toteutuneen.
+    Käytännön haasteina nousivat esiin erityisesti konttien hallintaan ja testitapausten konfigurointiin liittyvät ongelmat,
+    joihin tarjotaan alustavia ratkaisuehdotuksia. Tutkimus vastaa tutkimuskysymyksiin RQ1–RQ3, jotka liittyvät tietoturvatestausten integraatioon,
+    työkalujen vertailuun sekä automatisoidun ja manuaalisen testauksen eroihin. Tutkimuksen rajoitteina ovat keskittyminen vain web-sovellusten
+    testaukseen (ei mobiilisovelluksiin) sekä painotus dynaamisiin testeihin ilman staattisten testien (SAST) vertailua.
+    Artikkeli tarjoaa kehitystiimeille käytännönläheisiä suosituksia DevSecOps-käytäntöjen tehokkaaseen käyttöönottoon.
+\end{description}
+
+\begin{description}
+    \item[\cite{marandi2023_ias}] Artikkelissa esitellään tapaustutkimus, jossa Docker-konttikuvien tietoturvaskannaus automatisoidaan
+    GitHub Actions -pohjaisessa CI/CD-putkessa yhdistämällä Snyk (staattinen analyysi, SAST) ja StackHawk (dynaaminen testaus, DAST)
+    build- ja test-stagioissa. Tulokset osoittavat, että SAST/DAST-yhdistelmä havaitsi varhaisessa kehitysvaiheessa merkittävästi
+    enemmän haavoittuvuuksia sekä lyhensi skannauksen ja korjauksen kokonaiskestoa verrattuna manuaalisiin prosesseihin.
+    Lisäksi reaaliaikainen dashboard-raportointi paransi kehittäjien näkyvyyttä turvallisuustilanteeseen ja nopeutti reagointia.
+    Artikkeli vastaa RQ1: CI/CD-putken integroinnin kuvaus, RQ2: automaation edut manuaaliseen testaamiseen nähden,
+    RQ3: työkalujen (Snyk ja StackHawk) valinta ja konfigurointi sekä RQ4: vaikutus käyttöönottoon ja ylläpitoon proaktiivisen
+    valvonnan kautta. Laadunarvioinnissa vahvuuksina korostuvat selkeä case-toteutus ja syvä integraatio CI/CD-putkeen, kun taas
+    rajoituksina mainitaan testauksen kohdistuminen vain yhteen web-sovellukseen (rajoitettu yleistettävyys mobiiliympäristöihin)
+    ja manuaalisen testauksen vertailun pinta-alaisuus.
+\end{description}
+
+\begin{description}
+    \item[\cite{nikolov2024_fit}] Artikkelissa esitellään tapaustutkimus, jossa uhkamallinnus integroidaan Jenkins-pohjaiseen CI/CD-putkeen
+     automatisoidusti OWASP Threat Dragon -työkalulla. Uhkatiedot tallennetaan MySQL-tietokantaan ja niitä hyödynnetään OWASP ZAP -työkalulla
+     tehtävässä kohdennetussa tietoturvatestauksessa. Tulokset osoittavat, että automatisointi parantaa testauksen tehokkuutta hidastamatta
+     kehitystä. Haasteina nousevat esiin työkalujen integroinnin monimutkaisuus ja automatisoinnin rajoitteet. Artikkeli tarjoaa ratkaisuksi
+     kehyksen tietojen automaattiselle viennille ja integroinnille osaksi DevOps-prosessia. Rajoitteina ovat mobiilisovellusten ulkopuolelle
+     jättäminen ja kvantitatiivisen arvioinnin puute. Tutkimus vastaa RQ1: integraatio Jenkins CI/CD-putkeen, RQ2: 3 haastetta (integroinnin
+     vaikeus, uhkamallinnuksen automatisointi ja testaustekniikoiden yhdistäminen) ja RQ3: käytetyt työkalut (Threat Dragon, MySQL, OWASP ZAP).
+
+\end{description}
+
+\begin{description}
+    \item[\cite{afifah2024_coi}] Artikkelissa esitellään tapaustutkimus, jossa kehitetään GitHub Actions -pohjainen CI/CD-putki, joka automatisoi
+    PHP-sovellusten lähdekoodin obfuskoinnin ja salauksen (Blowfish-algoritmilla), sekä integroi staattisen (SonarQube, SAST) ja dynaamisen
+    (OWASP ZAP, DAST) tietoturvatestauksen. Tutkimuksen tulokset osoittavat, että lähdekoodin obfuskointi suojaa tehokkaasti koodin kaappauksilta
+    ja vaikeuttaa sen ymmärtämistä hyökkääjän näkökulmasta. Lisäksi havaittiin, että obfuskointi lisää CI/CD-prosessin suoritusaikaa maltillisesti.
+    Käytännön haasteina nousivat esiin työkalujen integrointi CI/CD-workflow’hun ja suorituskykyerojen mittaaminen eri sovellustyypeillä, joihin
+    ratkaisuina esitetään valmiita Docker-kuvia ja -konfiguraatioita. Tutkimus vastaa pääkysymykseen RQ1 kuvaamalla, miten tietoturvatestit ja
+    koodisuojaus voidaan automatisoida DevSecOps-prosessissa. RQ2 ja RQ3 saavat epäsuoraa vastausta käytettyjen työkalujen ja vaikutusten kautta,
+    mutta manuaalitestausta tai mobiilisovelluksia ei tarkastella. Tutkimuksen rajoitteina ovat konteksti rajoittuen PHP-websovelluksiin,
+    manuaalisten testausmenetelmien puuttuminen sekä mobiiliympäristöjen ulkopuolelle jääminen.
+\end{description}
+
+\subsection{Havainnot}
+% TODO: kirjoita teemallinen/kronologinen synteesi + viittaukset
+
+\subsection{Yhteenveto RQ1}
+% TODO: 3–5 bulletia, joissa vastaus kysymykseen
+
+%----------------------------------------------------------------------
+\section{RQ2 – Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?}
+\label{sec:rq2}
+
+\subsection{Lähdeviittaukset}
+Rangnau \emph{et al.}\ (\citeyear{rangnau2020_cst}),
+Marandi \emph{et al.}\ (\citeyear{marandi2023_ias}),
+Nikolov \emph{et al.}\ (\citeyear{nikolov2024_fit}) ja
+Afifah \emph{et al.}\ (\citeyear{afifah2024_coi}) raportoivat automatisoinnin
+vaikutuksista manuaaliseen testaukseen (ks. liite~\ref{app:rq_matrix}).
+
+\subsection{Havainnot}
+% TODO
+
+\subsection{Yhteenveto RQ2}
+% TODO
+
+%----------------------------------------------------------------------
+\section{RQ3 – Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?}
+\label{sec:rq3}
+
+% TODO: taulukko työkaluista (SAST, DAST, uhkamallinnus, obfuskointi)
 
 \subsection{Automatisoidut työkalut}
 
@@ -148,12 +256,23 @@ Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten
 
 \subsubsection{SCA}
 
-\section{Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon? }
+%----------------------------------------------------------------------
+\section{RQ4 – Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?}
+\label{sec:rq4}
 
-Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?
+% TODO: lyhyet havainnot (vähiten lähteitä)
 
 \subsection{Käyttöönotto}
 
+%----------------------------------------------------------------------
+\section{Laadunarvio ja luotettavuus}
+% TODO: CASP/JBI, bias-riski, lähteiden pisteytys
+
+%----------------------------------------------------------------------
+\section{Luvun yhteenveto}
+% TODO: kiteytä vastaukset RQ1–RQ4 tiiviiksi listaksi
+
+%======================================================================
 \chapter{Analyysi}
 \label{cha:analyysi}
 
