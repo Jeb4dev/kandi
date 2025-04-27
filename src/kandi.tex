@@ -314,7 +314,7 @@ vähiten.
 \begin{description}
     \item[\cite{rane2024_analysis_scanning}] vertailevat automatisoidun haavoittuvuus skannauksen ja manuaalisen penetraatiotestauksen tehokkuutta verkkosivustojen tietoturva-analyysissä. Keskeisiä tarkasteltuja työkaluja ovat automatisoidut skannerit kuten Netsparker ja penetraatiotestauksessa käytetyt työkalut kuten Burp Suite ja Nmap. Tutkimuksessa todettiin, että manuaalinen penetraatiotestaus on tarkempi ja tehokkaampi haavoittuvuuksien löytämisessä kuin automatisoitu skannaus, joka tuottaa usein vääriä positiivisia tuloksia.
 
-        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
     \begin{itemize}
         \item \textbf{RQ1:} -
         \item \textbf{RQ2:} Manuaalisen testauksen vahvuuksia ovat tarkkuus ja kyky havaita monimutkaisia haavoittuvuuksia, kuten käyttöoikeuksien korotus ja epäsuora objektiviittaus. Rajoituksena on testauksen vaatima suuri työmäärä. Automaation etuja ovat nopeus, resurssitehokkuus sekä toistettavuus, mutta sen heikkouksina korostuvat virhepositiivisten tulosten riski ja analyysin pinnallisuus.
@@ -326,11 +326,35 @@ vähiten.
 \end{description}
 
 \begin{description}
-    \item[\cite{raman2019_sqli}]
+    \item[\cite{raman2019_sqli}] artikkelissa esitellään ja verrataan automatisoitua SQLiAutoScript-menetelmän manuaaliseen lähestymistapaan laajamittaisten SQL-injektioiden penetraatiotestien hallinnassa web-sovelluksissa. Keskeisenä työkaluna menetelmässä hyödynnetään sqlmapia yhdistettynä komentosarja- ja lokitustoimintoihin, testausympäristöinä toimivat Windows batch- ja Linux Bash -komentosarjat.
+
+   Vertailussa manuaaliseen testaukseen 24 kokeen otoksessa menetelmä suoritti 110 970 HTTP-kyselyä (≈2813 \% enemmän), vähensi virheitä 66,7 \%, lyhensi yksittäisen testin ajankulun 30 \% ja lisäsi todennettuja löydöksiä 21 \%.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} Automatisoitu scriptaus mahdollistaa testien jatkuvan suorittamisen, mikä tukee epäsuorasti CI/CD-integraatiota.
+        \item \textbf{RQ2:} Automatisoitu testaus vähentää virheitä, parantaa skaalautuvuutta ja säästää aikaa, kun taas manuaalinen testaus on altis ihmisvirheille ja hidastaa suurten testimäärien käsittelyä.
+        \item \textbf{RQ3:} Työkaluina käytettiin sqlmap:ia sekä automatisoiduissa että manuaalisissa testeissä.
+        \item \textbf{RQ4:} -
+    \end{itemize}
+
+    Vahvuuksia ovat kvantitatiiviset tulokset (esim. HTTP-pyynnöt, virhemäärät), realistinen testausympäristö sekä selkeä vertailu manuaalisen ja automatisoidun lähestymistavan välillä. Rajoituksiin kuuluvat keskittyminen vain web-sovelluksiin (ei mobiilia), rajattu työkalukattavuus (vain sqlmap) ja keskittyminen SQL injektioiden testaukseen.
 \end{description}
 
 \begin{description}
-    \item[\cite{gottel2023_validating}]
+    \item[\cite{gottel2023_validating}] esittävät kvalitatiivisen analyysin IEC 62443-4-2 -standardin mukaisten teollisuusautomaation ja ohjausjärjestelmien (IACS) komponenttien kyberturvavaatimusten automatisoidusta validoinnista DevSecOps-prosessissa. Analyysi kartoittaa standardin komponenttivaatimukset (CR:t) ja liittää ne CI/CD-putken vaiheisiin käyttämällä valko-, harmaa- ja mustalaatikkotestausta. Kirjoittajat tunnistavat CR-kohtaisesti sopivat kaupalliset työkalut sekä avoimen lähdekoodin vaihtoehdot.
+
+    Tuloksena syntyy kattavuusmatriisi, joka osoittaa, että suurin osa mustalaatikkotesteistä voidaan automatisoida, mutta valkolaatiikkotestauksen kattavuus on heikko. Useiden CR-kohtien validointi vaatii edelleen manuaalista työtä.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} Parhaat käytännöt: shift-left ja kaupallisten sekä avointen ratkaisuiden yhdistäminen.
+        \item \textbf{RQ2:} Artikkeli käsittelee joitain automaation etuja ja manuaalisen testauksen tarvetta.
+        \item \textbf{RQ3:} Keskeisiä työkaluja ovat CRT- ja VIT-sertifioidut kaupalliset fuzzerit ja skannerit (Acheron, Achilles, Defensics, Nessus, Raven ES, VHunter) sekä avoimen lähdekoodin ratkaisut kuten AFL++, Burp Suite, JMeter, nmap, OpenVAS, Scapy, Selenium ja SymCC.
+        \item \textbf{RQ4:} -
+    \end{itemize}
+
+    Artikkelin vahvuuksia ovat kattava työkaluvertailu sekä standardiin sidottu, yksityiskohtainen CR-tason kattavuusanalyysi. Rajoituksiin kuuluvat mobiilikontekstin puuttuminen, kvantitatiivisten tulosten vähyys sekä teollisten järjestelmien erityispiirteisiin (kuten HMI-rajapintojen rajoitukset) liittyvät haasteet.
 \end{description}
 
 \begin{description}
