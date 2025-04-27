@@ -23,6 +23,7 @@
 | 4.2     | (DevSecOps OR DevOps OR CI/CD) AND impact AND (deployment OR maintenance)      | IEEE           | 62       |
 | 4.3     | DevOps                                                                         | EBSCOhost      | 208      |
 | 4.4     | DevSecOps Impact                                                               | Google Scholar | 3,420    |
+| 4.5     | Mobile Security DevOps                                                         | Google Scholar | 16 800   |
 
 ## Toisen vaiheen hakulauseet
 
@@ -40,6 +41,7 @@
 | 4.3a    | DevSecOps AND mobile                                                                                                                               | EBSCOhost      | 1        |
 | 4.3b    | DevOps AND mobile applications AND Continuous Integration and Deployment                                                                           | EBSCOhost      | 1        |
 | 4.4     | "DevSecOps practices and their impact"                                                                                                             | Google Scholar | 1        |
+| 4.5     | "Mobile DevOps" AND "Security Testing" AND "CI/CD"                                                                                                 | Google Scholar | 3        |
 
 ## Hakutulokset
 
@@ -76,3 +78,6 @@
 | 29 | 4.3a.1   | **Kirja:** Practical Security Automation and Testing: Tools and Techniques for Automated Security Scanning and Testing in DevSecOps | EBSCOhost      | 2019          | Tony Hsu                                                                | [EBSCOhost](https://web-p-ebscohost-com.ezproxy.uef.fi:2443/ehost/detail/detail?vid=0&sid=...)                                                                                     |             |
 | 30 | 4.3b.1   | **Kirja:** Mobile DevOps: Deliver Continuous Integration and Deployment Within Your Mobile Applications                             | EBSCOhost      | 2018          | Rohin Tak, Jhalak Modi                                                  | [EBSCOhost](https://web-p-ebscohost-com.ezproxy.uef.fi:2443/ehost/detail/detail?vid=2&sid=...)                                                                                     |             |
 | 31 | 4.4.1    | DevSecOps Metrics, Benefits, and Improvements                                                                                       | Google Scholar | 2024          | J. Chung                                                                | [proquest.com](http://ezproxy.uef.fi:2048/login?url=https://www.proquest.com/dissertations-theses/devsecops-metrics-benefits-improvements/docview/3030990883/se-2?accountid=11739) |             |
+| 31 | 4.5.1    | Mobilizing DevOps: exploration of DevOps adoption in mobile software development                                                    | Google Scholar | 2024          | B Ozdenizci Kose                                                        | [emerald.com](https://doi.org/10.1108/K-04-2024-0989 )                                                                                       |             |
+| 32 | 4.5.2    | Continuous delivery in mobile health applications                                                                                   | Google Scholar | 2024          | O. Byman                                                                | [oulurepo.oulu.fi](https://urn.fi/URN:NBN:fi:oulu-202406144579)                                                                                                                    |             |
+| 33 | 4.5.3    | An Empirical Study on the Role of Devops in the Development of Mobile Applications                                                  | Google Scholar | 2024          | R. Eramo, G. L. Scoccia, M. Nolletti, A. Celi, M. Autili                | [papers.ssrn.com](https://dx.doi.org/10.2139/ssrn.5031770 )                                                                                                                        |             |
