@@ -132,18 +132,21 @@ käsitellään luvussa~\ref{cha:analyysi}.
 
 %----------------------------------------------------------------------
 \section{Kirjallisuushaun yleiskuva}
-Kirjallisuushaku tuotti 428 viitettä, joista poistettiin 56
-duplikaattia. Tiukan seulonnan jälkeen tarkasteluun jäi 31 artikkelia.
-Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessista.
 
-\begin{figure}[H]
+Kirjallisuushaku tuotti yhteensä 267\,999 viitettä eri tietokannoista (IEEE, Google Scholar, EBSCOhost) ensimmäisessä vaiheessa.
+Hakulauseiden tarkentamisen ja toisen vaiheen haun jälkeen seulonta kohdistettiin 32 relevanttiin artikkeliin.
+Seulontaprosessissa poistettiin duplikaatit ja epäolennaiset julkaisut. Lopulliseen tarkasteluun valikoitui 31 artikkelia.
+Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessin etenemisestä ja seulontavaiheista.
+
+
+\begin{figure}[h]
   \centering
   \includegraphics[width=.8\textwidth]{figures/prisma.pdf}
   \caption{PRISMA-kaavio kirjallisuushaun vaiheista}
   \label{fig:prisma}
 \end{figure}
 
-\begin{table}[H]
+\begin{table}[h]
   \caption{Lähteiden kattavuus tutkimuskysymyksittäin}
   \label{tab:rq_matrix}
   \footnotesize
@@ -202,7 +205,6 @@ vähiten.
      kehyksen tietojen automaattiselle viennille ja integroinnille osaksi DevOps-prosessia. Rajoitteina ovat mobiilisovellusten ulkopuolelle
      jättäminen ja kvantitatiivisen arvioinnin puute. Tutkimus vastaa RQ1: integraatio Jenkins CI/CD-putkeen, RQ2: 3 haastetta (integroinnin
      vaikeus, uhkamallinnuksen automatisointi ja testaustekniikoiden yhdistäminen) ja RQ3: käytetyt työkalut (Threat Dragon, MySQL, OWASP ZAP).
-
 \end{description}
 
 \begin{description}
@@ -245,6 +247,15 @@ vaikutuksista manuaaliseen testaukseen (ks. liite~\ref{app:rq_matrix}).
 \label{sec:rq3}
 
 % TODO: taulukko työkaluista (SAST, DAST, uhkamallinnus, obfuskointi)
+
+\begin{description}
+\item[\cite{nutalapati2023_tools_techniques}] Artikkelissa tarkastellaan automatisoitua tietoturvatestausta mobiilisovelluksissa ja esitellään kattavasti käytettyjä
+työkaluja (mm. OWASP ZAP, Burp Suite ja Fortify) sekä tekniikoita (SAST, DAST, IAST). Tulosten mukaan automatisointi nopeuttaa haavoittuvuuksien tunnistamista,
+tarjoaa laajemman testauskattavuuden ja vähentää ihmislähtöisiä virheitä verrattuna manuaaliseen testaukseen. Haasteina mainitaan väärät positiiviset hälytykset,
+mobiiliympäristöjen monimutkaisuus ja kehittyvien uhkien jatkuva muuttuminen. Tutkimus vastaa alakysymyksiin RQ2 ja RQ3 kuvaamalla automatisoinnin etuja
+ja rajoituksia sekä esittelemällä konkreettisia testityökaluja. Laadunarvioinnissa vahvuuksina ovat kattava menetelmien esittely ja parhaat käytännöt.
+Rajoitteena mainitaan esitettyjen menetelmien yleisluonteisuus ilman yksittäisen tapaustutkimuksen tarjoamaa syvällisyyttä tai kvantitatiivista vertailua.
+\end{description}
 
 \subsection{Automatisoidut työkalut}
 
