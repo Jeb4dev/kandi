@@ -60,7 +60,7 @@
 \city{Kuopio} % Joko Kuopio tai Joensuu
 \firstsupervisor{Marko Jäntti} % Ensimmäisen ohjaajan nimi
 \secondsupervisor{} % Toisen ohjaajan, jos on, nimi
-\keywords{DevSecOps\sep Tietoturvatestaus\sep Mobiilisovellus} % Avainsanat erotetaan \sep-komennolla
+\keywords{DevSecOps\sep Tietoturvatestaus\sep Mobiilisovellus\sep CI/CD} % Avainsanat erotetaan \sep-komennolla
 \keywords[english]{DevSecOps\sep Security Testing\sep Mobile Application} % Avainsanat englanniksi
 
 %% ACM:n CCS-luokittelun LaTeX-komennot saa luotua ACM:n työkalulla osoitteessa
@@ -113,6 +113,20 @@ Työn rakenne: mitä luvut käsittelevät (1 kappale)
 \label{cha:teoria}
 Määritellään käsitteet DevSecOps, CI/CD, tietoturvatestaus, mobiilisovellus, jne.
 
+OWASP Top 10
+OWASP API Top 10
+OWASP Mobile Top 10
+CWE, CVSS,
+
+Secure code
+
+Android vs iOS spesifit asiat
+
+Mobiilisovellusten kehitysmenetelmät, teknologiat
+Natiivi, Hybridi, Web
+
+GitHub, Docker, Kubernetes
+
 \chapter{Menetelmät}
 \label{cha:menetelmat}
 Kuinka aineistoja analysoidaan, mitä aineistoja käytetty
@@ -141,7 +155,7 @@ Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessin etenemisestä ja se
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=.8\textwidth]{figures/prisma.pdf}
+%  \includegraphics[width=.8\textwidth]{figures/prisma.pdf}
   \caption{PRISMA-kaavio kirjallisuushaun vaiheista}
   \label{fig:prisma}
 \end{figure}
@@ -152,12 +166,17 @@ Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessin etenemisestä ja se
   \footnotesize
   \begin{tabular}{lcccc}
     \toprule
-    Lähde & RQ1 & RQ2 & RQ3 & RQ4 \\
+    Lähde \& RQ1 \& RQ2 \& RQ3 \& RQ4 \\
     \midrule
-    Rangnau 2020 & x & x & x & – \\
-    Marandi 2023 & x & x & x & x \\
-    Nikolov 2024 & x & x & x & – \\
-    Afifah 2024  & x & (x) & (✓) & – \\
+    Rangnau 2020 \& x \& x \& x \& – \\
+    Marandi 2023 \& x \& x \& x \& x \\
+    Nikolov 2024 \& x \& x \& x \& – \\
+    Afifah 2024  \& x \& (x) \& (x) \& – \\
+    Putra 2022  \& ? \& ? \& ? \& ? \\
+    Kushwaha 2024  \& x \& (x) \& (x) \& (x) \\
+    Feio  2024  \& (x) \& - \& x \& – \\
+    ??? 202X   \& ? \& ? \& ? \& ? \\
+    Nutalapati 2023  \& - \& x \& x \& – \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -173,50 +192,166 @@ vähiten.
 
 \subsection{Lähdeanalyysi}
 \begin{description}
-    \item[\cite{rangnau2020_cst}] Artikkelissa esitellään tapaustutkimus, jossa integroidaan kolme dynaamista tietoturvan testausmenetelmää
-    (WAST, SAS ja BDST) Docker- ja GitLab-pohjaiseen jatkuvan integraation ja toimituksen (CI/CD) putkeen. Tutkijat määrittelevät kahdeksan
-    keskeistä vaatimusta DevSecOps-käytännön onnistuneelle käyttöönotolle, kuten nopean rakennusajan (alle 10 minuuttia), rinnakkaiset
-    testiajojen mahdollisuudet sekä selkeät haavoittuvuusraportit. Tutkimuksen tulokset osoittavat näiden tavoitteiden pääosin toteutuneen.
-    Käytännön haasteina nousivat esiin erityisesti konttien hallintaan ja testitapausten konfigurointiin liittyvät ongelmat,
-    joihin tarjotaan alustavia ratkaisuehdotuksia. Tutkimus vastaa tutkimuskysymyksiin RQ1–RQ3, jotka liittyvät tietoturvatestausten integraatioon,
-    työkalujen vertailuun sekä automatisoidun ja manuaalisen testauksen eroihin. Tutkimuksen rajoitteina ovat keskittyminen vain web-sovellusten
-    testaukseen (ei mobiilisovelluksiin) sekä painotus dynaamisiin testeihin ilman staattisten testien (SAST) vertailua.
-    Artikkeli tarjoaa kehitystiimeille käytännönläheisiä suosituksia DevSecOps-käytäntöjen tehokkaaseen käyttöönottoon.
+    \item[\cite{rangnau2020_cst}] Artikkelissa esitellään tapaustutkimus, jossa integroidaan kolme dynaamista tietoturvan testausmenetelmää(WAST, SAS ja BDST) Docker- ja GitLab-pohjaiseen jatkuvan integraation ja toimituksen (CI/CD) putkeen. Tutkijat määrittelevät kahdeksan keskeistä vaatimusta DevSecOps-käytännön onnistuneelle käyttöönotolle, kuten nopean rakennusajan (alle 10 minuuttia), rinnakkaiset testiajojen mahdollisuudet sekä selkeät haavoittuvuusraportit. Tutkimuksen tulokset osoittavat näiden tavoitteiden pääosin toteutuneen. Käytännön haasteina nousivat esiin erityisesti konttien hallintaan ja testitapausten konfigurointiin liittyvät ongelmat, joihin tarjotaan alustavia ratkaisuehdotuksia. Tutkimus vastaa tutkimuskysymyksiin RQ1–RQ3, jotka liittyvät tietoturvatestausten integraatioon,työkalujen vertailuun sekä automatisoidun ja manuaalisen testauksen eroihin. Tutkimuksen rajoitteina ovat keskittyminen vain web-sovellusten testaukseen (ei mobiilisovelluksiin) sekä painotus dynaamisiin testeihin ilman staattisten testien (SAST) vertailua. Artikkeli tarjoaa kehitystiimeille käytännönläheisiä suosituksia DevSecOps-käytäntöjen tehokkaaseen käyttöönottoon.
 \end{description}
 
 \begin{description}
-    \item[\cite{marandi2023_ias}] Artikkelissa esitellään tapaustutkimus, jossa Docker-konttikuvien tietoturvaskannaus automatisoidaan
-    GitHub Actions -pohjaisessa CI/CD-putkessa yhdistämällä Snyk (staattinen analyysi, SAST) ja StackHawk (dynaaminen testaus, DAST)
-    build- ja test-stagioissa. Tulokset osoittavat, että SAST/DAST-yhdistelmä havaitsi varhaisessa kehitysvaiheessa merkittävästi
-    enemmän haavoittuvuuksia sekä lyhensi skannauksen ja korjauksen kokonaiskestoa verrattuna manuaalisiin prosesseihin.
-    Lisäksi reaaliaikainen dashboard-raportointi paransi kehittäjien näkyvyyttä turvallisuustilanteeseen ja nopeutti reagointia.
-    Artikkeli vastaa RQ1: CI/CD-putken integroinnin kuvaus, RQ2: automaation edut manuaaliseen testaamiseen nähden,
-    RQ3: työkalujen (Snyk ja StackHawk) valinta ja konfigurointi sekä RQ4: vaikutus käyttöönottoon ja ylläpitoon proaktiivisen
-    valvonnan kautta. Laadunarvioinnissa vahvuuksina korostuvat selkeä case-toteutus ja syvä integraatio CI/CD-putkeen, kun taas
-    rajoituksina mainitaan testauksen kohdistuminen vain yhteen web-sovellukseen (rajoitettu yleistettävyys mobiiliympäristöihin)
-    ja manuaalisen testauksen vertailun pinta-alaisuus.
+    \item[\cite{marandi2023_ias}] Artikkelissa esitellään tapaustutkimus, jossa Docker-konttikuvien tietoturvaskannaus automatisoidaan GitHub Actions -pohjaisessa CI/CD-putkessa yhdistämällä Snyk (staattinen analyysi, SAST) ja StackHawk (dynaaminen testaus, DAST)build- ja test-stagioissa. Tulokset osoittavat, että SAST/DAST-yhdistelmä havaitsi varhaisessa kehitysvaiheessa merkittävästi enemmän haavoittuvuuksia sekä lyhensi skannauksen ja korjauksen kokonaiskestoa verrattuna manuaalisiin prosesseihin. Lisäksi reaaliaikainen dashboard-raportointi paransi kehittäjien näkyvyyttä turvallisuustilanteeseen ja nopeutti reagointia. Artikkeli vastaa RQ1: CI/CD-putken integroinnin kuvaus, RQ2: automaation edut manuaaliseen testaamiseen nähden,RQ3: työkalujen (Snyk ja StackHawk) valinta ja konfigurointi sekä RQ4: vaikutus käyttöönottoon ja ylläpitoon proaktiivisen valvonnan kautta. Laadunarvioinnissa vahvuuksina korostuvat selkeä case-toteutus ja syvä integraatio CI/CD-putkeen, kun taas rajoituksina mainitaan testauksen kohdistuminen vain yhteen web-sovellukseen (rajoitettu yleistettävyys mobiiliympäristöihin)ja manuaalisen testauksen vertailun pinta-alaisuus.
 \end{description}
 
 \begin{description}
-    \item[\cite{nikolov2024_fit}] Artikkelissa esitellään tapaustutkimus, jossa uhkamallinnus integroidaan Jenkins-pohjaiseen CI/CD-putkeen
-     automatisoidusti OWASP Threat Dragon -työkalulla. Uhkatiedot tallennetaan MySQL-tietokantaan ja niitä hyödynnetään OWASP ZAP -työkalulla
-     tehtävässä kohdennetussa tietoturvatestauksessa. Tulokset osoittavat, että automatisointi parantaa testauksen tehokkuutta hidastamatta
-     kehitystä. Haasteina nousevat esiin työkalujen integroinnin monimutkaisuus ja automatisoinnin rajoitteet. Artikkeli tarjoaa ratkaisuksi
-     kehyksen tietojen automaattiselle viennille ja integroinnille osaksi DevOps-prosessia. Rajoitteina ovat mobiilisovellusten ulkopuolelle
-     jättäminen ja kvantitatiivisen arvioinnin puute. Tutkimus vastaa RQ1: integraatio Jenkins CI/CD-putkeen, RQ2: 3 haastetta (integroinnin
-     vaikeus, uhkamallinnuksen automatisointi ja testaustekniikoiden yhdistäminen) ja RQ3: käytetyt työkalut (Threat Dragon, MySQL, OWASP ZAP).
+    \item[\cite{nikolov2024_fit}] Artikkelissa esitellään tapaustutkimus, jossa uhkamallinnus integroidaan Jenkins-pohjaiseen CI/CD-putkeen automatisoidusti OWASP Threat Dragon -työkalulla. Uhkatiedot tallennetaan MySQL-tietokantaan ja niitä hyödynnetään OWASP ZAP -työkalulla tehtävässä kohdennetussa tietoturvatestauksessa. Tulokset osoittavat, että automatisointi parantaa testauksen tehokkuutta hidastamatta kehitystä. Haasteina nousevat esiin työkalujen integroinnin monimutkaisuus ja automatisoinnin rajoitteet. Artikkeli tarjoaa ratkaisuksi kehyksen tietojen automaattiselle viennille ja integroinnille osaksi DevOps-prosessia. Rajoitteina ovat mobiilisovellusten ulkopuolelle jättäminen ja kvantitatiivisen arvioinnin puute. Tutkimus vastaa RQ1: integraatio Jenkins CI/CD-putkeen, RQ2: 3 haastetta (integroinnin vaikeus, uhkamallinnuksen automatisointi ja testaustekniikoiden yhdistäminen) ja RQ3: käytetyt työkalut (Threat Dragon, MySQL, OWASP ZAP).
 \end{description}
 
 \begin{description}
-    \item[\cite{afifah2024_coi}] Artikkelissa esitellään tapaustutkimus, jossa kehitetään GitHub Actions -pohjainen CI/CD-putki, joka automatisoi
-    PHP-sovellusten lähdekoodin obfuskoinnin ja salauksen (Blowfish-algoritmilla), sekä integroi staattisen (SonarQube, SAST) ja dynaamisen
-    (OWASP ZAP, DAST) tietoturvatestauksen. Tutkimuksen tulokset osoittavat, että lähdekoodin obfuskointi suojaa tehokkaasti koodin kaappauksilta
-    ja vaikeuttaa sen ymmärtämistä hyökkääjän näkökulmasta. Lisäksi havaittiin, että obfuskointi lisää CI/CD-prosessin suoritusaikaa maltillisesti.
-    Käytännön haasteina nousivat esiin työkalujen integrointi CI/CD-workflow’hun ja suorituskykyerojen mittaaminen eri sovellustyypeillä, joihin
-    ratkaisuina esitetään valmiita Docker-kuvia ja -konfiguraatioita. Tutkimus vastaa pääkysymykseen RQ1 kuvaamalla, miten tietoturvatestit ja
-    koodisuojaus voidaan automatisoida DevSecOps-prosessissa. RQ2 ja RQ3 saavat epäsuoraa vastausta käytettyjen työkalujen ja vaikutusten kautta,
-    mutta manuaalitestausta tai mobiilisovelluksia ei tarkastella. Tutkimuksen rajoitteina ovat konteksti rajoittuen PHP-websovelluksiin,
-    manuaalisten testausmenetelmien puuttuminen sekä mobiiliympäristöjen ulkopuolelle jääminen.
+    \item[\cite{afifah2024_coi}] Artikkelissa esitellään tapaustutkimus, jossa kehitetään GitHub Actions -pohjainen CI/CD-putki, joka automatisoi PHP-sovellusten lähdekoodin obfuskoinnin ja salauksen (Blowfish-algoritmilla), sekä integroi staattisen (SonarQube, SAST) ja dynaamisen(OWASP ZAP, DAST) tietoturvatestauksen. Tutkimuksen tulokset osoittavat, että lähdekoodin obfuskointi suojaa tehokkaasti koodin kaappauksilta ja vaikeuttaa sen ymmärtämistä hyökkääjän näkökulmasta. Lisäksi havaittiin, että obfuskointi lisää CI/CD-prosessin suoritusaikaa maltillisesti. Käytännön haasteina nousivat esiin työkalujen integrointi CI/CD-workflow’hun ja suorituskykyerojen mittaaminen eri sovellustyypeillä, joihin ratkaisuina esitetään valmiita Docker-kuvia ja -konfiguraatioita. Tutkimus vastaa pääkysymykseen RQ1 kuvaamalla, miten tietoturvatestit ja koodisuojaus voidaan automatisoida DevSecOps-prosessissa. RQ2 ja RQ3 saavat epäsuoraa vastausta käytettyjen työkalujen ja vaikutusten kautta, mutta manuaalitestausta tai mobiilisovelluksia ei tarkastella. Tutkimuksen rajoitteina ovat konteksti rajoittuen PHP-websovelluksiin, manuaalisten testausmenetelmien puuttuminen sekä mobiiliympäristöjen ulkopuolelle jääminen.
+\end{description}
+
+\begin{description}
+    \item[\cite{putra2022_devsecops}]Putran ja Kabetan (2022) tapaustutkimuksessa kehitetään ja otetaan käyttöön DevSecOps-malli ketterään kehitysprosessiin integroimalla automatisoituja tietoturvatestejä (SAST, DAST) CI/CD-putkeen verkkopohjaiselle Node.js/Express.js-sovellukselle ja Flutter-mobiilikäyttöliittymälle. Tutkimuksessa toteutettiin GitLab CI/CD -putki AWS EC2:lla, jossa Docker-kontit, GitLab Runner sekä työkalut Njsscan (SAST) ja OWASP ZAP(DAST) mahdollistivat nopean rakennus-, testaus- ja käyttöönottoprosessin. Automatisointi lyhensi julkaisusyklin 2–3 tunnista 3–4 minuuttiin ja paljasti haavoittuvuuden (CWE-327)commit-hetkellä. RQ1:een vastattiin eriyttämällä pipeline-vaiheet,käyttämällä kontteja ja ”fail-fast”-periaatetta, parhaiksi käytännöiksi nousivat automaattinen testaus enenn julkaisua ja salaisuuksien hallinta GitLab-muuttujilla. RQ2 ja RQ3 käsittelivät pääasiassa automatisoidun testauksen etuja, kuten nopeus, jatkuva testaus sekä käytettyjä työkaluja, jättäen manuaalisen testauksen rajat ja mobiilikohtaiset haasteet (esim. sovelluskauppajakelu) sivuun. RQ4:n osalta prosessi nopeutti käyttöönottoa ja vähensi ylläpitokustannuksia, vaikka mobiilispesifiä vaikuttavuutta ei kvantifioitu. Tutkimuksen vahvuuksiin kuuluu selkeä ja systemaattinen tekninen toteutus ja mittaustulokset, mutta rajoituksina ovat kapea teknologiavalikoima (Node.js/Flutter), rajallinen vertailu turvallisuusmetriikoissa sekä mobiilikontekstin pinnallinen käsittely,vaikka Flutter mainitaankin.
+\end{description}
+
+\begin{description}
+    \item[\cite{kushwaha2024_cct}]Artikkelissa kuvataan Azure DevOps-ympäristöön rakennettu konttipohjainen DevSecOps-putki, jossa uhkamallinnus (Microsoft TMT) sekä automatisoidut SAST-, DAST- ja SCA-vaiheet (Codacy, OWASP ZAP, GitHub Advanced Security/CodeQL) on integroitu CI/CD-työnkulkuun Docker-kuvien kokoamisesta tuotantoon; kohteena oli haavoittuvuuksilla siemenetty finanssialan web-sovellus, jossa uhkamallinnus paljasti 26 STRIDE-riskiä, Codacy 28 staattista ongelmaa, GHAS 16 koodivirhettä ja 3 kriittistä riippuvuutta, ZAP raportoi XSS- ja SQL-injektiohälytyksiä, ja kaikki skannaukset valmistuivat muutamassa minuutissa. RQ1: Integraatio toteutuu YAML-pohjaisena monivaiheisena putkena, joka käynnistyy jokaisesta commitista; parhaat käytännöt ovat shift-left-filosofia, konttien yhtenäiset rakennusvaiheet ja salaisuuksien skannaus. RQ2: Automaatio vähentää manuaalista työtä ja tarjoaa jatkuvan kattavuuden, mutta vaatii tulosten manuaalista priorisointia ja täydentäviä penetraatiotestejä. RQ3: Mainitut työkalut ovat Codacy, OWASP ZAP, GHAS/CodeQL ja Microsoft TMT; erillisiä manuaalisia mobiilityökaluja ei käsitellä. RQ4: Putki nopeuttaa sovelluksen käyttöönottoa, pienentää tuotantoriskejä ja helpottaa ylläpitoa, mutta mobiilisovelluksia ei tarkastella. Vahvuudet: realistinen finanssi-case, integroitu Azure DevOps-ratkaisu ja kvantitatiiviset haavoittuvuustulokse. Rajoitteet: web-keskeinen rajaus ilman mobiilikontekstia, tarkkojen skannausaikojen puuttuminen ja vertailun rajoittuminen yhteen CI-alustaan.
+\end{description}
+
+\begin{description}
+    \item[\cite{feio2024_empirical}] Artikkelissa esitellään empiirinen tapaustutkimus, jossa rakennetaan DevSecOps-kehys. Kahdeksanvaiheinen CI/CD-putki (Plan–Monitor) laajennetaan jatkuvalla turvallisuustestauksella, integroimalla työkaluja kuten SonarQube (SAST), OWASP Dependency-Check (SCA) ja OWASP ZAP (DAST) Jenkinsiin, mikä mahdollisti automaattisen haavoittuvuuksien tunnistamisen. Tuloksena havaittiin 1795 haavoittuvuutta, joista 47 kriittisiä, ja kehittäjät arvioivat työkalujen hyödyllisyyttä myönteisesti. RQ1: Integraatio toteutui laajentamalla DevOps-putkea uusilla testausvaiheilla ja automatisoiduilla työkaluilla. Parhaat käytännöt sisälsivät avoimen lähdekoodin työkalujen käytön sekä jatkuvan palautteen keräämisen. RQ2: Automatisoidut työkalut antavat jatkuvan kattavuuden ja nopeat tulokset, mutta eivät löydä kompleksisia logiikkavirheitä, kun taas manuaaliset (esim. penetraatiotestaus) vaativat erikoisosaamista ja puuttuivat pilotista. RQ3: Työkaluina käytettiin yleisimpiä SAST-, DAST- ja SCA-työkaluja, kuten SonarQube, OpenVAS ja ZAP. RQ4: Artikkelissa ei tarkasteltu mobiilisovelluksia, mutta DevSecOpsin käyttöönotto paransi haavoittuvuuksien tunnistusta ja kehittäjien tietoturvatietoisuutta. Laadullisesti tutkimuksen vahvuuksia olivat realistinen teollinen ympäristö, kvantitatiiviset tulokset, kehittäjäpalaute sekä työkalujen käytännön integrointi. Rajotteisiin kuuluivat mobiilikontekstin puute ja joidenkin pipeline-vaiheiden (käyttöönotto, operointi) toteuttamatta jääminen.
+\end{description}
+
+\begin{description}
+    \item[\cite{schneider_2020_fuzzing}]
+    Tapaustutkimus kuvaa automatisoidun fuzzing-pohjaisen tietoturvatestauksen käyttöönottoa turkkilaisen Kuveyt Türk -pankin Mobil Şube -mobiilisovelluksen taustapalveluihin. Keskeisenä työkaluna käytettiin Fuzzino-kirjastoa integroituna olemassa olevaan Citrus- ja Apache HttpClient -pohjaiseen testikehikkoon, joka ajetaan DevOps-putkessa WCF-rajapintoihin kohdistuvina HTTP-pyyntöinä.
+
+    Yhden AllBadStrings-heuristiikan avulla generoitiin yli 50 000 fuzzattua pyyntöä, joista keskimäärin 61\,\% saavutti palvelun, 27\,\% torjuttiin WAF-palomuurissa ja 12\,\% johti virhevastaukseen ilman suoraan hyödynnettäviä haavoittuvuuksia, mutta paljastaen syötedatan validointitarpeita.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} Integraatio toteutettiin lisäämällä Fuzzino-kirjasto olemassa olevaan testausinfrastruktuuriin.
+        \item \textbf{RQ2:} Automatisoinnin etuna nähtiin kyky vastata kasvaviin vaatimuksiin ja parantaa haavoittuvuuksien löytämisen tehokkuutta.
+        \item \textbf{RQ3:} Artikkelissa mainitaan työkalut Fuzzino, Citrus, Apache HttpClient, Appium, Selenium sekä WAF-ratkaisu ja pankin omat 2FA-palvelut.
+        \item \textbf{RQ4:} DevSecOps paransi testauksen jatkuvuutta ja palautteen nopeutta, mutta käyttöönoton nopeuteen ei havaittu merkittävää vaikutusta.
+    \end{itemize}
+
+    Tutkimuksen vahvuuksina korostuivat realistinen pankkiympäristö, kvantitatiiviset tulokset ja integraation yksityiskohtaisuus. Rajoitteina mainittiin teknologiakattavuuden ja mobiiliratkaisujen rajallisuus.
+\end{description}
+
+\begin{description}
+    \item[\cite{baheux2023_droidsectester}] esittelevät DroidSecTester-työkaluketjun, joka integroi kontekstia hyödyntävän mallipohjaisen tietoturvatestauksen Android-sovelluksiin nelivaiheisena DevSecOps-putkena. Työkaluketjuun kuuluvat myös FlowDroid data-analyysiin ja VPatChecker haavoittuvuuksien tunnistamiseen. Todettuna tuloksena esitetään, että GHERA-testialustalla vähintään 38 \% haavoittuvuuksista voitiin mallintaa ja tunnistaa nykyisellä haavoittuvuusmallin määrittelyllä.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} Integraatio toteutuu nelivaiheisena prosessina, jossa luodaan sovelluksen malli, rikastetaan sitä tietovirroilla FlowDroidilla, generoidaan testejä ConTestilla ja tunnistetaan haavoittuvuuksia VPatCheckerillä. Parhaat käytännöt liittyvät mallipohjaisen testauksen hyödyntämiseen tehokkuuden saavuttamiseksi ja kontekstin huomioimiseksi.
+        \item \textbf{RQ2:} Tutkimus painottuu automaatioon
+        \item \textbf{RQ3:} Artikkelissa mainitaan FlowDroid, ConTest ja VPatChecker automatisoituun testaukseen.
+        \item \textbf{RQ4:} Työkalun tavoitteena on auttaa kehittäjiä löytämään haavoittuvuuksia kehityksen aikana ja parantaa Android-ekosysteemin tietoturvaa, eikä se suoraan käsittele käyttöönottoa.
+    \end{itemize}
+
+     Vahvuuksina voidaan nähdä DroidSecTester-työkaluketjun toteutus ja kvantitatiiviset tulokset tunnistettujen haavoittuvuuksien määrästä. Rajoitteita ovat vertailun puute muihin työkaluihin haavoittuvuuksien tunnistustarkkuudessa ja Android-keskeisyys, joka rajoittaa yleistettävyyttä.
+\end{description}
+
+\begin{description}
+    \item[\cite{grasselli2023_digitaltwin}] esittelevät NFV-MANO-viitekehykseen pohjautuvan menetelmän, joka mahdollistaa automaattisen digitaalisen kaksosen (DT) käyttöönoton ja hallinnan älykkäiden ajoneuvojen kyberturvallisuustestaukseen. Digitaalista kaksonen toimii kyberharjoitusalueena, jossa voidaan turvallisesti kokeilla potentiaalisia hyökkäyksiä ja vastatoimia virtuaalisessa ympäristössä. Keskeisiksi työkaluiksi mainitaan Open Source MANO (OSM) orkestraattorina, OpenStack pilvi-infrastruktuurin hallintaan sekä Kubernetes konttien hallintaan. Tutkimuksessa toteutettiin käyttötapaus, jossa DT:n avulla toteutettiin onnistunut verkkoskannaus simuloimalla infotainment-järjestelmän altistumista (eng. compromising) Bluetoothin kautta, osoittaen mitkä laitteet olivat näkyvissä haavoittuvan sovelluksen kautta. Tuloksena havaittiin, että digitaalinen kaksonen mahdollistaa joustavan ja nopean testausympäristön luomisen, mikä nopeuttaa turvatoimien kehittämistä ja validointia.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} -
+        \item \textbf{RQ2:} -
+        \item \textbf{RQ3:} Työkaluina automaattiseen testaukseen mainitaan OSM, OpenStack, Kubernetes ja cansniffer1
+        \item \textbf{RQ4:} Automatisoidun digitaalisen kaksosen havaittiin parantavan nopeuttavan riskianalyysiä ja tuotantoon vientiä ja ylläpitokatkoksia, mutta vaikutuksia mobiilisovelluksiin ei tarkastella.
+    \end{itemize}
+
+    Vahvuuksia ovat käytännönläheinen arkkitehtuuritoteutus todellisilla työkaluilla (OSM, OpenStack), realistinen käyttötapaus ajoneuvon verkkojen simulointiin sekä joustavuuden demonstrointi. Rajoituksiin kuuluvat mobiilikontekstin puute, kvantitatiivisten tulosten vähäisyys sekä rajaus telekom-alan NFV-MANO-viitekehykseen, mikä rajoittaa yleistävyyttä.
+\end{description}
+
+\begin{description}
+    \item[\cite{mukti2023_passwordmanager}] Artikkeli esittelee RootPass-salasanan hallintasovelluksen, joka on toteutettu Flutterilla ja yhdistää RootBeer-kirjaston kahdeksaan heuristiikkaan perustuvan juuritunnistuksen (eng. root detection) sekä turvamekanismit: AES-256-salauksen, PBKDF2-avainjohdannuksen, Flutter Secure Storagen ja sormenjälkitunnistuksen.
+
+    Turvallisuutta mitattiin MobSF-penetraatiotestauksessa (60/100, Low Risk) ja ImmuniWeb-testillä OWASP Mobile Top 10 riskejä arvioitaessa. Tulosten mukaan RootPass saavutti korkeimman turvallisuuspisteet (60/100) verrattuna Keeperiin, LastPassiin ja Dashlaneen sekä vähemmän OWASP-riskejä (12 vs. 16–19). Root-testissä sovellus sulkeutui roottatuilla laitteilla 100 \%:n tarkkuudella.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} -
+        \item \textbf{RQ2:} -
+        \item \textbf{RQ3:} Artikkelissa mainitaan automatisoituja työkaluja kuten MobSF ja ImmuniWeb Mobile App Security Test.
+        \item \textbf{RQ4:} -
+    \end{itemize}
+
+     Vahvuuksia tutkimuksessa ovat realistinen Android-prototyyppi ja kvantitatiivinen vertailu tunnettuja sovelluksia vastaan. Rajoituksia ovat keskittyminen vain Androidiin ja root tunnistukseen, eikä varsinaisesti tietoturvatestaukseen tai DevSecOps-näkökulmaan.
+\end{description}
+
+\begin{description}
+    \item[\cite{kohli2020_covid_tracer}] Artikkelissa tutkitaan neljän Android-pohjaisen COVID-19 -kontaktinjäljityssovelluksen tietoturvaa keskittyen staattiseen analyysiin ja potentiaalisten hyökkäyspintojen tunnistamiseen. Analyysissä hyödynnettiin ensisijaisesti MobSF-työkalua koodin staattiseen tarkasteluun ja Drozeria hyökkäysrajapinnan kartoittamiseen. Keskeiset tulokset osoittivat useita OWASP Mobile Top 10 ja CWE -haavoittuvuuksia testatuissa sovelluksissa.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} -
+        \item \textbf{RQ2:} Automatisoitu MobSF havaitsee noin 70 \% haavoittuvuuksista ja tarvitsee manuaalista varmistusta sekä täydentävää dynaamista testausta.
+        \item \textbf{RQ3:} Artikkeli mainitsee MobSF:n, Drozerin, ADB:n, apktoolin, Memu-emulaattorin ja suunnitellun mutta käyttämättä jääneen Burp Suiten.
+        \item \textbf{RQ4:} -
+    \end{itemize}
+
+     Artikkelin vahvuuksiin kuuluvat case-toteutus todellisilla sovelluksilla ja kvantitatiivisten tulosten esittäminen, kun taas rajoituksia ovat testauksen painottuminen staattiseen analyysiin ja rajattuminen Androidiin sekä kontaktinjäljityssovelluksiin verrattuna laajempaan mobiilisovelluskehitykseen.
+\end{description}
+
+\begin{description}
+    \item[\cite{zhu2024_sast_tools}]
+\end{description}
+
+\begin{description}
+    \item[\cite{rane2024_analysis_scanning}]
+\end{description}
+
+\begin{description}
+    \item[\cite{raman2019_sqli}]
+\end{description}
+
+\begin{description}
+    \item[\cite{gottel2023_validating}]
+\end{description}
+
+\begin{description}
+    \item[\cite{rane2024_analysis_scanning}]
+\end{description}
+
+\begin{description}
+    \item[\cite{dupont2021_incremental}]
+\end{description}
+
+\begin{description}
+    \item[\cite{aljohani2023_automating}]
+\end{description}
+
+\begin{description}
+\item[\cite{nutalapati2023_tools_techniques}] Artikkelissa tarkastellaan automatisoitua tietoturvatestausta mobiilisovelluksissa ja esitellään kattavasti käytettyjä työkaluja (mm. OWASP ZAP, Burp Suite ja Fortify) sekä tekniikoita (SAST, DAST, IAST). Tulosten mukaan automatisointi nopeuttaa haavoittuvuuksien tunnistamista,tarjoaa laajemman testauskattavuuden ja vähentää ihmislähtöisiä virheitä verrattuna manuaaliseen testaukseen. Haasteina mainitaan väärät positiiviset hälytykset, mobiiliympäristöjen monimutkaisuus ja kehittyvien uhkien jatkuva muuttuminen. Tutkimus vastaa alakysymyksiin RQ2 ja RQ3 kuvaamalla automatisoinnin etuja ja rajoituksia sekä esittelemällä konkreettisia testityökaluja. Laadunarvioinnissa vahvuuksina ovat kattava menetelmien esittely ja parhaat käytännöt. Rajoitteena mainitaan esitettyjen menetelmien yleisluonteisuus ilman yksittäisen tapaustutkimuksen tarjoamaa syvällisyyttä tai kvantitatiivista vertailua.
+\end{description}
+
+\begin{description}
+    \item[\cite{saleem2023_survey}]
+\end{description}
+
+\begin{description}
+    \item[\cite{chatterjee2024_operational_efficiency}]
+\end{description}
+
+\begin{description}
+    \item[\cite{savor2016_facebook}]
+\end{description}
+
+\begin{description}
+    \item[\cite{offerman2022_practices}]
+\end{description}
+
+\begin{description}
+    \item[\cite{tony2019_practical}]
+\end{description}
+
+\begin{description}
+    \item[\cite{rohin2018_book}]
+\end{description}
+
+\begin{description}
+    \item[\cite{chung2024_devsecops}]
 \end{description}
 
 \subsection{Havainnot}
@@ -230,10 +365,9 @@ vähiten.
 \label{sec:rq2}
 
 \subsection{Lähdeviittaukset}
-Rangnau \emph{et al.}\ (\citeyear{rangnau2020_cst}),
 Marandi \emph{et al.}\ (\citeyear{marandi2023_ias}),
-Nikolov \emph{et al.}\ (\citeyear{nikolov2024_fit}) ja
-Afifah \emph{et al.}\ (\citeyear{afifah2024_coi}) raportoivat automatisoinnin
+Rangnau \emph{et al.}\ (\citeyear{putra2022_devsecops}) ja
+Nikolov \emph{et al.}\ (\citeyear{rangnau2020_cst}) raportoivat automatisoinnin
 vaikutuksista manuaaliseen testaukseen (ks. liite~\ref{app:rq_matrix}).
 
 \subsection{Havainnot}
@@ -247,17 +381,12 @@ vaikutuksista manuaaliseen testaukseen (ks. liite~\ref{app:rq_matrix}).
 \label{sec:rq3}
 
 % TODO: taulukko työkaluista (SAST, DAST, uhkamallinnus, obfuskointi)
-
-\begin{description}
-\item[\cite{nutalapati2023_tools_techniques}] Artikkelissa tarkastellaan automatisoitua tietoturvatestausta mobiilisovelluksissa ja esitellään kattavasti käytettyjä
-työkaluja (mm. OWASP ZAP, Burp Suite ja Fortify) sekä tekniikoita (SAST, DAST, IAST). Tulosten mukaan automatisointi nopeuttaa haavoittuvuuksien tunnistamista,
-tarjoaa laajemman testauskattavuuden ja vähentää ihmislähtöisiä virheitä verrattuna manuaaliseen testaukseen. Haasteina mainitaan väärät positiiviset hälytykset,
-mobiiliympäristöjen monimutkaisuus ja kehittyvien uhkien jatkuva muuttuminen. Tutkimus vastaa alakysymyksiin RQ2 ja RQ3 kuvaamalla automatisoinnin etuja
-ja rajoituksia sekä esittelemällä konkreettisia testityökaluja. Laadunarvioinnissa vahvuuksina ovat kattava menetelmien esittely ja parhaat käytännöt.
-Rajoitteena mainitaan esitettyjen menetelmien yleisluonteisuus ilman yksittäisen tapaustutkimuksen tarjoamaa syvällisyyttä tai kvantitatiivista vertailua.
-\end{description}
+Ragnau \emph{et al.}\ (\citeyear{rangnau2020_cst}) ja
+Feio \emph{et al.}\ (\citeyear{feio2024_empirical}) ovat lähteitä
 
 \subsection{Automatisoidut työkalut}
+
+\cite{feio2024_empirical} käy hyvin läpi eri työkaluja
 
 \subsection{Manuaaliset työkalut}
 
