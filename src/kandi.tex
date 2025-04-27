@@ -299,7 +299,6 @@ vähiten.
 
     Konkreettisia tuloksia olivat työkalujen vaihteleva haavoittuvuuskattavuus (korkein 67\%, alin 22\%) ja tehokkuus eri vertailuaineistoilla, sekä tavukoodiin perustuvien työkalujen nopeampi suorituskyky.
 
-
     Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
     \begin{itemize}
         \item \textbf{RQ1:} -
@@ -328,7 +327,7 @@ vähiten.
 \begin{description}
     \item[\cite{raman2019_sqli}] artikkelissa esitellään ja verrataan automatisoitua SQLiAutoScript-menetelmän manuaaliseen lähestymistapaan laajamittaisten SQL-injektioiden penetraatiotestien hallinnassa web-sovelluksissa. Keskeisenä työkaluna menetelmässä hyödynnetään sqlmapia yhdistettynä komentosarja- ja lokitustoimintoihin, testausympäristöinä toimivat Windows batch- ja Linux Bash -komentosarjat.
 
-   Vertailussa manuaaliseen testaukseen 24 kokeen otoksessa menetelmä suoritti 110 970 HTTP-kyselyä (≈2813 \% enemmän), vähensi virheitä 66,7 \%, lyhensi yksittäisen testin ajankulun 30 \% ja lisäsi todennettuja löydöksiä 21 \%.
+   Vertailussa manuaaliseen testaukseen 24 kokeen otoksessa menetelmä suoritti 110 970 HTTP-kyselyä (noin 2813 \% enemmän), vähensi virheitä 66,7 \%, lyhensi yksittäisen testin ajankulun 30 \% ja lisäsi todennettuja löydöksiä 21 \%.
 
     Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
     \begin{itemize}
@@ -358,15 +357,33 @@ vähiten.
 \end{description}
 
 \begin{description}
-    \item[\cite{rane2024_analysis_scanning}]
+    \item[\cite{aljohani2023_automating}] Artikkeli esittelee yhtenäisen kehyksen DevSecOps-prosessin automatisoidulle tietoturva-analyysille. Kehikko koostuu CI-putkeen liitettävästä agentista ja mikropalvelupohjaisesta moottorista, joka automatisoi SAST- ja DAST-skannaukset Shuffle-pohjaisessa SOAR-ympäristössä Docker-kontteja käyttäen.
+
+    Tapaustutkimuksessa DVJA-verkkosovellus skannattiin GitHub Actions- ja Jenkins-putkissa Dependency-Checkin, Detect Secretesin ja Nikton avulla, ja koko suoritus vei 15 min 50 s, josta SAST 4 min 30 s (4 löydöstä) ja DAST 50 s (20 löydöstä)
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} -
+        \item \textbf{RQ2:} Automaattiset työkalut nopeuttavat testausta ja vähentävät manuaalista työtä, mutta rajoituksina ovat väärien positiivisten tulosten määrä ja työkalujen konfiguroinnin vaativuus.
+        \item \textbf{RQ3:} Artikkelissa mainitut työkalut ovat automatisoituja työkaluja: Dependency-Check (SAST), Detect Secrets (SAST) ja Nikto Scanner (DAST).
+        \item \textbf{RQ4:} -
+    \end{itemize}
+
+    Tutkimuksen vahvuuksia ovat konkreettinen tapaustutkimus ja viitekehyksen käytännön sovellettavuuden osoittaminen, realistisen ympäristön käyttö testauksessa sekä kvantitatiivisten tulosten (suoritusajat, löydetyt haavoittuvuudet) esittäminen. Rajoituksia ovat rajattu teknologia (vain tietyt SAST- ja DAST-työkalut) sekä mobiilisovellusten sijaan yksittäisen Java-verkkosovelluksen testaus. Artikkelissa tunnistetaan myös Nikto-työkalun puute vakavuusluokituksessa rajoitteena.
 \end{description}
 
 \begin{description}
-    \item[\cite{dupont2021_incremental}]
-\end{description}
+    \item[\cite{dupont2021_incremental}] esittelevät kevyen inkrementaalisen Common Criteria (CC) -sertifiointiprosessin integrointia DevSecOps-malliin tavoitteena automatisoida tietoturvasertifioinnin todisteiden keräämistä. Prosessia havainnollistetaan palomuurikomponentin (iptables/netfilter) päivityksellä autoalan platooning-järjestelmässä. Sertifiointiputkeen sisällytettiin SAST- ja DAST-työkalut sekä GitLab CI/CD- ja Jenkins-ympäristöt. Automatisoidulla lähestymistavalla vaikutusanalyysiraporttien (IAR) valmisteluaika lyheni merkittävästi ilman laadun heikkenemistä.
 
-\begin{description}
-    \item[\cite{aljohani2023_automating}]
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} Integraatio toteutettiin mallintamalla CC- ja DevSecOps-vaiheet rinnakkain, parhaiksi käytännöiksi nousivat SARIF-standardin hyödyntäminen ja kaksivaiheinen raportointi.
+        \item \textbf{RQ2:} Automatisointi nopeutti testejä ja vähensi virheitä, mutta monimutkaiset tapaukset vaativat yhä manuaalista tarkastusta.
+        \item \textbf{RQ3:} Käytetyiksi automatisoinnin työkaluiksi nimetään SAST-työkalut Frama-C, SonarQube, Eclipse Steady, DAST-työkalut OpenSCAP, OpenVAS, OWASP ZAP, uhkamallinnustyökalut Threat Dragon ja Threagile sekä seurantaan ja operatiiviseen tietoturvaan tarkoitetut SIEM- ja SOAR-ratkaisut.
+        \item \textbf{RQ4:} -
+    \end{itemize}
+
+    Artikkelin vahvuuksia ovat konkreettinen tapaustutkimus autoteollisuuden palomuurin päivityksestä, DevSecOps-prosessin mallintaminen aktiviteettidiagrammeilla  ja esitys siitä, miten automaattisesti kerättyjä todisteita (SAST, DAST) voidaan hyödyntää sertifioinnissa. Rajoituksia ovat, että tapaustutkimus keskittyy vain vaikutusanalyysivaiheeseen, mobiilisovelluskontekstin puute, ja vaikka työkaluja nimetään, kvantitatiivista dataa niiden tehokkuudesta tai vertailua eri työkalujen välillä ei esitetä yksityiskohtaisesti.
 \end{description}
 
 \begin{description}
