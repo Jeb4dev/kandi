@@ -147,9 +147,9 @@ käsitellään luvussa~\ref{cha:analyysi}.
 %----------------------------------------------------------------------
 \section{Kirjallisuushaun yleiskuva}
 
-Kirjallisuushaku tuotti yhteensä 267\,999 viitettä eri tietokannoista (IEEE, Google Scholar, EBSCOhost) ensimmäisessä vaiheessa.
-Hakulauseiden tarkentamisen ja toisen vaiheen haun jälkeen seulonta kohdistettiin 32 relevanttiin artikkeliin.
-Seulontaprosessissa poistettiin duplikaatit ja epäolennaiset julkaisut. Lopulliseen tarkasteluun valikoitui 31 artikkelia.
+Kirjallisuushaku tuotti yhteensä 283\,360 viitettä eri tietokannoista (IEEE, Google Scholar, EBSCOhost) ensimmäisessä vaiheessa.
+Hakulauseiden tarkentamisen ja toisen vaiheen haun jälkeen seulonta kohdistettiin 29 relevanttiin artikkeliin ja 2 kirjaan.
+Seulontaprosessissa poistettiin duplikaatit ja epäolennaiset julkaisut. Lopulliseen tarkasteluun valikoitui 26 teosta.
 Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessin etenemisestä ja seulontavaiheista.
 
 
@@ -295,11 +295,34 @@ vähiten.
 \end{description}
 
 \begin{description}
-    \item[\cite{zhu2024_sast_tools}]
+    \item[\cite{zhu2024_sast_tools}] Artikkeli keskittyy staattisten sovellusturvallisuustestaus (SAST) työkalujen vertailuun Android-ympäristössä. Tutkijat kehittävät VulsTotal-alustan, joka yhdistää 11 SAST-työkalua ja normalisoi niiden haavoittuvuusraportit. Tutkimuksessa luodaan 67 standardoitua haavoittuvuustyyppiä, joita testattiin synteettisillä (GHERA, MSTG\&PIVAA) ja CVE-pohjaisilla benchmarkeillä.
+
+    Konkreettisia tuloksia olivat työkalujen vaihteleva haavoittuvuuskattavuus (korkein 67\%, alin 22\%) ja tehokkuus eri vertailuaineistoilla, sekä tavukoodiin perustuvien työkalujen nopeampi suorituskyky.
+
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} -
+        \item \textbf{RQ2:} -
+        \item \textbf{RQ3:} Mainitaan ja arvioidaan 11 automatisoitua SAST-työkalua Androidille.
+        \item \textbf{RQ4:} -
+    \end{itemize}
+
+    Tutkimuksen vahvuuksia ovat yhtenäisen arviointialustan luominen, kattava 11 työkalun vertailu, laaja empiirinen aineisto sekä realistiset testausympäristöt. Rajoituksena keskittyminen vain Android SAST-työkaluihin
 \end{description}
 
 \begin{description}
-    \item[\cite{rane2024_analysis_scanning}]
+    \item[\cite{rane2024_analysis_scanning}] vertailevat automatisoidun haavoittuvuus skannauksen ja manuaalisen penetraatiotestauksen tehokkuutta verkkosivustojen tietoturva-analyysissä. Keskeisiä tarkasteltuja työkaluja ovat automatisoidut skannerit kuten Netsparker ja penetraatiotestauksessa käytetyt työkalut kuten Burp Suite ja Nmap. Tutkimuksessa todettiin, että manuaalinen penetraatiotestaus on tarkempi ja tehokkaampi haavoittuvuuksien löytämisessä kuin automatisoitu skannaus, joka tuottaa usein vääriä positiivisia tuloksia.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} -
+        \item \textbf{RQ2:} Manuaalisen testauksen vahvuuksia ovat tarkkuus ja kyky havaita monimutkaisia haavoittuvuuksia, kuten käyttöoikeuksien korotus ja epäsuora objektiviittaus. Rajoituksena on testauksen vaatima suuri työmäärä. Automaation etuja ovat nopeus, resurssitehokkuus sekä toistettavuus, mutta sen heikkouksina korostuvat virhepositiivisten tulosten riski ja analyysin pinnallisuus.
+        \item \textbf{RQ3:} Työkaluihin kuuluivat automatisoiduille Netsparker/Invicti sekä manuaalisille Burp Suite, SQLmap, Metasploit ja Nmap.
+        \item \textbf{RQ4:} -
+    \end{itemize}
+
+     Tutkimuksen vahvuuksia ovat käytännönläheinen vertailu todellisella verkkosivustolla, kvantitatiiviset tulokset haavoittuvuuksien määristä sekä selkeä metodologinen jako automatisoitujen ja manuaalisten menetelmien välille. Rajoituksina yksittäiseen verkkopalveluun testaus, CI/CD-integraation puute ja mobiilinäkökulman sekä pitkäkestoisen seurannan puuttuminen.
 \end{description}
 
 \begin{description}
