@@ -389,7 +389,7 @@ Muutoin tutkimuskysymykset ja kriteerit pysyivät muuttumattomina.
 \section*{Luvun rakenne}
 Tässä luvussa esitetään kirjallisuuskatsauksen empiiriset havainnot
 neljän tutkimuskysymyksen (RQ1–RQ4) mukaisesti.  Menetelmä- ja
-hakuprosessi kuvattiin luvussa~\ref{cha:menetelmat}; johtopäätökset
+hakuprosessi kuvattiin luvussa~\ref{cha:methods}; johtopäätökset
 käsitellään luvussa~\ref{cha:analyysi}.
 
 %----------------------------------------------------------------------
@@ -435,10 +435,10 @@ Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessin etenemisestä ja se
     Göttel 2023 (IEC 62443)                          & X   & X   & X   & --  \\
     Aljohani 2023 (Unified framework)                & --  & X   & X   & --  \\
     Dupont 2021 (Incremental CC)                     & X   & X   & X   & --  \\
-    Nutalapati 2023 (Tools \& Techniques)             & --  & X   & X   & --  \\
-    Saleem 2023 (Survey, Pakistan)                   &      &     &     &     \\
-    Chatterjee 2024 (Operational Efficiency)         &      &     &     &     \\
-    Savor 2016 (Facebook CD)                         &      &     &     &     \\
+    Nutalapati 2023 (Tools)                          & --  & X   & X   & --  \\
+    Saleem 2023 (Survey, Pakistan)                   & --  & --  &  +  & ++  \\
+    Chatterjee 2024 (Operational Efficiency)         &  +  &  -  &  -  &  +  \\
+    Savor 2016 (Facebook CD)                         &  +  &  -  &  -  &  ++ \\
     Offerman 2022 (DevOps Practices)                 &      &     &     &     \\
     Hsu 2019 (Practical Security Automation, book)   &      &     &     &     \\
     Rohin 2018 (Mobile DevOps, book)                 &      &     &     &     \\
@@ -649,19 +649,57 @@ vähiten.
 \end{description}
 
 \begin{description}
-\item[\cite{nutalapati2023_tools_techniques}] Artikkelissa tarkastellaan automatisoitua tietoturvatestausta mobiilisovelluksissa ja esitellään kattavasti käytettyjä työkaluja (mm. OWASP ZAP, Burp Suite ja Fortify) sekä tekniikoita (SAST, DAST, IAST). Tulosten mukaan automatisointi nopeuttaa haavoittuvuuksien tunnistamista,tarjoaa laajemman testauskattavuuden ja vähentää ihmislähtöisiä virheitä verrattuna manuaaliseen testaukseen. Haasteina mainitaan väärät positiiviset hälytykset, mobiiliympäristöjen monimutkaisuus ja kehittyvien uhkien jatkuva muuttuminen. Tutkimus vastaa alakysymyksiin RQ2 ja RQ3 kuvaamalla automatisoinnin etuja ja rajoituksia sekä esittelemällä konkreettisia testityökaluja. Laadunarvioinnissa vahvuuksina ovat kattava menetelmien esittely ja parhaat käytännöt. Rajoitteena mainitaan esitettyjen menetelmien yleisluonteisuus ilman yksittäisen tapaustutkimuksen tarjoamaa syvällisyyttä tai kvantitatiivista vertailua.
+\item[\cite{nutalapati2023_tools_techniques}]
 \end{description}
 
 \begin{description}
-    \item[\cite{saleem2023_survey}]
+    \item[\cite{saleem2023_survey}] kyselytutkimuksessa tarkastellaan DevOps-käytäntöjen vaikutusta ohjelmistojen laatuun Pakistanissa.
+
+    Tutkimuksen tulokset osoittivat, että automaatiolla on vahvin positiivinen vaikutus ohjelmiston laatuun, kun taas jatkuvalla integraatiolla ja käyttöönotolla ei ollut yhtä merkittävää vaikutusta. Kommunikaatiolla ja kollaboraatiolla sekä mittauksella ja monitoroinnilla todettiin myös olevan vahva positiivinen yhteys ohjelmiston laatuun.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} -
+        \item \textbf{RQ2:} -
+        \item \textbf{RQ3:} Artikkeli nimeää useita CI/CD työkaluja, kuten GitLab ja Jenkins
+        \item \textbf{RQ4:} Artikkeli keskittyy yleiseen ohjelmiston laatuun DevOpsissa.
+    \end{itemize}
+
+    Rajoitteena otoskoko (14 ohjelmistoyrityksestä) ja maantieteellinen alue (Pakistan).
 \end{description}
 
 \begin{description}
-    \item[\cite{chatterjee2024_operational_efficiency}]
+    \item[\cite{chatterjee2024_operational_efficiency}] Tapaustutkimus tarkasteli jatkuvan integraation ja jatkuvan toimituksen (CI/CD) sekä DevOps-käytäntöjen integrointia ohjelmistotoimitusprosessiin tehokkuuden parantamiseksi.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} Artikkeli tarjoaa konkreettisen mallin CI/CD-integroinnille DevOpsiin. Parhaiksi käytännöiksi nostettiin sprinttipohjainen kehitys, monen ympäristön (Dev, Prod) käyttö sekä testauksen automatisointi.
+        \item \textbf{RQ2:} Tutkimuksessa todettiin, että automatisointi vähensi virheitä, nopeutti käyttöönottoa ja paransi laatua, kun taas manuaalinen testaus oli hidasta ja virhealtista, aiheuttaen viivästyksiä ja laadullisia ongelmia. Tietoturvaa ei tarkasteltu, mutta voidaan osittain soveltaa.
+        \item \textbf{RQ3:} Artikkeli listaa CI/CD-työkaluja, mutta ei tietoturvatestaus-työkaluja
+        \item \textbf{RQ4:} Tutkimuksen tapausesimerkki osoittaa merkittävät hyödyt automaatiosta verrattuna manuaalisiin menetelmiin: automatisoitu CI/CD-putki vähensi merkittävästi käyttöönottoaikaa, paransi ohjelmiston laatua sekä lisäsi asiakastyytyväisyyttä ja liiketoiminnan tehokkuutta.
+    \end{itemize}
+
+    Vahvuutena realistinen AWS toteutus ja selkeä liike-elämään esimerkki tapaus.
+    Rajoitteena tutkimuksessa ei käsitellä tietoturvaa taikka mobiilisovelluksia.
 \end{description}
 
 \begin{description}
-    \item[\cite{savor2016_facebook}]
+    \item[\cite{savor2016_facebook}] Artikkeli tarkastelee jatkuvaa käyttöönottoa kahdessa hyvin erilaisessa yrityksessä, Facebookissa ja OANDAssa, analysoiden sen käytäntöjä ja vaikutuksia kvantitatiivisesti ja kvalitatiivisesti usean vuoden ajalta.
+
+    Keskeisenä tuloksena todetaan, että jatkuva käyttöönotto ei estä tuottavuuden ja laadun skaalautumista insinööritiimin koon ja koodikannan kasvaessa merkittävästi. Facebookilla raportoitiin kriittisten ongelmien määrän pysyneen vakaana, vaikka julkaisumäärät kasvoivat merkittävästi.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} Artikkelissa kuvataan jatkuvan käyttöönoton prosessia, mutta tietoturvaa ei käsitellä.
+        \item \textbf{RQ2:} -
+        \item \textbf{RQ3:} Tietoturva-työkaluja (kuten SAST/DAST) ei käsitellä
+        \item \textbf{RQ4:} Jatkuva käyttöönotto nopeutti kehittäjien toimituskykyä (esim. päivittäiset vs. viikottaiset julkaisut) ja paransi motivaatiota, mutta vaati jatkuvaa työkalujen ja koulutuksen investointia. Vaikutuksia mobiilisovellusten käyttöönottoon tarkastellaan epäsuorasti.
+    \end{itemize}
+
+    Artikkelin vahvuuksia ovat kahden erikokoisen yrityksen tapaustutkimus ja pitkän aikavälin (7 ja 5 vuotta) kvantitatiivinen ja kvalitatiivinen analyysi, jotka tuottavat realistisia tuloksia skaalautuvuudesta ja laadusta.
+    Rajoitteena mobiilikehityksen konteksti puuttuu eikä tietoturvaa käsitellä.
+
+
 \end{description}
 
 \begin{description}
