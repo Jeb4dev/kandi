@@ -165,11 +165,221 @@ Tässä luvussa määritellään käsitteet kuten DevSecOps, CI/CD, tietoturvate
 \label{sec:teoria-yhteenveto}
 % Tiivistää keskeiset käsitteet ja nivoo ne tutkimuskysymyksiin.
 
+%-------------------------------------------------
 \chapter{Menetelmät}
-\label{cha:menetelmat}
-Kuinka aineistoja analysoidaan, mitä aineistoja käytetty
-listataan hakualauseet, joilla aineistoja haettu, include ja exclude
-Valitut aineistot: noin 30 artikkelia
+\label{cha:methods}
+
+Tässä luvussa kuvataan, miten kirjallisuusaineisto kerättiin ja analysoitiin.
+Menettely perustuu yksinkertaistettuun kirjallisuuskatsaukseen, ei täyteen
+PRISMA- tai Kitchenham-protokollaan.
+
+Tämän työn tavoitteena on vastata neljään tutkimuskysymykseen:
+
+\section{Tutkimuskysymykset ja tavoitteet}
+\label{sec:rq}
+\begin{itemize}
+  \item \textbf{RQ1}: Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
+  \item \textbf{RQ2}: Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?
+  \item \textbf{RQ3}: Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?
+  \item \textbf{RQ4}: Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?
+\end{itemize}
+% Selitä lyhyesti, miksi systemaattinen kirjallisuuskatsaus on tarkoituksenmukainen (TODO).
+% Perustele SLR-valinta (Kitchenham 2009).
+
+\section{Protokolla}
+\label{sec:protocol}
+
+Erillistä, virallisesti rekisteröityä katsausprotokollaa ei laadittu,
+koska kyseessä on kandidaatintutkielma. Hakustrategia ja kriteerit
+määriteltiin iteratiivisesti työn aikana ja esitetään alla.
+
+
+\section{Hakustrategia}
+\label{sec:search-strategy}
+
+\subsection{Tietokannat}
+Hakukanaviksi valittiin \emph{IEEE Xplore}, \emph{Google Scholar}
+ja \emph{EBSCOhost}, koska ne kattavat sekä vertaisarvioidut
+IT-alan artikkelit että harvakseltaan indeksoidut kirjat.
+
+\subsection{Hakuvaihe 1: laajat haut}
+Taulukko~\ref{tab:first-phase} esittää ensimmäisen vaiheen
+hakulauseet ja tulosmäärät. Tulokset olivat paikoin kymmeniä tuhansia,
+minkä vuoksi hakua ei seulottu käsin tässä vaiheessa.
+
+%-------------------------------------------------
+\begin{table}[htbp]
+  \centering
+  \footnotesize  % hieman pienempi fontti mahtumisen helpottamiseksi
+  \caption{Ensimmäisen vaiheen hakulauseet ja tulosmäärät.}
+  \label{tab:first-phase}
+  \begin{tabularx}{\textwidth}{l>{\ttfamily\small\raggedright\arraybackslash}X l r}
+    \toprule
+    \textbf{ID} &
+    \textbf{Hakulause} &
+    \textbf{Tietokanta} &
+    \textbf{Tuloksia} \\
+    \midrule
+    1.1 & DevSecOps                                                                                                & IEEE Xplore     & 148     \\
+    1.2 & ("Continuous Integration" AND "Continuous Delivery") OR "CI/CD"                                          & IEEE Xplore     & 542     \\
+    1.3 & (security OR cybersecurity) AND "Mobile App*" AND (integrat* OR implement*)                              & IEEE Xplore     & 2\,262  \\
+    2.1 & automat* AND manual testing AND Security                                                                  & IEEE Xplore     & 804     \\
+    3.1 & Security Testing Tools                                                                                   & IEEE Xplore     & 8\,516  \\
+    3.2 & Security Testing Tools for Mobile Apps                                                                   & Google Scholar  & 267\,000 \\
+    4.1 & security testing AND impact (deployment OR maintenance)                                                  & IEEE Xplore     & 398     \\
+    4.2 & (DevSecOps OR DevOps OR CI/CD) AND impact AND (deployment OR maintenance)                                & IEEE Xplore     & 62      \\
+    4.3 & DevOps                                                                                                   & EBSCOhost       & 208     \\
+    4.4 & DevSecOps Impact                                                                                         & Google Scholar  & 3\,420  \\
+    4.5 & Mobile Security DevOps                                                                                   & Google Scholar  & 16\,800 \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection{Hakuvaihe 2: tarkennetut haut}
+Esivalinnan jälkeen hakulauseita rajattiin. Esimerkiksi
+\texttt{"DevSecOps" AND mobile} (EBSCOhost) palautti vain yhden osuman,
+mikä helpotti manuaalista seulontaa. Täydellinen lista rajatuista hauista
+on liitteessä~\ref{app:queries}.
+
+% Preambeliin samat paketit (jos eivät jo ole)
+
+\begin{table}[htbp]
+  \centering
+  \footnotesize
+  \caption{Toisen vaiheen tarkennetut hakulauseet ja tulosmäärät.}
+  \label{tab:second-phase}
+  \begin{tabularx}{\textwidth}{l>{\ttfamily\small\raggedright\arraybackslash}X l r}
+    \toprule
+    \textbf{ID} &
+    \textbf{Rajattu hakulause} &
+    \textbf{Tietokanta} &
+    \textbf{Tuloksia} \\
+    \midrule
+    1.1  & Integrating Continuous "DevSecOps" Security Testing Techniques                                                            & IEEE Xplore    & 4  \\
+    1.2  & Implement* AND Security CI/CD Pipeline* NOT cloud AND Development AND DevSecOps                                           & IEEE Xplore    & 3  \\
+    1.3  & 2020 $\rightarrow$ ("security testing" OR "cybersecurity testing") AND "Mobile App*" AND (integrat* OR implement*) AND NOT ("Education*" OR "JavaScript") & IEEE Xplore    & 6  \\
+    2.1a & Comparative Analysis of Automated and Manual Testing for Cybersecurity                                                    & IEEE Xplore    & 2  \\
+    2.1b & Automated "Security Testing" (DevSecOps OR DevOpsSec) AND CI/CD NOT IoT                                                   & IEEE Xplore    & 4  \\
+    3.1  & Integrating Continuous Security Testing Tools (DevSecOps OR CI/CD) AND "Case Study" NOT "data driven"                     & IEEE Xplore    & 4  \\
+    3.2  & Automated Security Testing "Mobile Apps" Tools                                                                            & Google Scholar & 1  \\
+    4.1  & Impact of DevOps to deployment and maintenance                                                                            & IEEE Xplore    & 1  \\
+    4.2  & Impact Analysis in DevOps based Software Development Quality Deployment NOT (Monolith OR "Big data")                      & IEEE Xplore    & 3  \\
+    4.3a & DevSecOps AND mobile                                                                                                      & EBSCOhost      & 1  \\
+    4.3b & DevOps AND mobile applications AND Continuous Integration and Deployment                                                  & EBSCOhost      & 1  \\
+    4.4  & "DevSecOps practices and their impact"                                                                                    & Google Scholar & 1  \\
+    4.5  & "Mobile DevOps" AND "Security Testing" AND "CI/CD"                                                                        & Google Scholar & 3  \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection{Ajallinen ja kielirajaus}
+\label{sec:search-limits}
+
+Hakukielet rajattiin suomeen ja englantiin. Käytännössä kaikki sisään
+otetut artikkelit ovat englanninkielisiä (n = 33), yksi suomenkielinen työ
+sisältyy aineistoon. Aikarajausta ei asetettu, mutta
+valitut julkaisut sijoittuvat luontevasti vuosille 2016–2025.
+
+\section{Julkaisujen valintaprosessi}
+\label{sec:selection}
+
+Kaikki tarkennettujen hakujen (hakuvaihe 2) osumat ladattiin
+kokoteksteinä ja arvioitiin seuraavilla sisäänotto-/poissulkukriteereillä:
+
+\begin{itemize}
+  \item \textbf{Include}: käsittelee DevSecOpsia, CI/CD:tä, mobiilisovellusten tietoturvatestausta, mobiilisovellusten DevOps.
+  \item \textbf{Exclude}: ei kokotekstiä saatavilla, pelkkä esitys/abstrakti,
+        kieli muu kuin suomi tai englanti, tai julkaisu ei käsittele mitään
+        seuraavista: turvallisuus, CI/CD, mobiili. Pääpaino IoT tai OT.
+\end{itemize}
+
+Tämän prosessin tuloksena valittiin \textbf{n = 34} artikkelia analyysiin.
+
+\cite{ozdenizci2024mobilizing} kokoteksti saatiin pyytämällä lukuoikeutta.
+
+%-------------------------------------------------
+\subsection{Datan poiminta}
+\label{sec:data-extraction}
+
+Viitteet vietiin taulukkoon, johon kerättiin kentät
+ID, vuosi, tutkimusmenetelmä, otsikko, tekijät, DOI/URL ja tietokanta
+(Taulukko~\ref{tab:extractionfields}). Poiminnan teki yksi henkilö;
+kaksoispoimintaa tai formaalia laatuluokitusta ei tehty.
+
+
+\begin{table}[htbp]
+  \centering
+  \footnotesize
+  \caption{Käytetty poimintalomake.}
+  \label{tab:extractionfields}
+  \begin{tabular}{p{3cm}p{8.5cm}}
+    \toprule
+    \textbf{Kenttä} & \textbf{Kuvaus} \\
+    \midrule
+    ID           & Viitteen yksilöllinen tunniste (Haku ID + juokseva nro) \\
+    Vuosi        & Julkaisuvuosi (4 numeroa) \\
+    Tutkimus\-menetelmä & Artikkelin itse raportoima menetelmä (esim.\ case-tutkimus, survey) \\
+    Otsikko      & Artikkelin otsikko sellaisenaan \\
+    Tekijät      & Kirjoittajien etunimen ensimmäinen kirjain ja sukunimi \\
+    Linkki       & DOI-osoite tai pysyvä URL \\
+    Tietokanta   & IEEE Xplore, Google Scholar tai EBSCOhost \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%-------------------------------------------------
+
+\section{Työkalut ja toistettavuus}
+\label{sec:tools}
+Overleaf, Github
+
+%-------------------------------------------------
+\section{Synteesi}
+\label{sec:synthesis}
+
+\subsection{Kuvaileva analyysi}
+Julkaisut jaoteltiin julkaisuvuoden ja tietokannan mukaan
+(Taulukko~\ref{tab:descriptive}). Tulosten jakauma osoittaa, että
+suurin osa lähteistä on ilmestynyt 2023–2024
+ja painottuu IEEE Xploreen.
+
+\subsection{Sisällön tiivistys}
+Artikkeleista poimittiin esimerkkihavaintoja, jotka ryhmiteltiin
+viiteen pääteemaan (Taulukko~\ref{tab:themes}).
+Tarkempaa temaattista koodausta ei tehty kandidaatintutkielman
+rajausten vuoksi.
+
+\begin{table}[htbp]
+  \centering
+  \footnotesize
+  \caption{Julkaisujen jakautuminen vuosittain ja tietokannoittain.}
+  \label{tab:descriptive}
+  \begin{tabular}{lrrr}
+    \toprule
+    \textbf{Vuosi} & \textbf{IEEE Xplore} & \textbf{Google Scholar} & \textbf{EBSCOhost} \\
+    \midrule
+    2016 & 1 & 0 & 0 \\
+    2018 & 0 & 0 & 1 \\
+    2019 & 1 & 0 & 1 \\
+    2020 & 4 & 0 & 0 \\
+    2021 & 1 & 0 & 0 \\
+    2022 & 2 & 0 & 0 \\
+    2023 & 9 & 3 & 0 \\
+    2024 & 7 & 5 & 0 \\
+    \midrule
+    Yhteensä & 25 & 8 & 2 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%-------------------------------------------------
+\section{Poikkeamat alkuperäisestä suunnasta}
+\label{sec:deviations}
+
+Hakua jatkettiin huhtikuuhun 2025 saakka ja
+hakulauseita tarkennettiin toistuvasti tulosjoukkojen koon perusteella.
+Muutoin tutkimuskysymykset ja kriteerit pysyivät muuttumattomina.
+
 
 %======================================================================
 \chapter{Tulokset}
@@ -198,35 +408,49 @@ Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessin etenemisestä ja se
   \label{fig:prisma}
 \end{figure}
 
-\begin{table}[h]
+\begin{table}[htbp]
+  \centering
+  \footnotesize
   \caption{Lähteiden kattavuus tutkimuskysymyksittäin}
   \label{tab:rq_matrix}
-  \footnotesize
-  \begin{tabular}{lcccc}
+  \begin{tabular}{p{5cm}cccc}
     \toprule
-    Lähde \& RQ1 \& RQ2 \& RQ3 \& RQ4 \\
+    \textbf{Lähde} & \textbf{RQ1} & \textbf{RQ2} & \textbf{RQ3} & \textbf{RQ4} \\
     \midrule
-    Rangnau 2020 \& x \& x \& x \& – \\
-    Marandi 2023 \& x \& x \& x \& x \\
-    Nikolov 2024 \& x \& x \& x \& – \\
-    Afifah 2024  \& x \& (x) \& (x) \& – \\
-    Putra 2022  \& ? \& ? \& ? \& ? \\
-    Kushwaha 2024  \& x \& (x) \& (x) \& (x) \\
-    Feio  2024  \& (x) \& - \& x \& – \\
-    ??? 202X   \& ? \& ? \& ? \& ? \\
-    Nutalapati 2023  \& - \& x \& x \& – \\
+    Rangnau 2020                                     & X   & X   & X   & --  \\
+    Marandi 2023                                     & X   & X   & X   & X   \\
+    Nikolov 2024                                     & X   & X   & X   & --  \\
+    Afifah 2024                                      & X   & (X) & (X) & --  \\
+    Putra 2022                                       & X   & X   & X   & (X) \\
+    Kushwaha 2024                                    & X   & (X) & (X) & (X) \\
+    Feio 2024                                        & X   & X   & X   & --  \\
+    Schneider 2020                                   & X   & X   & X   & --  \\
+    Baheux 2023                                      & X   & (X) & X   & --  \\
+    Grasselli 2023 (Digital Twin)                    & --  & --  & X   & (X) \\
+    Mukti 2023 (Password Manager)                    & --  & --  & X   & --  \\
+    Kohli 2020 (COVID Tracer apps)                   & --  & X   & X   & --  \\
+    Zhu 2024 (SAST tools)                            & --  & --  & X   & --  \\
+    Rane 2024 (Auto vs Manual scan)                  & --  & X   & X   & --  \\
+    Raman 2019 (SQLi AutoScript)                     & X   & X   & X   & --  \\
+    Göttel 2023 (IEC 62443)                          & X   & X   & X   & --  \\
+    Aljohani 2023 (Unified framework)                & --  & X   & X   & --  \\
+    Dupont 2021 (Incremental CC)                     & X   & X   & X   & --  \\
+    Nutalapati 2023 (Tools \& Techniques)             & --  & X   & X   & --  \\
+    Saleem 2023 (Survey, Pakistan)                   &      &     &     &     \\
+    Chatterjee 2024 (Operational Efficiency)         &      &     &     &     \\
+    Savor 2016 (Facebook CD)                         &      &     &     &     \\
+    Offerman 2022 (DevOps Practices)                 &      &     &     &     \\
+    Hsu 2019 (Practical Security Automation, book)   &      &     &     &     \\
+    Rohin 2018 (Mobile DevOps, book)                 &      &     &     &     \\
+    Chung 2024 (DevSecOps Metrics)                   &      &     &     &     \\
     \bottomrule
   \end{tabular}
 \end{table}
 
+
 Taulukosta~\ref{tab:rq_matrix} nähdään, että neljä päälähdettä
 kattavat laajimmin RQ1–RQ3-alueet, mutta RQ4:ää tukevia tutkimuksia on
 vähiten.
-
-%----------------------------------------------------------------------
-\section{RQ1 – Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?}
-\label{sec:rq1}
-
 
 \subsection{Lähdeanalyysi}
 \begin{description}
@@ -455,6 +679,13 @@ vähiten.
 \begin{description}
     \item[\cite{chung2024_devsecops}]
 \end{description}
+
+%----------------------------------------------------------------------
+\section{RQ1 – Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?}
+\label{sec:rq1}
+
+Tässä alaluvussa tarkastellaan n artikkelia, jotka kuvaavat
+tietoturvatestauksen integrointia CI/CD-putkeen.
 
 \subsection{Havainnot}
 % TODO: kirjoita teemallinen/kronologinen synteesi + viittaukset
