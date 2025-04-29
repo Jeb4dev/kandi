@@ -86,27 +86,39 @@ KIRJOITA ENGLANNINKIELINEN TIIVISTELMÄSI TÄHÄN
 \chapter{Johdanto}
 \label{cha:johdanto}
 
-Tutkimuskysymykset:
-
-\begin{description}
-    \item[Pääkysymys:] Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
-    \begin{description}
-        \item[Alakysymys 1:] Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?
-        \item[Alakysymys 2:] Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?
-        \item[Alakysymys 3:] Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?
-    \end{description}
-\end{description}
-
-Biblio Authoreiden siivous:
-Etunimen eka kirjain -> etunimi
-
-Tutkimuksen rakenne
-
-Johdannon alku:
 motivoidaan lukija
 Muut aikaisemmat tutkimukset: miten 5 aikaisempa artikkelia, viittauksia lähteisiin
 Miksi tutkimusta tarvitaan? Ei aikaisempaa tutkimusta tähän specifiin aiheeseen
+
+\section{Statement of the Problem}
+\label{sec:statement-of-problem}
+
+\section{Purpose of the Study}
+\label{sec:purpose-of-study}
+
+The purpose of this systematic literature review is to:
+
+\section{Tutkimuskysymykset}
+\label{sec:research-questions}
+
+\begin{description}
+    \item[Pääkysymys (RQ1):] Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
+    \begin{description}
+        \item[Alakysymys 1 (RQ2):] Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?
+        \item[Alakysymys 2 (RQ3):] Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?
+        \item[Alakysymys 3 (RQ4):] Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?
+    \end{description}
+\end{description}
+
+\section{Tutkimuksen merkitys}
+\label{sec:signigicance-of-study}
+
 minun työn tavoitteet: pääcontribuutio
+
+Biblio Authoreiden siivous:
+
+Etunimen eka kirjain -> etunimi
+
 Työn rakenne: mitä luvut käsittelevät (1 kappale)
 
 \chapter{Teoria}
@@ -413,7 +425,7 @@ Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessin etenemisestä ja se
   \footnotesize
   \caption{Lähteiden kattavuus tutkimuskysymyksittäin}
   \label{tab:rq_matrix}
-  \begin{tabular}{p{5cm}cccc}
+  \begin{tabular}{p{8cm}cccc}
     \toprule
     \textbf{Lähde} & \textbf{RQ1} & \textbf{RQ2} & \textbf{RQ3} & \textbf{RQ4} \\
     \midrule
@@ -428,21 +440,24 @@ Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessin etenemisestä ja se
     Baheux 2023                                      & X   & (X) & X   & --  \\
     Grasselli 2023 (Digital Twin)                    & --  & --  & X   & (X) \\
     Mukti 2023 (Password Manager)                    & --  & --  & X   & --  \\
-    Kohli 2020 (COVID Tracer apps)                   & --  & X   & X   & --  \\
-    Zhu 2024 (SAST tools)                            & --  & --  & X   & --  \\
-    Rane 2024 (Auto vs Manual scan)                  & --  & X   & X   & --  \\
-    Raman 2019 (SQLi AutoScript)                     & X   & X   & X   & --  \\
-    Göttel 2023 (IEC 62443)                          & X   & X   & X   & --  \\
-    Aljohani 2023 (Unified framework)                & --  & X   & X   & --  \\
-    Dupont 2021 (Incremental CC)                     & X   & X   & X   & --  \\
-    Nutalapati 2023 (Tools)                          & --  & X   & X   & --  \\
-    Saleem 2023 (Survey, Pakistan)                   & --  & --  &  +  & ++  \\
-    Chatterjee 2024 (Operational Efficiency)         &  +  &  -  &  -  &  +  \\
-    Savor 2016 (Facebook CD)                         &  +  &  -  &  -  &  ++ \\
-    Offerman 2022 (DevOps Practices)                 &  +  &  -  &  -  &  ++ \\
+    Kohli 2020 (COVID Tracer apps)                   &  -   &  +  &  +  &  -  \\
+    Zhu 2024 (SAST tools)                            &  -   &  +  &  ++ &  -  \\
+    Rane 2024 (Auto vs Manual scan)                  &  -   &  +  &  +  &  -  \\
+    Raman 2019 (SQLi AutoScript)                     &  -   &  +  &  -  &  -  \\
+    Göttel 2023 (IEC 62443)                          &  +   &  +  &  +  &  -  \\
+    Aljohani 2023 (Unified framework)                &  ++  &  +  &  +  &  ?  \\
+    Dupont 2021 (Incremental CC)                     &  +   &  +  &  +  &  +  \\
+    Nutalapati 2023 (Tools)                          &  ++  &  ++ &  ++ &  +  \\
+    Saleem 2023 (Survey, Pakistan)                   &  -   &  -  &  -  &  +  \\
+    Chatterjee 2024 (Operational Efficiency)         &  +   &  -  &  -  &  +  \\
+    Savor 2016 (Facebook CD)                         &  +   &  -  &  -  &  ++ \\
+    Offerman 2022 (DevOps Practices)                 &  +   &  -  &  -  &  +  \\
     Hsu 2019 (Practical Security Automation, book)   &      &     &     &     \\
-    Rohin 2018 (Mobile DevOps, book)                 &      &     &     &     \\
-    Chung 2024 (DevSecOps Metrics)                   &      &     &     &     \\
+    Rohin 2018 (Mobile DevOps, book)                 &  ++  &  +  &  -  &  ++ \\
+    Chung 2024 (DevSecOps Metrics)                   &  +   &  +  &  +  &  +  \\
+    Ozdenizci 2024 (Mobilizing DevOps)               &  +   &  +  &  +  &  +  \\
+    Byman 2024 (CD in Mobile Applications)           &  +   &  -  &  -  &  +  \\
+    Eramoa 2024 (DevOps Role in Mobile)              &  +   &  -  &  -  &  +  \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -625,7 +640,7 @@ vähiten.
 
     Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
     \begin{itemize}
-        \item \textbf{RQ1:} -
+        \item \textbf{RQ1:} - % TODO: Lue tarkemmin
         \item \textbf{RQ2:} Automaattiset työkalut nopeuttavat testausta ja vähentävät manuaalista työtä, mutta rajoituksina ovat väärien positiivisten tulosten määrä ja työkalujen konfiguroinnin vaativuus.
         \item \textbf{RQ3:} Artikkelissa mainitut työkalut ovat automatisoituja työkaluja: Dependency-Check (SAST), Detect Secrets (SAST) ja Nikto Scanner (DAST).
         \item \textbf{RQ4:} -
@@ -635,17 +650,17 @@ vähiten.
 \end{description}
 
 \begin{description}
-    \item[\cite{dupont2021_incremental}] esittelevät kevyen inkrementaalisen Common Criteria (CC) -sertifiointiprosessin integrointia DevSecOps-malliin tavoitteena automatisoida tietoturvasertifioinnin todisteiden keräämistä. Prosessia havainnollistetaan palomuurikomponentin (iptables/netfilter) päivityksellä autoalan platooning-järjestelmässä. Sertifiointiputkeen sisällytettiin SAST- ja DAST-työkalut sekä GitLab CI/CD- ja Jenkins-ympäristöt. Automatisoidulla lähestymistavalla vaikutusanalyysiraporttien (IAR) valmisteluaika lyheni merkittävästi ilman laadun heikkenemistä.
+    \item[\cite{dupont2021_incremental}] esittelevät Common Criteria (CC) -sertifiointiprosessin integrointia DevSecOps-malliin tavoitteena automatisoida tietoturvasertifioinnin todisteiden keräämistä. Prosessia havainnollistetaan palomuurikomponentin (iptables/netfilter) päivityksellä autoalan platooning-järjestelmässä. Sertifiointiputkeen sisällytettiin SAST- ja DAST-työkalut sekä GitLab CI/CD- ja Jenkins-ympäristöt. Automatisoidulla lähestymistavalla vaikutusanalyysiraporttien (IAR) valmisteluaika lyheni merkittävästi ilman laadun heikkenemistä.
 
     Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
     \begin{itemize}
         \item \textbf{RQ1:} Integraatio toteutettiin mallintamalla CC- ja DevSecOps-vaiheet rinnakkain, parhaiksi käytännöiksi nousivat SARIF-standardin hyödyntäminen ja kaksivaiheinen raportointi.
         \item \textbf{RQ2:} Automatisointi nopeutti testejä ja vähensi virheitä, mutta monimutkaiset tapaukset vaativat yhä manuaalista tarkastusta.
         \item \textbf{RQ3:} Käytetyiksi automatisoinnin työkaluiksi nimetään SAST-työkalut Frama-C, SonarQube, Eclipse Steady, DAST-työkalut OpenSCAP, OpenVAS, OWASP ZAP, uhkamallinnustyökalut Threat Dragon ja Threagile sekä seurantaan ja operatiiviseen tietoturvaan tarkoitetut SIEM- ja SOAR-ratkaisut.
-        \item \textbf{RQ4:} -
+        \item \textbf{RQ4:} % TODO: lue lähde tarkemmin ja pohdi hyödyllisyyttä.
     \end{itemize}
 
-    Artikkelin vahvuuksia ovat konkreettinen tapaustutkimus autoteollisuuden palomuurin päivityksestä, DevSecOps-prosessin mallintaminen aktiviteettidiagrammeilla  ja esitys siitä, miten automaattisesti kerättyjä todisteita (SAST, DAST) voidaan hyödyntää sertifioinnissa. Rajoituksia ovat, että tapaustutkimus keskittyy vain vaikutusanalyysivaiheeseen, mobiilisovelluskontekstin puute, ja vaikka työkaluja nimetään, kvantitatiivista dataa niiden tehokkuudesta tai vertailua eri työkalujen välillä ei esitetä yksityiskohtaisesti.
+    Artikkelin vahvuuksia ovat konkreettinen tapaustutkimus autoteollisuuden palomuurin päivityksestä, DevSecOps-prosessin mallintaminen aktiviteettidiagrammeilla  ja esitys siitä, miten automaattisesti kerättyjä todisteita (SAST, DAST) voidaan hyödyntää sertifioinnissa. Rajoituksia ovat, että tapaustutkimus keskittyy vain vaikutusanalyysivaiheeseen, mobiilisovelluskontekstin puute. Vaikka työkaluja nimetään, kvantitatiivista dataa niiden tehokkuudesta tai vertailua eri työkalujen välillä ei esitetä yksityiskohtaisesti.
 \end{description}
 
 \begin{description}
@@ -728,7 +743,62 @@ vähiten.
 \end{description}
 
 \begin{description}
-    \item[\cite{chung2024_devsecops}]
+    \item[\cite{chung2024_devsecops}] laadullinen tutkimus käsittelee tärkeimpiä mittareita DevSecOpsin menestyksen arvioimiseksi ja sen etuja sekä parannusmahdollisuuksia.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} Integraatio tehdään vaiheittain tuomalla turvallisuustestit jo kehitysympäristö-tasolle ja automatisoimalla ne pipelineen.
+        \item \textbf{RQ2:} Tutkimus korostaa automatisoidun testauksen (SAST/DAST) nopeutta ja toistettavuutta, mutta huomauttaa manuaalisen pentestin tarpeesta kriittisten reunatapausten varmistamisessa. Automatisointi voi silti tuottaa vääriä positiivisia tuloksia.
+        \item \textbf{RQ3:} Mainitut työkalut sisältävät uhkamallinnus-työpajat, penetraatiotestauksen, SAST-, DAST-, IAST- ja infrastruktuuriskannerit, CI/CD-orkestraattorit sekä Quirkos-analytiikan.
+        \item \textbf{RQ4:} Jatkuva integraatio ja -julkistus (CI/CD) lyhensivät julkaisuaikoja. DevSecOps-putkeen upotetut SAST-, DAST- ja konttien konfiguraatio skannaukset pienensivät tuotanto korjausten määrää, mikä näkyi ylläpitokustannusten laskuna. Jatkuva valvonta (ylläpito → monitorointi → palaute) ja IaC-pohjaiset päivitysmekanismit tehostivat elinkaaren aikaisia päivityksiä, jolloin käyttökatkot ja rollback-tapaukset vähenevät.
+    \end{itemize}
+
+    Tutkimus hyödyntää useita eri aineistonkeruumenetelmiä (haastattelut, kirjallisuuskatsaus, video- ja lehtianalyysi)
+    Rajoituksina voidaan pitää mobiilisovelluskehityksen kontekstin puuttumista, sillä tutkimus käsittelee DevSecOpsia yleisesti ohjelmistokehityksessä.
+\end{description}
+
+\begin{description}
+    \item[\cite{ozdenizci2024mobilizing}] Artikkeli tarkastelee keskikokoisen ohjelmistoyrityksen Mobile DevOps-toteutusta, jossa rakennettiin GitHub Actions- ja Jenkins-pohjainen CI/CD-putki sekä liitettiin mobiilikohtaiset testaus-, julkaisu- ja tietoturvatoiminnot.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} Tutkimus esittelee toiminnallisia strategioita tunnistettujen haasteiden ratkaisemiseksi.
+        \item \textbf{RQ2:} Automaattinen testaus tunnistaa laitekohtaisia ongelmia, mutta ei visuaalisia virheitä.
+        \item \textbf{RQ3:} Mainitut työkalut ovat Appium, Espresso, TestFlight, OWASP ZAP ja Nessus automatisoituihin tarkastuksiin sekä GitHub-koodikatselmukset ja TestFlightin beetatestaajat manuaalisiin arviointeihin.
+        \item \textbf{RQ4:} Mobiili kontekstissa hitaampi prosessi web kontekstiin verrattuna.
+    \end{itemize}
+
+    Vahvuutena on realistinen tapaustutkimus yhdessä yrityksessä ja ...
+    Rajoitteena vain yhden yrityksen tapauksen tarkastelu.
+\end{description}
+
+\begin{description}
+    \item[\cite{byman2024continuous}] tutki jatkuvan toimituksen soveltamista terveysmobiilisovelluksiin ja esitteli suunnitelman sekä toteutuksen CI/CD-putkelle tähän tarkoitukseen.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:}
+        \item \textbf{RQ2:} Manuaalisen prosessin rajoituksena on alttius virheille ja epäjohdonmukaisuus, kun taas automatisoinnin etuja ovat toistettavuus, tehokkuus ja vakaus toistuviin tehtäviin.
+        \item \textbf{RQ3:} Mainittuja työkaluja ovat muun muassa GitLab CI/CD, Fastlane, Gradle, Android Studio, Google Play Console API. Tietoturvaan liittyen mainitaan SonarQube staattiseen analyysiin ja Docker Scout konttien skannaukseen
+        \item \textbf{RQ4:} Jatkuvan toimituksen prosessi mahdollistaa nopeammat päivitykset ja virheenkorjaukset.
+    \end{itemize}
+
+    Työn vahvuuksia ovat konkreettisen CI/CD-putken suunnittelu ja toteutus terveysmobiilisovellusten kontekstissa, realistisen kehitysympäristön käyttö ja automaation hyötyjen vertailu manuaaliseen prosessiin. Rajoitteina keskittyminen terveys sovelluksiin niiden poikkeuksellisten regulatiivisten vaatimusten vuoksi.
+\end{description}
+
+
+\begin{description}
+    \item[\cite{eramo2024empirical}] Artikkelissa tutkitaan DevOps-käytäntöjen roolia mobiilisovellusten kehityksessä analysoimalla Android-sovellusten kehitystyötä 7 441 GitHub-repositorion pohjalta. Tutkimus keskittyy commit-viestien luokitteluun ja niiden yhdistämiseen DevOps-prosessin eri vaiheisiin.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} -
+        \item \textbf{RQ2:} -
+        \item \textbf{RQ3:} -
+        \item \textbf{RQ4:} -
+    \end{itemize}
+
+    Vahvuutena suuren mittakaavan empiirinen toteutus sekä koneoppimisella saavutetut kvantitiiviset tulokset. Rajoitteena tutkimus ei juurikaan vastaa tutkimuskysymyksiin eikä kuomioi mobiilikonekstia tai tietoturvaa.
 \end{description}
 
 %----------------------------------------------------------------------
