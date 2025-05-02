@@ -1,0 +1,47 @@
+name: Build LaTeX PDF
+
+on:
+  push:
+    branches: [ main ]           # change if you use master/develop
+
+jobs:
+  build_pdf:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write            # needed for the release step
+
+    steps:
+      # 1. Get the code ------------------------------------------------
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      # 2. Compile -----------------------------------------------------
+      - name: Compile kandi.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: src      # <── the folder that holds your .tex
+          root_file: kandi.tex        # <── your main file
+          latexmk_use_xelatex: true   # or comment out for pdfLaTeX default
+
+      # 3. (Optional) expose the PDF as a run-artifact -----------------
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kandi-pdf
+          path: src/kandi.pdf         # ← latex-action outputs <root>.pdf
+
+      # 4. (Optional) update a “latest” release ------------------------
+      - name: Delete previous 'latest' release
+        uses: ame-yu/action-delete-latest-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create / update 'latest' release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: latest
+          name: Compiled PDF (latest)
+          artifacts: src/kandi.pdf
+          allowUpdates: true
+          replacesArtifacts: true
+          token: ${{ secrets.GITHUB_TOKEN }}
