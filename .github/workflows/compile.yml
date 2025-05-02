@@ -2,7 +2,7 @@ name: Build LaTeX PDF
 
 on:
   push:
-    branches: [ main ]           # change if you use master/develop
+    branches: [ main, master ]           # change if you use master/develop
 
 jobs:
   build_pdf:
