@@ -124,6 +124,8 @@ Työn rakenne: mitä luvut käsittelevät (1 kappale)
 \chapter{Teoria}
 \label{cha:teoria}
 
+% TODO: nimetään luku uudelleen esim. devSecOpsin taustaa, jne.
+
 \section{Johdanto teoria-lukuun}
 \label{sec:teoria-johdanto}
 
@@ -340,14 +342,10 @@ kaksoispoimintaa tai formaalia laatuluokitusta ei tehty.
 \end{table}
 
 %-------------------------------------------------
-
-\section{Työkalut ja toistettavuus}
-\label{sec:tools}
-Overleaf, Github
-
-%-------------------------------------------------
 \section{Synteesi}
 \label{sec:synthesis}
+
+% TODO: alilukuja vain jos useampi kappale tekstiä per luku, väh 2. alilukuja väh.2
 
 \subsection{Kuvaileva analyysi}
 Julkaisut jaoteltiin julkaisuvuoden ja tietokannan mukaan
@@ -458,6 +456,49 @@ Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessin etenemisestä ja se
     Ozdenizci 2024 (Mobile DevOps adoption)             &  +   &  +  &  +  &  +  \\
     Byman 2024 (Mobile health CD)                       &  +   &  -  &  -  &  +  \\
     Eramoa 2024 (DevOps in mobile)                      &  +   &  -  &  -  &  +  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[htbp]
+  \centering
+  \footnotesize
+  \caption{Kirjallisuuslähteiden teema-alueiden kattavuus}
+  \label{tab:theme_matrix}
+  \begin{tabular}{p{7cm}cccc}
+    \toprule
+    \textbf{Lähde} & \textbf{CI/CD} & \textbf{Security} & \textbf{Mobiili} & \textbf{DevSecOps} \\
+    \midrule
+    Afifah 2024 (Code obfuscation)                      &  x   &  x  &  -  &  x \\
+    Aljohani 2023 (Unified DevSecOps framework)         &  x   &  x  &  -  &  x \\
+    Baheux 2023 (Android vulnerability detection)       &  -   &  x  &  x  &  - \\
+    Byman 2024 (Mobile health CD)                       &  x   &  x  &  x  &  - \\
+    Chatterjee 2024 (Operational efficiency DevOps)     &  x   &  -  &  -  &  - \\
+    Chung 2024 (DevSecOps metrics analysis)             &  x   &  x  &  -  &  x \\
+    Dupont 2021 (Incremental certification)             &  x   &  x  &  -  &  x \\
+    Eramoa 2024 (DevOps in mobile)                      &  x   &  -  &  x  &  - \\
+    Feio 2024 (Continuous security testing)             &  x   &  x  &  -  &  x \\
+    Grasselli 2023 (Vehicle digital twin)               &  -   &  x  &  -  &  - \\
+    Göttel 2023 (IEC 62443 validation)                  &  x   &  x  &  -  &  x \\
+    Hsu 2019 (Security automation book)                 &  x   &  x  &  x  &  x \\
+    Kohli 2020 (COVID app security)                     &  -   &  x  &  x  &  - \\
+    Kushwaha 2024 (Financial DevSecOps)                 &  x   &  x  &  -  &  x \\
+    Marandi 2023 (Security scanning pipeline)           &  x   &  x  &  -  &  x \\
+    Mukti 2023 (Password manager security)              &  -   &  x  &  x  &  - \\
+    Nikolov 2024 (Threat modeling)                      &  x   &  x  &  -  &  x \\
+    Nutalapati 2023 (Mobile security tools)             &  x   &  x  &  x  &  - \\
+    Offerman 2022 (DevOps adoption effects)             &  x   &  -  &  -  &  - \\
+    Ozdenizci 2024 (Mobile DevOps adoption)             &  x   &  x  &  x  &  x \\
+    Putra 2022 (Static-dynamic testing)                 &  x   &  x  &  x  &  x \\
+    Raman 2019 (SQLi test automation)                   &  -   &  x  &  -  &  - \\
+    Rane 2024 (Auto vs manual testing)                  &  -   &  x  &  -  &  - \\
+    Rangnau 2020 (Dynamic security testing)             &  x   &  x  &  -  &  x \\
+    Rohin 2018 (Mobile DevOps book)                     &  x   &  -  &  x  &  - \\
+    Saleem 2023 (DevOps quality survey)                 &  x   &  -  &  -  &  - \\
+    Savor 2016 (Facebook continuous deployment)         &  x   &  -  &  -  &  - \\
+    Schneider 2020 (Mobile banking fuzzing)             &  -   &  x  &  x  &  - \\
+    Zhu 2024 (Android SAST tools)                       &  -   &  x  &  x  &  - \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -664,7 +705,17 @@ vähiten.
 \end{description}
 
 \begin{description}
-\item[\cite{nutalapati2023_tools_techniques}]
+    \item[\cite{nutalapati2023_tools_techniques}] Artikkeli kuvaa automatisoidun mobiilisovellusten tietoturvatestauksen kehikkoa: rakennetaan testauskokonaisuus, joka yhdistää SAST-, DAST- ja IAST-tekniikat ja käyttää työkaluja OWASP ZAP, Burp Suite, Fortify, AppScan ja Veracode kehitysputken (CI/CD) yhteydessä. Tuloksina todetaan automatisoinnin parempi kattavuus, nopeus ja johdonmukaisuus sekä haavoittuvuuksien varhaisempi havaitseminen, mutta kvantitatiivisia mittareita ei raportoida.
+
+    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+    \begin{itemize}
+        \item \textbf{RQ1:} -
+        \item \textbf{RQ2:} Automaattinen testaus tuo tehokkuutta, skaalautuvuutta ja toistettavuutta, mutta kärsii vääristä positiivisista ja negatiivisista tuloksista. Manuaalinen testaus on hitaampaa ja virhealttiimpaa, mutta löytää kriittisiä ongelmia.
+        \item \textbf{RQ3:} Mainitut automatisoidut työkalut ovat OWASP ZAP, Burp Suite, Fortify, AppScan ja Veracode.
+        \item \textbf{RQ4:} -
+    \end{itemize}
+
+    Laadun vahvuuksia ovat kattava työkalujen ja tekniikoiden kartoitus, realistinen kuvaus mobiilihaasteista ja selkeä analyysi haasteista.
 \end{description}
 
 \begin{description}
@@ -735,7 +786,7 @@ vähiten.
 \end{description}
 
 \begin{description}
-    \item[\cite{tony2019_practical}]
+    \item[\cite{hsu2019_practical}]
 \end{description}
 
 \begin{description}
@@ -805,14 +856,29 @@ vähiten.
 \section{RQ1 – Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?}
 \label{sec:rq1}
 
-Tässä alaluvussa tarkastellaan n artikkelia, jotka kuvaavat
-tietoturvatestauksen integrointia CI/CD-putkeen.
+Tähän tutkimuskysymykseen vastasi \emph{n} = 23 lähdettä koko
+30 julkaisu\-aineistosta (\emph{N} = 30), eli noin 77 \%.
+Lähteiden tarkempi jakauma on seuraava:
 
-\subsection{Havainnot}
-% TODO: kirjoita teemallinen/kronologinen synteesi + viittaukset
+\begin{itemize}
+  \item \textbf{Tietoturva­fokus:} 7 artikkelia (30 \%) käsitteli
+        tietoturvaa yleisesti, ja 1 artikkeli (4 \%) yhdisti
+        tietoturvan sekä mobiilin näkökulman.
+  \item \textbf{Mobiili­konteksti:} 6 artikkelia (26 \%)
+        tarkasteli nimenomaan mobiilisovelluksia,
+        joista yksi sisälsi myös tietoturvanäkökulman.
+  \item \textbf{CI/CD-integraatio:} 12 artikkelia (52 \%)
+        kuvasi tietoturvatestauksen liittämistä
+        CI/CD-putkeen.
+\end{itemize}
 
-\subsection{Yhteenveto RQ1}
-% TODO: 3–5 bulletia, joissa vastaus kysymykseen
+(Huom.\ prosenttiosuudet eivät summaudu sataan, koska
+kategoriat eivät ole toisensa poissulkevia.)
+
+Seuraavissa alaluvuissa tulokset esitetään kahden teeman kautta:
+\subsection{Integrointimallit CI/CD-putkessa}
+\subsection{Parhaat DevSecOps-käytännöt}
+\subsection*{Yhteenveto RQ1}
 
 %----------------------------------------------------------------------
 \section{RQ2 – Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?}
@@ -829,6 +895,8 @@ vaikutuksista manuaaliseen testaukseen (ks. liite~\ref{app:rq_matrix}).
 
 \subsection{Yhteenveto RQ2}
 % TODO
+
+% kandipalaveri 12 jälkeen 6. päivä
 
 %----------------------------------------------------------------------
 \section{RQ3 – Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?}
