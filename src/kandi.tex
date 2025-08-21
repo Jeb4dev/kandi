@@ -70,982 +70,1045 @@
 %% \ccsdesc[500]{Some Class}
 
 \begin{document}
-\maketitle
-\begin{abstract}
-KIRJOITA SUOMENKIELINEN TIIVISTELMÄSI TÄHÄN
-\end{abstract}
+    \maketitle
+    \begin{abstract}
+        KIRJOITA SUOMENKIELINEN TIIVISTELMÄSI TÄHÄN
+    \end{abstract}
 
-\begin{abstract}[english]
-KIRJOITA ENGLANNINKIELINEN TIIVISTELMÄSI TÄHÄN
-\end{abstract}
+    \begin{abstract}[english]
+        KIRJOITA ENGLANNINKIELINEN TIIVISTELMÄSI TÄHÄN
+    \end{abstract}
 
-\frontmatter
-\tableofcontents
-\mainmatter
+    \frontmatter
+    \tableofcontents
+    \mainmatter
 
-\chapter{Johdanto}
-\label{cha:johdanto}
 
-motivoidaan lukija
-Muut aikaisemmat tutkimukset: miten 5 aikaisempa artikkelia, viittauksia lähteisiin
-Miksi tutkimusta tarvitaan? Ei aikaisempaa tutkimusta tähän specifiin aiheeseen
+    \chapter{Johdanto}
+    \label{cha:johdanto}
 
-\section{Statement of the Problem}
-\label{sec:statement-of-problem}
+    motivoidaan lukija Muut aikaisemmat tutkimukset: miten 5 aikaisempa artikkelia, viittauksia lähteisiin Miksi tutkimusta tarvitaan? Ei aikaisempaa tutkimusta tähän specifiin aiheeseen
 
-\section{Purpose of the Study}
-\label{sec:purpose-of-study}
 
-The purpose of this systematic literature review is to:
+    \section{Statement of the Problem}
+    \label{sec:statement-of-problem}
 
-\section{Tutkimuskysymykset}
-\label{sec:research-questions}
 
-\begin{description}
-    \item[Pääkysymys (RQ1):] Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
+    \section{Purpose of the Study}
+    \label{sec:purpose-of-study}
+
+    The purpose of this systematic literature review is to:
+
+
+    \section{Tutkimuskysymykset}
+    \label{sec:research-questions}
+
     \begin{description}
-        \item[Alakysymys 1 (RQ2):] Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?
-        \item[Alakysymys 2 (RQ3):] Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?
-        \item[Alakysymys 3 (RQ4):] Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?
+        \item[Pääkysymys (RQ1):] Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusta DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
+        \begin{description}
+            \item[Alakysymys 1 (RQ2):] Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?
+            \item[Alakysymys 2 (RQ3):] Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?
+            \item[Alakysymys 3 (RQ4):] Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?
+        \end{description}
     \end{description}
-\end{description}
 
-\section{Tutkimuksen merkitys}
-\label{sec:signigicance-of-study}
 
-minun työn tavoitteet: pääcontribuutio
+    \section{Tutkimuksen merkitys}
+    \label{sec:signigicance-of-study}
 
-Biblio Authoreiden siivous:
+    minun työn tavoitteet: pääcontribuutio
 
-Etunimen eka kirjain -> etunimi
+    Biblio Authoreiden siivous:
 
-Työn rakenne: mitä luvut käsittelevät (1 kappale)
+    Etunimen eka kirjain -> etunimi
 
-\chapter{Teoria}
-\label{cha:teoria}
+    Työn rakenne: mitä luvut käsittelevät (1 kappale)
+
+
+    \chapter{Teoria}
+    \label{cha:teoria}
 
 % TODO: nimetään luku uudelleen esim. devSecOpsin taustaa, jne.
 
-\section{Johdanto teoria-lukuun}
-\label{sec:teoria-johdanto}
 
-Tässä luvussa määritellään käsitteet kuten DevSecOps, CI/CD, tietoturvatestaus, mobiilisovellus, jne.
+    \section{Johdanto teoria-lukuun}
+    \label{sec:teoria-johdanto}
+
+    Tässä luvussa määritellään käsitteet kuten DevSecOps, CI/CD, tietoturvatestaus, mobiilisovellus, jne.
 
 % Perustelu luvun rakenteelle ja käsitteille; OWASP-dokumenttien rooli grey literature -aineistona.
 
 %--- 2  DevSecOps & CI/CD-putki --------------------
-\section{DevSecOps ja CI/CD}
-\label{sec:devsecops-cicd}
-  \subsection{DevOps-mallin evoluutio DevSecOpsiin}
-  \subsection{CI/CD-arkkitehtuuri}
-  \subsection{Kontti- ja orkestrointialustat}
+
+
+    \section{DevSecOps ja CI/CD}
+    \label{sec:devsecops-cicd}
+
+    \subsection{DevOps-mallin evoluutio DevSecOpsiin}
+
+    \subsection{CI/CD-arkkitehtuuri}
+
+    \subsection{Kontti- ja orkestrointialustat}
 
 %--- 3  Tietoturvatestaus --------------------------
-\section{Tietoturvatestaus}
-\label{sec:testing}
-  \subsection{SAST, DAST, IAST ja SCA}
-  \subsection{Testauksen integrointi putkeen}
+
+
+    \section{Tietoturvatestaus}
+    \label{sec:testing}
+
+    \subsection{SAST, DAST, IAST ja SCA}
+
+    \subsection{Testauksen integrointi putkeen}
 
 %--- 4  Haavoittuvuustaksonomiat ja standardit -----
-\section{Haavoittuvuustaksonomiat ja standardit}
-\label{sec:taxonomies}
 
-  \subsection{OWASP Top 10 -sarja}
+
+    \section{Haavoittuvuustaksonomiat ja standardit}
+    \label{sec:taxonomies}
+
+    \subsection{OWASP Top 10 -sarja}
+
     \subsubsection{Web-sovellukset (2021)}   % \cite{owasp-top10-web-2021}
+
     \subsubsection{API-rajapinnat (2023)}     % \cite{owasp-top10-api-2023}
+
     \subsubsection{Mobiilisovellukset (2024)} % \cite{owasp-top10-mobile-2024}
+
     \subsubsection{CI/CD-putket (2023)}       % \cite{owasp-top10-cicd-2023}
 
-  \subsection{Common Weakness Enumeration (CWE)}
-  \subsection{Common Vulnerability Scoring System (CVSS v3.1)}
-  \subsection{Kartoitus OWASP - CWE - CVSS}
+    \subsection{Common Weakness Enumeration (CWE)}
+
+    \subsection{Common Vulnerability Scoring System (CVSS v3.1)}
+
+    \subsection{Kartoitus OWASP - CWE - CVSS}
 
 %--- 5  Turvallinen koodaus ------------------------
-\section{Turvallinen koodaus}
-\label{sec:secure-code}
-  \subsection{Periaatteet}
-  \subsection{Ohjeistot ja cheat-sheetit}
-  \subsection{Automatisoidut tarkistukset}
+
+
+    \section{Turvallinen koodaus}
+    \label{sec:secure-code}
+
+    \subsection{Periaatteet}
+
+    \subsection{Ohjeistot ja cheat-sheetit}
+
+    \subsection{Automatisoidut tarkistukset}
 
 %--- 6  Mobiilisovellusten erityispiirteet ---------
-\section{Mobiilisovellusten erityispiirteet}
-\label{sec:mobile}
-  \subsection{Android vs.\ iOS turvallisuusmallit}
-  \subsection{Kehitysmallit ja teknologiat}
-  \subsection{Mobile Top 10 -riskien soveltaminen}
+
+
+    \section{Mobiilisovellusten erityispiirteet}
+    \label{sec:mobile}
+
+    \subsection{Android vs.\ iOS turvallisuusmallit}
+
+    \subsection{Kehitysmallit ja teknologiat}
+
+    \subsection{Mobile Top 10 -riskien soveltaminen}
 
 %--- 7  Yhteenveto -------------------------------
-\section{Yhteenveto}
-\label{sec:teoria-yhteenveto}
+
+
+    \section{Yhteenveto}
+    \label{sec:teoria-yhteenveto}
 % Tiivistää keskeiset käsitteet ja nivoo ne tutkimuskysymyksiin.
 
 %-------------------------------------------------
-\chapter{Menetelmät}
-\label{cha:methods}
 
-Tässä luvussa kuvataan, miten kirjallisuusaineisto kerättiin ja analysoitiin.
-Menettely perustuu yksinkertaistettuun kirjallisuuskatsaukseen, ei täyteen
-PRISMA- tai Kitchenham-protokollaan.
 
-Tämän työn tavoitteena on vastata neljään tutkimuskysymykseen:
+    \chapter{Menetelmät}
+    \label{cha:methods}
 
-\section{Tutkimuskysymykset ja tavoitteet}
-\label{sec:rq}
-\begin{itemize}
-  \item \textbf{RQ1}: Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
-  \item \textbf{RQ2}: Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?
-  \item \textbf{RQ3}: Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?
-  \item \textbf{RQ4}: Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?
-\end{itemize}
+    Tässä luvussa kuvataan, miten kirjallisuusaineisto kerättiin ja analysoitiin. Menettely perustuu yksinkertaistettuun kirjallisuuskatsaukseen, ei täyteen PRISMA- tai Kitchenham-protokollaan.
+
+    Tämän työn tavoitteena on vastata neljään tutkimuskysymykseen:
+
+
+    \section{Tutkimuskysymykset ja tavoitteet}
+    \label{sec:rq}
+    \begin{itemize}
+        \item \textbf{RQ1}: Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusta DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?
+        \item \textbf{RQ2}: Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?
+        \item \textbf{RQ3}: Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?
+        \item \textbf{RQ4}: Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?
+    \end{itemize}
 % Selitä lyhyesti, miksi systemaattinen kirjallisuuskatsaus on tarkoituksenmukainen (TODO).
 % Perustele SLR-valinta (Kitchenham 2009).
 
-\section{Protokolla}
-\label{sec:protocol}
 
-Erillistä, virallisesti rekisteröityä katsausprotokollaa ei laadittu,
-koska kyseessä on kandidaatintutkielma. Hakustrategia ja kriteerit
-määriteltiin iteratiivisesti työn aikana ja esitetään alla.
+    \section{Protokolla}
+    \label{sec:protocol}
+
+    Erillistä, virallisesti rekisteröityä katsausprotokollaa ei laadittu,
+    koska kyseessä on kandidaatintutkielma. Hakustrategia ja kriteerit määriteltiin iteratiivisesti työn aikana ja esitetään alla.
 
 
-\section{Hakustrategia}
-\label{sec:search-strategy}
+    \section{Hakustrategia}
+    \label{sec:search-strategy}
 
-\subsection{Tietokannat}
-Hakukanaviksi valittiin \emph{IEEE Xplore}, \emph{Google Scholar}
-ja \emph{EBSCOhost}, koska ne kattavat sekä vertaisarvioidut
-IT-alan artikkelit että harvakseltaan indeksoidut kirjat.
+    \subsection{Tietokannat}
+    Hakukanaviksi valittiin \emph{IEEE Xplore}, \emph{Google Scholar}
+    ja \emph{EBSCOhost}, koska ne kattavat sekä vertaisarvioidut IT-alan artikkelit että harvakseltaan indeksoidut kirjat.
 
-\subsection{Hakuvaihe 1: laajat haut}
-Taulukko~\ref{tab:first-phase} esittää ensimmäisen vaiheen
-hakulauseet ja tulosmäärät. Tulokset olivat paikoin kymmeniä tuhansia,
-minkä vuoksi hakua ei seulottu käsin tässä vaiheessa.
+    \subsection{Hakuvaihe 1: laajat haut}
+    Taulukko~\ref{tab:first-phase} esittää ensimmäisen vaiheen hakulauseet ja tulosmäärät. Tulokset olivat paikoin kymmeniä tuhansia,
+    minkä vuoksi hakua ei seulottu käsin tässä vaiheessa.
 
 %-------------------------------------------------
-\begin{table}[htbp]
-  \centering
-  \footnotesize  % hieman pienempi fontti mahtumisen helpottamiseksi
-  \caption{Ensimmäisen vaiheen hakulauseet ja tulosmäärät.}
-  \label{tab:first-phase}
-  \begin{tabularx}{\textwidth}{l>{\ttfamily\small\raggedright\arraybackslash}X l r}
-    \toprule
-    \textbf{ID} &
-    \textbf{Hakulause} &
-    \textbf{Tietokanta} &
-    \textbf{Tuloksia} \\
-    \midrule
-    1.1 & DevSecOps                                                                                                & IEEE Xplore     & 148     \\
-    1.2 & ("Continuous Integration" AND "Continuous Delivery") OR "CI/CD"                                          & IEEE Xplore     & 542     \\
-    1.3 & (security OR cybersecurity) AND "Mobile App*" AND (integrat* OR implement*)                              & IEEE Xplore     & 2\,262  \\
-    2.1 & automat* AND manual testing AND Security                                                                  & IEEE Xplore     & 804     \\
-    3.1 & Security Testing Tools                                                                                   & IEEE Xplore     & 8\,516  \\
-    3.2 & Security Testing Tools for Mobile Apps                                                                   & Google Scholar  & 267\,000 \\
-    4.1 & security testing AND impact (deployment OR maintenance)                                                  & IEEE Xplore     & 398     \\
-    4.2 & (DevSecOps OR DevOps OR CI/CD) AND impact AND (deployment OR maintenance)                                & IEEE Xplore     & 62      \\
-    4.3 & DevOps                                                                                                   & EBSCOhost       & 208     \\
-    4.4 & DevSecOps Impact                                                                                         & Google Scholar  & 3\,420  \\
-    4.5 & Mobile Security DevOps                                                                                   & Google Scholar  & 16\,800 \\
-    \bottomrule
-  \end{tabularx}
-\end{table}
+    \begin{table}[htbp]
+        \centering
+        \footnotesize  % hieman pienempi fontti mahtumisen helpottamiseksi
+        \caption{Ensimmäisen vaiheen hakulauseet ja tulosmäärät.}
+        \label{tab:first-phase}
+        \begin{tabularx}{\textwidth}{l>{\ttfamily\small\raggedright\arraybackslash}X l r}
+            \toprule
+            \textbf{ID} &
+            \textbf{Hakulause} &
+            \textbf{Tietokanta} &
+            \textbf{Tuloksia} \\
+            \midrule
+            1.1 & DevSecOps                                                                                                & IEEE Xplore     & 148     \\
+            1.2 & ("Continuous Integration" AND "Continuous Delivery") OR "CI/CD"                                          & IEEE Xplore     & 542     \\
+            1.3 & (security OR cybersecurity) AND "Mobile App*" AND (integrat* OR implement*)                              & IEEE Xplore     & 2\,262  \\
+            2.1 & automat* AND manual testing AND Security                                                                  & IEEE Xplore     & 804     \\
+            3.1 & Security Testing Tools                                                                                   & IEEE Xplore     & 8\,516  \\
+            3.2 & Security Testing Tools for Mobile Apps                                                                   & Google Scholar  & 267\,000 \\
+            4.1 & security testing AND impact (deployment OR maintenance)                                                  & IEEE Xplore     & 398     \\
+            4.2 & (DevSecOps OR DevOps OR CI/CD) AND impact AND (deployment OR maintenance)                                & IEEE Xplore     & 62      \\
+            4.3 & DevOps                                                                                                   & EBSCOhost       & 208     \\
+            4.4 & DevSecOps Impact                                                                                         & Google Scholar  & 3\,420  \\
+            4.5 & Mobile Security DevOps                                                                                   & Google Scholar  & 16\,800 \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
 
-\subsection{Hakuvaihe 2: tarkennetut haut}
-Esivalinnan jälkeen hakulauseita rajattiin. Esimerkiksi
-\texttt{"DevSecOps" AND mobile} (EBSCOhost) palautti vain yhden osuman,
-mikä helpotti manuaalista seulontaa. Täydellinen lista rajatuista hauista
-on liitteessä~\ref{app:queries}.
+    \subsection{Hakuvaihe 2: tarkennetut haut}
+    Esivalinnan jälkeen hakulauseita rajattiin. Esimerkiksi
+    \texttt{"DevSecOps" AND mobile} (EBSCOhost) palautti vain yhden osuman,
+    mikä helpotti manuaalista seulontaa. Täydellinen lista rajatuista hauista on liitteessä~\ref{app:queries}.
 
 % Preambeliin samat paketit (jos eivät jo ole)
 
-\begin{table}[htbp]
-  \centering
-  \footnotesize
-  \caption{Toisen vaiheen tarkennetut hakulauseet ja tulosmäärät.}
-  \label{tab:second-phase}
-  \begin{tabularx}{\textwidth}{l>{\ttfamily\small\raggedright\arraybackslash}X l r}
-    \toprule
-    \textbf{ID} &
-    \textbf{Rajattu hakulause} &
-    \textbf{Tietokanta} &
-    \textbf{Tuloksia} \\
-    \midrule
-    1.1  & Integrating Continuous "DevSecOps" Security Testing Techniques                                                            & IEEE Xplore    & 4  \\
-    1.2  & Implement* AND Security CI/CD Pipeline* NOT cloud AND Development AND DevSecOps                                           & IEEE Xplore    & 3  \\
-    1.3  & 2020 $\rightarrow$ ("security testing" OR "cybersecurity testing") AND "Mobile App*" AND (integrat* OR implement*) AND NOT ("Education*" OR "JavaScript") & IEEE Xplore    & 6  \\
-    2.1a & Comparative Analysis of Automated and Manual Testing for Cybersecurity                                                    & IEEE Xplore    & 2  \\
-    2.1b & Automated "Security Testing" (DevSecOps OR DevOpsSec) AND CI/CD NOT IoT                                                   & IEEE Xplore    & 4  \\
-    3.1  & Integrating Continuous Security Testing Tools (DevSecOps OR CI/CD) AND "Case Study" NOT "data driven"                     & IEEE Xplore    & 4  \\
-    3.2  & Automated Security Testing "Mobile Apps" Tools                                                                            & Google Scholar & 1  \\
-    4.1  & Impact of DevOps to deployment and maintenance                                                                            & IEEE Xplore    & 1  \\
-    4.2  & Impact Analysis in DevOps based Software Development Quality Deployment NOT (Monolith OR "Big data")                      & IEEE Xplore    & 3  \\
-    4.3a & DevSecOps AND mobile                                                                                                      & EBSCOhost      & 1  \\
-    4.3b & DevOps AND mobile applications AND Continuous Integration and Deployment                                                  & EBSCOhost      & 1  \\
-    4.4  & "DevSecOps practices and their impact"                                                                                    & Google Scholar & 1  \\
-    4.5  & "Mobile DevOps" AND "Security Testing" AND "CI/CD"                                                                        & Google Scholar & 3  \\
-    \bottomrule
-  \end{tabularx}
-\end{table}
+    \begin{table}[htbp]
+        \centering
+        \footnotesize
+        \caption{Toisen vaiheen tarkennetut hakulauseet ja tulosmäärät.}
+        \label{tab:second-phase}
+        \begin{tabularx}{\textwidth}{l>{\ttfamily\small\raggedright\arraybackslash}X l r}
+            \toprule
+            \textbf{ID} &
+            \textbf{Rajattu hakulause} &
+            \textbf{Tietokanta} &
+            \textbf{Tuloksia} \\
+            \midrule
+            1.1  & Integrating Continuous "DevSecOps" Security Testing Techniques                                                            & IEEE Xplore    & 4  \\
+            1.2  & Implement* AND Security CI/CD Pipeline* NOT cloud AND Development AND DevSecOps                                           & IEEE Xplore    & 3  \\
+            1.3  & 2020 $\rightarrow$ ("security testing" OR "cybersecurity testing") AND "Mobile App*" AND (integrat* OR implement*) AND NOT ("Education*" OR "JavaScript") & IEEE Xplore    & 6  \\
+            2.1a & Comparative Analysis of Automated and Manual Testing for Cybersecurity                                                    & IEEE Xplore    & 2  \\
+            2.1b & Automated "Security Testing" (DevSecOps OR DevOpsSec) AND CI/CD NOT IoT                                                   & IEEE Xplore    & 4  \\
+            3.1  & Integrating Continuous Security Testing Tools (DevSecOps OR CI/CD) AND "Case Study" NOT "data driven"                     & IEEE Xplore    & 4  \\
+            3.2  & Automated Security Testing "Mobile Apps" Tools                                                                            & Google Scholar & 1  \\
+            4.1  & Impact of DevOps to deployment and maintenance                                                                            & IEEE Xplore    & 1  \\
+            4.2  & Impact Analysis in DevOps based Software Development Quality Deployment NOT (Monolith OR "Big data")                      & IEEE Xplore    & 3  \\
+            4.3a & DevSecOps AND mobile                                                                                                      & EBSCOhost      & 1  \\
+            4.3b & DevOps AND mobile applications AND Continuous Integration and Deployment                                                  & EBSCOhost      & 1  \\
+            4.4  & "DevSecOps practices and their impact"                                                                                    & Google Scholar & 1  \\
+            4.5  & "Mobile DevOps" AND "Security Testing" AND "CI/CD"                                                                        & Google Scholar & 3  \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
 
-\subsection{Ajallinen ja kielirajaus}
-\label{sec:search-limits}
+    \subsection{Ajallinen ja kielirajaus}
+    \label{sec:search-limits}
 
-Hakukielet rajattiin suomeen ja englantiin. Käytännössä kaikki sisään
-otetut artikkelit ovat englanninkielisiä (n = 33). Aikarajausta ei asetettu, mutta
-valitut julkaisut sijoittuvat vuosille 2016–2025.
+    Hakukielet rajattiin suomeen ja englantiin. Käytännössä kaikki sisään otetut artikkelit ovat englanninkielisiä (n = 33). Aikarajausta ei asetettu, mutta valitut julkaisut sijoittuvat vuosille 2016–2025.
 
-\section{Julkaisujen valintaprosessi}
-\label{sec:selection}
 
-Kaikki tarkennettujen hakujen (hakuvaihe 2) osumat ladattiin
-kokoteksteinä ja arvioitiin seuraavilla sisäänotto-/poissulkukriteereillä:
+    \section{Julkaisujen valintaprosessi}
+    \label{sec:selection}
 
-\begin{itemize}
-  \item \textbf{Include}: käsittelee DevSecOpsia, CI/CD:tä, mobiilisovellusten tietoturvatestausta, mobiilisovellusten DevOps.
-  \item \textbf{Exclude}: ei kokotekstiä saatavilla, pelkkä esitys/abstrakti,
-        kieli muu kuin suomi tai englanti, tai julkaisu ei käsittele mitään
-        seuraavista: turvallisuus, CI/CD, mobiili. Pääpaino IoT tai OT.
-\end{itemize}
+    Kaikki tarkennettujen hakujen (hakuvaihe 2) osumat ladattiin kokoteksteinä ja arvioitiin seuraavilla sisäänotto-/poissulkukriteereillä:
 
-Tämän prosessin tuloksena valittiin \textbf{n = 34} artikkelia analyysiin.
+    \begin{itemize}
+        \item \textbf{Include}: käsittelee DevSecOpsia, CI/CD:tä, mobiilisovellusten tietoturvatestausta, mobiilisovellusten DevOps.
+        \item \textbf{Exclude}: ei kokotekstiä saatavilla, pelkkä esitys/abstrakti,
+        kieli muu kuin suomi tai englanti, tai julkaisu ei käsittele mitään seuraavista: turvallisuus, CI/CD, mobiili. Pääpaino IoT tai OT.
+    \end{itemize}
 
-\cite{ozdenizci2024mobilizing} tutkimus saatiin pyytämällä lukuoikeutta.
+    Tämän prosessin tuloksena valittiin \textbf{n = 34} artikkelia analyysiin.
+
+    \cite{ozdenizci2024mobilizing} tutkimus saatiin pyytämällä lukuoikeutta.
 
 %-------------------------------------------------
-\subsection{Datan poiminta}
-\label{sec:data-extraction}
 
-Viitteet vietiin taulukkoon, johon kerättiin kentät
-ID, vuosi, tutkimusmenetelmä, otsikko, tekijät, DOI/URL ja tietokanta
-(Taulukko~\ref{tab:extractionfields}). Poiminnan teki yksi henkilö;
-kaksoispoimintaa tai formaalia laatuluokitusta ei tehty.
+    \subsection{Datan poiminta}
+    \label{sec:data-extraction}
+
+    Viitteet vietiin taulukkoon, johon kerättiin kentät ID, vuosi, tutkimusmenetelmä, otsikko, tekijät, DOI/URL ja tietokanta
+    (Taulukko~\ref{tab:extractionfields}). Poiminnan teki tutkielman kirjoittaja yksin, eikä kaksoispoimintaa tai formaalia laatuluokitusta tehty.
 
 
-\begin{table}[htbp]
-  \centering
-  \footnotesize
-  \caption{Käytetty poimintalomake.}
-  \label{tab:extractionfields}
-  \begin{tabular}{p{3cm}p{8.5cm}}
-    \toprule
-    \textbf{Kenttä} & \textbf{Kuvaus} \\
-    \midrule
-    ID           & Viitteen yksilöllinen tunniste (Haku ID + juokseva nro) \\
-    Vuosi        & Julkaisuvuosi (4 numeroa) \\
-    Tutkimus\-menetelmä & Artikkelin itse raportoima menetelmä (esim.\ case-tutkimus, survey) \\
-    Otsikko      & Artikkelin otsikko sellaisenaan \\
-    Tekijät      & Kirjoittajien etunimen ensimmäinen kirjain ja sukunimi \\
-    Linkki       & DOI-osoite tai pysyvä URL \\
-    Tietokanta   & IEEE Xplore, Google Scholar tai EBSCOhost \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+    \begin{table}[htbp]
+        \centering
+        \footnotesize
+        \caption{Käytetty poimintalomake.}
+        \label{tab:extractionfields}
+        \begin{tabular}{p{3cm}p{8.5cm}}
+            \toprule
+            \textbf{Kenttä}     & \textbf{Kuvaus}                                                     \\
+            \midrule
+            ID                  & Viitteen yksilöllinen tunniste (Haku ID + juokseva nro)             \\
+            Vuosi               & Julkaisuvuosi (4 numeroa)                                           \\
+            Tutkimus\-menetelmä & Artikkelin itse raportoima menetelmä (esim.\ case-tutkimus, survey) \\
+            Otsikko             & Artikkelin otsikko sellaisenaan                                     \\
+            Tekijät             & Kirjoittajien etunimen ensimmäinen kirjain ja sukunimi              \\
+            Linkki              & DOI-osoite tai pysyvä URL                                           \\
+            Tietokanta          & IEEE Xplore, Google Scholar tai EBSCOhost                           \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
 
 %-------------------------------------------------
-\section{Synteesi}
-\label{sec:synthesis}
+
+
+    \section{Synteesi}
+    \label{sec:synthesis}
 
 % TODO: alilukuja vain jos useampi kappale tekstiä per luku, väh 2. alilukuja väh.2
 
-\subsection{Kuvaileva analyysi}
-Julkaisut jaoteltiin julkaisuvuoden ja tietokannan mukaan
-(Taulukko~\ref{tab:descriptive}). Tulosten jakauma osoittaa, että
-suurin osa lähteistä on ilmestynyt 2023–2024
-ja painottuu IEEE Xploreen.
+    \subsection{Kuvaileva analyysi}
+    Julkaisut jaoteltiin julkaisuvuoden ja tietokannan mukaan
+    (Taulukko~\ref{tab:descriptive}). Tulosten jakauma osoittaa, että suurin osa lähteistä on ilmestynyt 2023–2024 ja painottuu IEEE Xploreen.
 
-\subsection{Sisällön tiivistys}
-Artikkeleista poimittiin esimerkkihavaintoja, jotka ryhmiteltiin
-viiteen pääteemaan (Taulukko~\ref{tab:themes}).
-Tarkempaa temaattista koodausta ei tehty kandidaatintutkielman
-rajausten vuoksi.
+    \subsection{Sisällön tiivistys}
+    Artikkeleiden sisällöt analysoitiin ja ryhmiteltiin neljään pääteemaan: CI/CD, Security, Mobiili ja DevSecOps (Taulukko~\ref{tab:themes}). Laajempaa temaattista koodausta ei toteutettu kandidaatintutkielman rajauksen vuoksi.
 
-\begin{table}[htbp]
-  \centering
-  \footnotesize
-  \caption{Julkaisujen jakautuminen vuosittain ja tietokannoittain.}
-  \label{tab:descriptive}
-  \begin{tabular}{lcccr}
-    \toprule
-    \textbf{Vuosi} & \textbf{IEEE Xplore} & \textbf{Google Scholar} & \textbf{EBSCOhost} & \textbf{Yhteensä} \\
-    \midrule
-    2016 & 1 & 0 & 0 & 1  \\
-    2018 & 0 & 0 & 1 & 1  \\
-    2019 & 1 & 0 & 1 & 2  \\
-    2020 & 4 & 0 & 0 & 4  \\
-    2021 & 1 & 0 & 0 & 1  \\
-    2022 & 2 & 0 & 0 & 2  \\
-    2023 & 9 & 3 & 0 & 12 \\
-    2024 & 7 & 5 & 0 & 12 \\
-    \midrule
-    Yhteensä & 25 & 8 & 2 & 35\\
-    \bottomrule
-  \end{tabular}
-\end{table}
+    Teemoista CI/CD ja Security muodostavat usein yhdessä DevSecOps-kokonaisuuden. DevOps-käytännöt sekä automatisoitu tietoturvatestaus ovat monin osin sovellettavissa myös mobiilisovellusten kehitykseen ja ylläpitoon, mutta eivät ota huomioon mobiilisovellusten erityispiirteitä. Siksi mobiiliin liittyvät teemat haluttiin nostaa selkeästi esiin. Teemojen avulla pyrittiin systemaattisesti tunnistamaan, mitkä tutkimuksista käsittelivät erityisesti mobiilisovelluksia ja/tai tietoturvaa.
+
+    \begin{table}[htbp]
+        \centering
+        \footnotesize
+        \caption{Julkaisujen jakautuminen vuosittain ja tietokannoittain.}
+        \label{tab:descriptive}
+        \begin{tabular}{lcccr}
+            \toprule
+            \textbf{Vuosi} & \textbf{IEEE Xplore} & \textbf{Google Scholar} & \textbf{EBSCOhost} & \textbf{Yhteensä} \\
+            \midrule
+            2016           & 1                    & 0                       & 0                  & 1                 \\
+            2018           & 0                    & 0                       & 1                  & 1                 \\
+            2019           & 1                    & 0                       & 1                  & 2                 \\
+            2020           & 4                    & 0                       & 0                  & 4                 \\
+            2021           & 1                    & 0                       & 0                  & 1                 \\
+            2022           & 2                    & 0                       & 0                  & 2                 \\
+            2023           & 9                    & 3                       & 0                  & 12                \\
+            2024           & 7                    & 5                       & 0                  & 12                \\
+            \midrule
+            Yhteensä       & 25                   & 8                       & 2                  & 35                \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
 
 %-------------------------------------------------
-\section{Poikkeamat alkuperäisestä suunnasta}
-\label{sec:deviations}
 
-Hakua jatkettiin huhtikuuhun 2025 saakka ja
-hakulauseita tarkennettiin toistuvasti tulosjoukkojen koon perusteella.
-Muutoin tutkimuskysymykset ja kriteerit pysyivät muuttumattomina.
+
+    \section{Poikkeamat alkuperäisestä suunnasta}
+    \label{sec:deviations}
+
+    Hakua jatkettiin huhtikuuhun 2025 saakka ja hakulauseita tarkennettiin toistuvasti tulosjoukkojen koon perusteella. Muutoin tutkimuskysymykset ja kriteerit pysyivät muuttumattomina.
 
 
 %======================================================================
-\chapter{Tulokset}
-\label{cha:tulokset}
+
+
+    \chapter{Tulokset}
+    \label{cha:tulokset}
 
 %----------------------------------------------------------------------
-\section*{Luvun rakenne}
-Tässä luvussa esitetään kirjallisuuskatsauksen empiiriset havainnot
-neljän tutkimuskysymyksen (RQ1–RQ4) mukaisesti.  Menetelmä- ja
-hakuprosessi kuvattiin luvussa~\ref{cha:methods}; johtopäätökset
-käsitellään luvussa~\ref{cha:analyysi}.
+
+
+    \section*{Luvun rakenne}
+    Tässä luvussa esitetään kirjallisuuskatsauksen empiiriset havainnot neljän tutkimuskysymyksen (RQ1–RQ4) mukaisesti. Menetelmä- ja hakuprosessi kuvattiin luvussa~\ref{cha:methods}; johtopäätökset käsitellään luvussa~\ref{cha:analyysi}.
+
+    Kirjallisuushaku tuotti yhteensä 283\,360 viitettä eri tietokannoista (IEEE, Google Scholar, EBSCOhost) ensimmäisessä vaiheessa. Hakulauseiden tarkentamisen ja toisen vaiheen haun jälkeen seulonta kohdistettiin 29 relevanttiin artikkeliin ja 2 kirjaan. Seulontaprosessissa poistettiin duplikaatit ja epäolennaiset julkaisut. Lopulliseen tarkasteluun valikoitui 26 teosta. Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessin etenemisestä ja seulontavaiheista. Liitteessä \ref{sec:source-analysis} annotoitu jokainen lähde yksitellen.
 
 %----------------------------------------------------------------------
-\section{Kirjallisuushaun yleiskuva}
-
-Kirjallisuushaku tuotti yhteensä 283\,360 viitettä eri tietokannoista (IEEE, Google Scholar, EBSCOhost) ensimmäisessä vaiheessa.
-Hakulauseiden tarkentamisen ja toisen vaiheen haun jälkeen seulonta kohdistettiin 29 relevanttiin artikkeliin ja 2 kirjaan.
-Seulontaprosessissa poistettiin duplikaatit ja epäolennaiset julkaisut. Lopulliseen tarkasteluun valikoitui 26 teosta.
-Kuva~\ref{fig:prisma} esittää PRISMA-kaavion hakuprosessin etenemisestä ja seulontavaiheista.
-
-
-\begin{figure}[h]
-  \centering
-%  \includegraphics[width=.8\textwidth]{figures/prisma.pdf}
-  \caption{PRISMA-kaavio kirjallisuushaun vaiheista}
-  \label{fig:prisma}
-\end{figure}
-
-\begin{table}[htbp]
-  \centering
-  \footnotesize
-  \caption{Lähteiden kattavuus tutkimuskysymyksittäin}
-  \label{tab:rq_matrix}
-  \begin{tabular}{p{7cm}cccc}
-    \toprule
-    \textbf{Lähde} & \textbf{RQ1} & \textbf{RQ2} & \textbf{RQ3} & \textbf{RQ4} \\
-    \midrule
-    Rangnau 2020 (Dynamic security testing)             &  +   &  +  &  +  &  -  \\
-    Marandi 2023 (Security scanning pipeline)           &  +   &  +  &  +  &  +  \\
-    Nikolov 2024 (Threat modeling)                      &  +   &  +  &  +  &  +  \\
-    Afifah 2024 (Code obfuscation)                      &  +   &  -  &  +  &  -  \\
-    Putra 2022 (Static-dynamic testing)                 &  ++  &  +  &  +  &  +  \\
-    Kushwaha 2024 (Financial DevSecOps)                 &  +   &  +  &  +  &  +  \\
-    Feio 2024 (Continuous security testing)             &  ++  &  +  &  ++ &  +  \\
-    Schneider (2020 Mobile banking fuzzing)             &  +   &  +  &  ++ &  -  \\
-    Baheux 2023 (Android vulnerability detection)       &  +   &  -  &  +  &  -  \\
-    Grasselli 2023 (Vehicle digital twin)               &  +   &  -  &  -  &  +  \\
-    Mukti 2023 (Password manager security)              &  -   &  -  &  +  &  -  \\
-    Kohli 2020 (COVID app security)                     &  -   &  +  &  +  &  -  \\
-    Zhu 2024 (Android SAST tools)                       &  -   &  +  &  ++ &  -  \\
-    Rane 2024 (Auto vs manual testing)                  &  -   &  +  &  +  &  -  \\
-    Raman 2019 (SQLi test automation)                   &  -   &  +  &  -  &  -  \\
-    Göttel 2023 (IEC 62443 validation)                  &  +   &  +  &  +  &  -  \\
-    Aljohani 2023 (Unified DevSecOps framework)         &  ++  &  +  &  +  &  +  \\
-    Dupont 2021 (Incremental certification)             &  +   &  +  &  +  &  +  \\
-    Nutalapati 2023 (Mobile security tools)             &  ++  &  ++ &  ++ &  +  \\
-    Saleem 2023 (DevOps quality survey)                 &  -   &  -  &  -  &  +  \\
-    Chatterjee 2024 (Operational efficiency DevOps)     &  +   &  -  &  -  &  +  \\
-    Savor 2016 (Facebook continuous deployment)         &  +   &  -  &  -  &  ++ \\
-    Offerman 2022 (DevOps adoption effects)             &  +   &  -  &  -  &  +  \\
-    Hsu 2019 (Security automation book)                 &  ++  &  ++ &  ++ &  +  \\
-    Rohin 2018 (Mobile DevOps book)                     &  ++  &  +  &  -  &  ++ \\
-    Chung 2024 (DevSecOps metrics analysis)             &  +   &  +  &  +  &  +  \\
-    Ozdenizci 2024 (Mobile DevOps adoption)             &  +   &  +  &  +  &  +  \\
-    Byman 2024 (Mobile health CD)                       &  +   &  -  &  -  &  +  \\
-    Eramoa 2024 (DevOps in mobile)                      &  +   &  -  &  -  &  +  \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-
-\begin{table}[htbp]
-  \centering
-  \footnotesize
-  \caption{Kirjallisuuslähteiden teema-alueiden kattavuus}
-  \label{tab:rq_themes}
-  \begin{tabular}{p{7cm}cccc}
-    \toprule
-    \textbf{Lähde} & \textbf{CI/CD} & \textbf{Security} & \textbf{Mobiili} & \textbf{DevSecOps} \\
-    \midrule
-    Afifah 2024 (Code obfuscation)                      &  x   &  x  &  -  &  x \\
-    Aljohani 2023 (Unified DevSecOps framework)         &  x   &  x  &  -  &  x \\
-    Baheux 2023 (Android vulnerability detection)       &  -   &  x  &  x  &  - \\
-    Byman 2024 (Mobile health CD)                       &  x   &  x  &  x  &  - \\
-    Chatterjee 2024 (Operational efficiency DevOps)     &  x   &  -  &  -  &  - \\
-    Chung 2024 (DevSecOps metrics analysis)             &  x   &  x  &  -  &  x \\
-    Dupont 2021 (Incremental certification)             &  x   &  x  &  -  &  x \\
-    Eramoa 2024 (DevOps in mobile)                      &  x   &  -  &  x  &  - \\
-    Feio 2024 (Continuous security testing)             &  x   &  x  &  -  &  x \\
-    Grasselli 2023 (Vehicle digital twin)               &  -   &  x  &  -  &  - \\
-    Göttel 2023 (IEC 62443 validation)                  &  x   &  x  &  -  &  x \\
-    Hsu 2019 (Security automation book)                 &  x   &  x  &  x  &  x \\
-    Kohli 2020 (COVID app security)                     &  -   &  x  &  x  &  - \\
-    Kushwaha 2024 (Financial DevSecOps)                 &  x   &  x  &  -  &  x \\
-    Marandi 2023 (Security scanning pipeline)           &  x   &  x  &  -  &  x \\
-    Mukti 2023 (Password manager security)              &  -   &  x  &  x  &  - \\
-    Nikolov 2024 (Threat modeling)                      &  x   &  x  &  -  &  x \\
-    Nutalapati 2023 (Mobile security tools)             &  x   &  x  &  x  &  - \\
-    Offerman 2022 (DevOps adoption effects)             &  x   &  -  &  -  &  - \\
-    Ozdenizci 2024 (Mobile DevOps adoption)             &  x   &  x  &  x  &  x \\
-    Putra 2022 (Static-dynamic testing)                 &  x   &  x  &  x  &  x \\
-    Raman 2019 (SQLi test automation)                   &  -   &  x  &  -  &  - \\
-    Rane 2024 (Auto vs manual testing)                  &  -   &  x  &  -  &  - \\
-    Rangnau 2020 (Dynamic security testing)             &  x   &  x  &  -  &  x \\
-    Rohin 2018 (Mobile DevOps book)                     &  x   &  -  &  x  &  - \\
-    Saleem 2023 (DevOps quality survey)                 &  x   &  -  &  -  &  - \\
-    Savor 2016 (Facebook continuous deployment)         &  x   &  -  &  -  &  - \\
-    Schneider 2020 (Mobile banking fuzzing)             &  -   &  x  &  x  &  - \\
-    Zhu 2024 (Android SAST tools)                       &  -   &  x  &  x  &  - \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-
-Taulukosta~\ref{tab:rq_matrix} nähdään, että neljä päälähdettä
-kattavat laajimmin RQ1–RQ3-alueet, mutta RQ4:ää tukevia tutkimuksia on
-vähiten.
-
-\subsection{Lähdeanalyysi}
-\begin{description}
-    \item[\cite{rangnau2020_cst}] Artikkelissa esitellään tapaustutkimus, jossa integroidaan kolme dynaamista tietoturvan testausmenetelmää(WAST, SAS ja BDST) Docker- ja GitLab-pohjaiseen jatkuvan integraation ja toimituksen (CI/CD) putkeen. Tutkijat määrittelevät kahdeksan keskeistä vaatimusta DevSecOps-käytännön onnistuneelle käyttöönotolle, kuten nopean rakennusajan (alle 10 minuuttia), rinnakkaiset testiajojen mahdollisuudet sekä selkeät haavoittuvuusraportit. Tutkimuksen tulokset osoittavat näiden tavoitteiden pääosin toteutuneen. Käytännön haasteina nousivat esiin erityisesti konttien hallintaan ja testitapausten konfigurointiin liittyvät ongelmat, joihin tarjotaan alustavia ratkaisuehdotuksia. Tutkimus vastaa tutkimuskysymyksiin RQ1–RQ3, jotka liittyvät tietoturvatestausten integraatioon,työkalujen vertailuun sekä automatisoidun ja manuaalisen testauksen eroihin. Tutkimuksen rajoitteina ovat keskittyminen vain web-sovellusten testaukseen (ei mobiilisovelluksiin) sekä painotus dynaamisiin testeihin ilman staattisten testien (SAST) vertailua. Artikkeli tarjoaa kehitystiimeille käytännönläheisiä suosituksia DevSecOps-käytäntöjen tehokkaaseen käyttöönottoon.
-\end{description}
-
-\begin{description}
-    \item[\cite{marandi2023_ias}] Artikkelissa esitellään tapaustutkimus, jossa Docker-konttikuvien tietoturvaskannaus automatisoidaan GitHub Actions -pohjaisessa CI/CD-putkessa yhdistämällä Snyk (staattinen analyysi, SAST) ja StackHawk (dynaaminen testaus, DAST)build- ja test-stagioissa. Tulokset osoittavat, että SAST/DAST-yhdistelmä havaitsi varhaisessa kehitysvaiheessa merkittävästi enemmän haavoittuvuuksia sekä lyhensi skannauksen ja korjauksen kokonaiskestoa verrattuna manuaalisiin prosesseihin. Lisäksi reaaliaikainen dashboard-raportointi paransi kehittäjien näkyvyyttä turvallisuustilanteeseen ja nopeutti reagointia. Artikkeli vastaa RQ1: CI/CD-putken integroinnin kuvaus, RQ2: automaation edut manuaaliseen testaamiseen nähden,RQ3: työkalujen (Snyk ja StackHawk) valinta ja konfigurointi sekä RQ4: vaikutus käyttöönottoon ja ylläpitoon proaktiivisen valvonnan kautta. Laadunarvioinnissa vahvuuksina korostuvat selkeä case-toteutus ja syvä integraatio CI/CD-putkeen, kun taas rajoituksina mainitaan testauksen kohdistuminen vain yhteen web-sovellukseen (rajoitettu yleistettävyys mobiiliympäristöihin)ja manuaalisen testauksen vertailun pinta-alaisuus.
-\end{description}
-
-\begin{description}
-    \item[\cite{nikolov2024_fit}] Artikkelissa esitellään tapaustutkimus, jossa uhkamallinnus integroidaan Jenkins-pohjaiseen CI/CD-putkeen automatisoidusti OWASP Threat Dragon -työkalulla. Uhkatiedot tallennetaan MySQL-tietokantaan ja niitä hyödynnetään OWASP ZAP -työkalulla tehtävässä kohdennetussa tietoturvatestauksessa. Tulokset osoittavat, että automatisointi parantaa testauksen tehokkuutta hidastamatta kehitystä. Haasteina nousevat esiin työkalujen integroinnin monimutkaisuus ja automatisoinnin rajoitteet. Artikkeli tarjoaa ratkaisuksi kehyksen tietojen automaattiselle viennille ja integroinnille osaksi DevOps-prosessia. Rajoitteina ovat mobiilisovellusten ulkopuolelle jättäminen ja kvantitatiivisen arvioinnin puute. Tutkimus vastaa RQ1: integraatio Jenkins CI/CD-putkeen, RQ2: 3 haastetta (integroinnin vaikeus, uhkamallinnuksen automatisointi ja testaustekniikoiden yhdistäminen) ja RQ3: käytetyt työkalut (Threat Dragon, MySQL, OWASP ZAP).
-\end{description}
-
-\begin{description}
-    \item[\cite{afifah2024_coi}] Artikkelissa esitellään tapaustutkimus, jossa kehitetään GitHub Actions -pohjainen CI/CD-putki, joka automatisoi PHP-sovellusten lähdekoodin obfuskoinnin ja salauksen (Blowfish-algoritmilla), sekä integroi staattisen (SonarQube, SAST) ja dynaamisen(OWASP ZAP, DAST) tietoturvatestauksen. Tutkimuksen tulokset osoittavat, että lähdekoodin obfuskointi suojaa tehokkaasti koodin kaappauksilta ja vaikeuttaa sen ymmärtämistä hyökkääjän näkökulmasta. Lisäksi havaittiin, että obfuskointi lisää CI/CD-prosessin suoritusaikaa maltillisesti. Käytännön haasteina nousivat esiin työkalujen integrointi CI/CD-workflow’hun ja suorituskykyerojen mittaaminen eri sovellustyypeillä, joihin ratkaisuina esitetään valmiita Docker-kuvia ja -konfiguraatioita. Tutkimus vastaa pääkysymykseen RQ1 kuvaamalla, miten tietoturvatestit ja koodisuojaus voidaan automatisoida DevSecOps-prosessissa. RQ2 ja RQ3 saavat epäsuoraa vastausta käytettyjen työkalujen ja vaikutusten kautta, mutta manuaalitestausta tai mobiilisovelluksia ei tarkastella. Tutkimuksen rajoitteina ovat konteksti rajoittuen PHP-websovelluksiin, manuaalisten testausmenetelmien puuttuminen sekä mobiiliympäristöjen ulkopuolelle jääminen.
-\end{description}
-
-\begin{description}
-    \item[\cite{putra2022_devsecops}]Putran ja Kabetan (2022) tapaustutkimuksessa kehitetään ja otetaan käyttöön DevSecOps-malli ketterään kehitysprosessiin integroimalla automatisoituja tietoturvatestejä (SAST, DAST) CI/CD-putkeen verkkopohjaiselle Node.js/Express.js-sovellukselle ja Flutter-mobiilikäyttöliittymälle. Tutkimuksessa toteutettiin GitLab CI/CD -putki AWS EC2:lla, jossa Docker-kontit, GitLab Runner sekä työkalut Njsscan (SAST) ja OWASP ZAP(DAST) mahdollistivat nopean rakennus-, testaus- ja käyttöönottoprosessin. Automatisointi lyhensi julkaisusyklin 2–3 tunnista 3–4 minuuttiin ja paljasti haavoittuvuuden (CWE-327)commit-hetkellä. RQ1:een vastattiin eriyttämällä pipeline-vaiheet,käyttämällä kontteja ja ”fail-fast”-periaatetta, parhaiksi käytännöiksi nousivat automaattinen testaus enenn julkaisua ja salaisuuksien hallinta GitLab-muuttujilla. RQ2 ja RQ3 käsittelivät pääasiassa automatisoidun testauksen etuja, kuten nopeus, jatkuva testaus sekä käytettyjä työkaluja, jättäen manuaalisen testauksen rajat ja mobiilikohtaiset haasteet (esim. sovelluskauppajakelu) sivuun. RQ4:n osalta prosessi nopeutti käyttöönottoa ja vähensi ylläpitokustannuksia, vaikka mobiilispesifiä vaikuttavuutta ei kvantifioitu. Tutkimuksen vahvuuksiin kuuluu selkeä ja systemaattinen tekninen toteutus ja mittaustulokset, mutta rajoituksina ovat kapea teknologiavalikoima (Node.js/Flutter), rajallinen vertailu turvallisuusmetriikoissa sekä mobiilikontekstin pinnallinen käsittely,vaikka Flutter mainitaankin.
-\end{description}
-
-\begin{description}
-    \item[\cite{kushwaha2024_cct}]Artikkelissa kuvataan Azure DevOps-ympäristöön rakennettu konttipohjainen DevSecOps-putki, jossa uhkamallinnus (Microsoft TMT) sekä automatisoidut SAST-, DAST- ja SCA-vaiheet (Codacy, OWASP ZAP, GitHub Advanced Security/CodeQL) on integroitu CI/CD-työnkulkuun Docker-kuvien kokoamisesta tuotantoon; kohteena oli haavoittuvuuksilla siemenetty finanssialan web-sovellus, jossa uhkamallinnus paljasti 26 STRIDE-riskiä, Codacy 28 staattista ongelmaa, GHAS 16 koodivirhettä ja 3 kriittistä riippuvuutta, ZAP raportoi XSS- ja SQL-injektiohälytyksiä, ja kaikki skannaukset valmistuivat muutamassa minuutissa. RQ1: Integraatio toteutuu YAML-pohjaisena monivaiheisena putkena, joka käynnistyy jokaisesta commitista; parhaat käytännöt ovat shift-left-filosofia, konttien yhtenäiset rakennusvaiheet ja salaisuuksien skannaus. RQ2: Automaatio vähentää manuaalista työtä ja tarjoaa jatkuvan kattavuuden, mutta vaatii tulosten manuaalista priorisointia ja täydentäviä penetraatiotestejä. RQ3: Mainitut työkalut ovat Codacy, OWASP ZAP, GHAS/CodeQL ja Microsoft TMT; erillisiä manuaalisia mobiilityökaluja ei käsitellä. RQ4: Putki nopeuttaa sovelluksen käyttöönottoa, pienentää tuotantoriskejä ja helpottaa ylläpitoa, mutta mobiilisovelluksia ei tarkastella. Vahvuudet: realistinen finanssi-case, integroitu Azure DevOps-ratkaisu ja kvantitatiiviset haavoittuvuustulokse. Rajoitteet: web-keskeinen rajaus ilman mobiilikontekstia, tarkkojen skannausaikojen puuttuminen ja vertailun rajoittuminen yhteen CI-alustaan.
-\end{description}
-
-\begin{description}
-    \item[\cite{feio2024_empirical}] Artikkelissa esitellään empiirinen tapaustutkimus, jossa rakennetaan DevSecOps-kehys. Kahdeksanvaiheinen CI/CD-putki (Plan–Monitor) laajennetaan jatkuvalla turvallisuustestauksella, integroimalla työkaluja kuten SonarQube (SAST), OWASP Dependency-Check (SCA) ja OWASP ZAP (DAST) Jenkinsiin, mikä mahdollisti automaattisen haavoittuvuuksien tunnistamisen. Tuloksena havaittiin 1795 haavoittuvuutta, joista 47 kriittisiä, ja kehittäjät arvioivat työkalujen hyödyllisyyttä myönteisesti. RQ1: Integraatio toteutui laajentamalla DevOps-putkea uusilla testausvaiheilla ja automatisoiduilla työkaluilla. Parhaat käytännöt sisälsivät avoimen lähdekoodin työkalujen käytön sekä jatkuvan palautteen keräämisen. RQ2: Automatisoidut työkalut antavat jatkuvan kattavuuden ja nopeat tulokset, mutta eivät löydä kompleksisia logiikkavirheitä, kun taas manuaaliset (esim. penetraatiotestaus) vaativat erikoisosaamista ja puuttuivat pilotista. RQ3: Työkaluina käytettiin yleisimpiä SAST-, DAST- ja SCA-työkaluja, kuten SonarQube, OpenVAS ja ZAP. RQ4: Artikkelissa ei tarkasteltu mobiilisovelluksia, mutta DevSecOpsin käyttöönotto paransi haavoittuvuuksien tunnistusta ja kehittäjien tietoturvatietoisuutta. Laadullisesti tutkimuksen vahvuuksia olivat realistinen teollinen ympäristö, kvantitatiiviset tulokset, kehittäjäpalaute sekä työkalujen käytännön integrointi. Rajotteisiin kuuluivat mobiilikontekstin puute ja joidenkin pipeline-vaiheiden (käyttöönotto, operointi) toteuttamatta jääminen.
-\end{description}
-
-\begin{description}
-    \item[\cite{schneider_2020_fuzzing}]
-    Tapaustutkimus kuvaa automatisoidun fuzzing-pohjaisen tietoturvatestauksen käyttöönottoa turkkilaisen Kuveyt Türk -pankin Mobil Şube -mobiilisovelluksen taustapalveluihin. Keskeisenä työkaluna käytettiin Fuzzino-kirjastoa integroituna olemassa olevaan Citrus- ja Apache HttpClient -pohjaiseen testikehikkoon, joka ajetaan DevOps-putkessa WCF-rajapintoihin kohdistuvina HTTP-pyyntöinä.
-
-    Yhden AllBadStrings-heuristiikan avulla generoitiin yli 50 000 fuzzattua pyyntöä, joista keskimäärin 61\,\% saavutti palvelun, 27\,\% torjuttiin WAF-palomuurissa ja 12\,\% johti virhevastaukseen ilman suoraan hyödynnettäviä haavoittuvuuksia, mutta paljastaen syötedatan validointitarpeita.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} Integraatio toteutettiin lisäämällä Fuzzino-kirjasto olemassa olevaan testausinfrastruktuuriin.
-        \item \textbf{RQ2:} Automatisoinnin etuna nähtiin kyky vastata kasvaviin vaatimuksiin ja parantaa haavoittuvuuksien löytämisen tehokkuutta.
-        \item \textbf{RQ3:} Artikkelissa mainitaan työkalut Fuzzino, Citrus, Apache HttpClient, Appium, Selenium sekä WAF-ratkaisu ja pankin omat 2FA-palvelut.
-        \item \textbf{RQ4:} DevSecOps paransi testauksen jatkuvuutta ja palautteen nopeutta, mutta käyttöönoton nopeuteen ei havaittu merkittävää vaikutusta.
-    \end{itemize}
-
-    Tutkimuksen vahvuuksina korostuivat realistinen pankkiympäristö, kvantitatiiviset tulokset ja integraation yksityiskohtaisuus. Rajoitteina mainittiin teknologiakattavuuden ja mobiiliratkaisujen rajallisuus.
-\end{description}
-
-\begin{description}
-    \item[\cite{baheux2023_droidsectester}] esittelevät DroidSecTester-työkaluketjun, joka integroi kontekstia hyödyntävän mallipohjaisen tietoturvatestauksen Android-sovelluksiin nelivaiheisena DevSecOps-putkena. Työkaluketjuun kuuluvat myös FlowDroid data-analyysiin ja VPatChecker haavoittuvuuksien tunnistamiseen. Todettuna tuloksena esitetään, että GHERA-testialustalla vähintään 38 \% haavoittuvuuksista voitiin mallintaa ja tunnistaa nykyisellä haavoittuvuusmallin määrittelyllä.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} Integraatio toteutuu nelivaiheisena prosessina, jossa luodaan sovelluksen malli, rikastetaan sitä tietovirroilla FlowDroidilla, generoidaan testejä ConTestilla ja tunnistetaan haavoittuvuuksia VPatCheckerillä. Parhaat käytännöt liittyvät mallipohjaisen testauksen hyödyntämiseen tehokkuuden saavuttamiseksi ja kontekstin huomioimiseksi.
-        \item \textbf{RQ2:} Tutkimus painottuu automaatioon
-        \item \textbf{RQ3:} Artikkelissa mainitaan FlowDroid, ConTest ja VPatChecker automatisoituun testaukseen.
-        \item \textbf{RQ4:} Työkalun tavoitteena on auttaa kehittäjiä löytämään haavoittuvuuksia kehityksen aikana ja parantaa Android-ekosysteemin tietoturvaa, eikä se suoraan käsittele käyttöönottoa.
-    \end{itemize}
-
-     Vahvuuksina voidaan nähdä DroidSecTester-työkaluketjun toteutus ja kvantitatiiviset tulokset tunnistettujen haavoittuvuuksien määrästä. Rajoitteita ovat vertailun puute muihin työkaluihin haavoittuvuuksien tunnistustarkkuudessa ja Android-keskeisyys, joka rajoittaa yleistettävyyttä.
-\end{description}
-
-\begin{description}
-    \item[\cite{grasselli2023_digitaltwin}] esittelevät NFV-MANO-viitekehykseen pohjautuvan menetelmän, joka mahdollistaa automaattisen digitaalisen kaksosen (DT) käyttöönoton ja hallinnan älykkäiden ajoneuvojen kyberturvallisuustestaukseen. Digitaalista kaksonen toimii kyberharjoitusalueena, jossa voidaan turvallisesti kokeilla potentiaalisia hyökkäyksiä ja vastatoimia virtuaalisessa ympäristössä. Keskeisiksi työkaluiksi mainitaan Open Source MANO (OSM) orkestraattorina, OpenStack pilvi-infrastruktuurin hallintaan sekä Kubernetes konttien hallintaan. Tutkimuksessa toteutettiin käyttötapaus, jossa DT:n avulla toteutettiin onnistunut verkkoskannaus simuloimalla infotainment-järjestelmän altistumista (eng. compromising) Bluetoothin kautta, osoittaen mitkä laitteet olivat näkyvissä haavoittuvan sovelluksen kautta. Tuloksena havaittiin, että digitaalinen kaksonen mahdollistaa joustavan ja nopean testausympäristön luomisen, mikä nopeuttaa turvatoimien kehittämistä ja validointia.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} Automatisointi ja elinkaaren hallinta digitaalisten kaksoisversioiden käyttöönotossa, liittyy osittain myös DevOps-automaatioon. % TODO: read more
-        \item \textbf{RQ2:} -
-        \item \textbf{RQ3:} Työkaluina automaattiseen testaukseen mainitaan OSM, OpenStack, Kubernetes ja cansniffer1, mutta ne eivät ole kovin relevantteja.
-        \item \textbf{RQ4:} Automatisoidun digitaalisen kaksosen havaittiin parantavan nopeuttavan riskianalyysiä ja tuotantoon vientiä ja ylläpitokatkoksia, mutta vaikutuksia mobiilisovelluksiin ei tarkastella.
-    \end{itemize}
-
-    Vahvuuksia ovat käytännönläheinen arkkitehtuuritoteutus todellisilla työkaluilla (OSM, OpenStack), realistinen käyttötapaus ajoneuvon verkkojen simulointiin sekä joustavuuden demonstrointi. Rajoituksiin kuuluvat mobiilikontekstin puute, kvantitatiivisten tulosten vähäisyys sekä rajaus telekom-alan NFV-MANO-viitekehykseen, mikä rajoittaa yleistävyyttä.
-\end{description}
-
-\begin{description}
-    \item[\cite{mukti2023_passwordmanager}] Artikkeli esittelee RootPass-salasanan hallintasovelluksen, joka on toteutettu Flutterilla ja yhdistää RootBeer-kirjaston kahdeksaan heuristiikkaan perustuvan juuritunnistuksen (eng. root detection) sekä turvamekanismit: AES-256-salauksen, PBKDF2-avainjohdannuksen, Flutter Secure Storagen ja sormenjälkitunnistuksen.
-
-    Turvallisuutta mitattiin MobSF-penetraatiotestauksessa (60/100, Low Risk) ja ImmuniWeb-testillä OWASP Mobile Top 10 riskejä arvioitaessa. Tulosten mukaan RootPass saavutti korkeimman turvallisuuspisteet (60/100) verrattuna Keeperiin, LastPassiin ja Dashlaneen sekä vähemmän OWASP-riskejä (12 vs. 16–19). Root-testissä sovellus sulkeutui roottatuilla laitteilla 100 \%:n tarkkuudella.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} -
-        \item \textbf{RQ2:} -
-        \item \textbf{RQ3:} Artikkelissa mainitaan automatisoituja työkaluja kuten MobSF ja ImmuniWeb Mobile App Security Test.
-        \item \textbf{RQ4:} -
-    \end{itemize}
-
-     Vahvuuksia tutkimuksessa ovat realistinen Android-prototyyppi ja kvantitatiivinen vertailu tunnettuja sovelluksia vastaan. Rajoituksia ovat keskittyminen vain Androidiin ja root tunnistukseen, eikä varsinaisesti tietoturvatestaukseen tai DevSecOps-näkökulmaan.
-\end{description}
-
-\begin{description}
-    \item[\cite{kohli2020_covid_tracer}] Artikkelissa tutkitaan neljän Android-pohjaisen COVID-19 -kontaktinjäljityssovelluksen tietoturvaa keskittyen staattiseen analyysiin ja potentiaalisten hyökkäyspintojen tunnistamiseen. Analyysissä hyödynnettiin ensisijaisesti MobSF-työkalua koodin staattiseen tarkasteluun ja Drozeria hyökkäysrajapinnan kartoittamiseen. Keskeiset tulokset osoittivat useita OWASP Mobile Top 10 ja CWE -haavoittuvuuksia testatuissa sovelluksissa.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} -
-        \item \textbf{RQ2:} Automatisoitu MobSF havaitsee noin 70 \% haavoittuvuuksista ja tarvitsee manuaalista varmistusta sekä täydentävää dynaamista testausta.
-        \item \textbf{RQ3:} Artikkeli mainitsee MobSF:n, Drozerin, ADB:n, apktoolin, Memu-emulaattorin ja suunnitellun mutta käyttämättä jääneen Burp Suiten.
-        \item \textbf{RQ4:} -
-    \end{itemize}
-
-     Artikkelin vahvuuksiin kuuluvat case-toteutus todellisilla sovelluksilla ja kvantitatiivisten tulosten esittäminen, kun taas rajoituksia ovat testauksen painottuminen staattiseen analyysiin ja rajattuminen Androidiin sekä kontaktinjäljityssovelluksiin verrattuna laajempaan mobiilisovelluskehitykseen.
-\end{description}
-
-\begin{description}
-    \item[\cite{zhu2024_sast_tools}] Artikkeli keskittyy staattisten sovellusturvallisuustestaus (SAST) työkalujen vertailuun Android-ympäristössä. Tutkijat kehittävät VulsTotal-alustan, joka yhdistää 11 SAST-työkalua ja normalisoi niiden haavoittuvuusraportit. Tutkimuksessa luodaan 67 standardoitua haavoittuvuustyyppiä, joita testattiin synteettisillä (GHERA, MSTG\&PIVAA) ja CVE-pohjaisilla benchmarkeillä.
-
-    Konkreettisia tuloksia olivat työkalujen vaihteleva haavoittuvuuskattavuus (korkein 67\%, alin 22\%) ja tehokkuus eri vertailuaineistoilla, sekä tavukoodiin perustuvien työkalujen nopeampi suorituskyky.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} -
-        \item \textbf{RQ2:} -
-        \item \textbf{RQ3:} Mainitaan ja arvioidaan 11 automatisoitua SAST-työkalua Androidille.
-        \item \textbf{RQ4:} -
-    \end{itemize}
-
-    Tutkimuksen vahvuuksia ovat yhtenäisen arviointialustan luominen, kattava 11 työkalun vertailu, laaja empiirinen aineisto sekä realistiset testausympäristöt. Rajoituksena keskittyminen vain Android SAST-työkaluihin
-\end{description}
-
-\begin{description}
-    \item[\cite{rane2024_analysis_scanning}] vertailevat automatisoidun haavoittuvuus skannauksen ja manuaalisen penetraatiotestauksen tehokkuutta verkkosivustojen tietoturva-analyysissä. Keskeisiä tarkasteltuja työkaluja ovat automatisoidut skannerit kuten Netsparker ja penetraatiotestauksessa käytetyt työkalut kuten Burp Suite ja Nmap. Tutkimuksessa todettiin, että manuaalinen penetraatiotestaus on tarkempi ja tehokkaampi haavoittuvuuksien löytämisessä kuin automatisoitu skannaus, joka tuottaa usein vääriä positiivisia tuloksia.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} -
-        \item \textbf{RQ2:} Manuaalisen testauksen vahvuuksia ovat tarkkuus ja kyky havaita monimutkaisia haavoittuvuuksia, kuten käyttöoikeuksien korotus ja epäsuora objektiviittaus. Rajoituksena on testauksen vaatima suuri työmäärä. Automaation etuja ovat nopeus, resurssitehokkuus sekä toistettavuus, mutta sen heikkouksina korostuvat virhepositiivisten tulosten riski ja analyysin pinnallisuus.
-        \item \textbf{RQ3:} Työkaluihin kuuluivat automatisoiduille Netsparker/Invicti sekä manuaalisille Burp Suite, SQLmap, Metasploit ja Nmap.
-        \item \textbf{RQ4:} -
-    \end{itemize}
-
-     Tutkimuksen vahvuuksia ovat käytännönläheinen vertailu todellisella verkkosivustolla, kvantitatiiviset tulokset haavoittuvuuksien määristä sekä selkeä metodologinen jako automatisoitujen ja manuaalisten menetelmien välille. Rajoituksina yksittäiseen verkkopalveluun testaus, CI/CD-integraation puute ja mobiilinäkökulman sekä pitkäkestoisen seurannan puuttuminen.
-\end{description}
-
-\begin{description}
-    \item[\cite{raman2019_sqli}] artikkelissa esitellään ja verrataan automatisoitua SQLiAutoScript-menetelmän manuaaliseen lähestymistapaan laajamittaisten SQL-injektioiden penetraatiotestien hallinnassa web-sovelluksissa. Keskeisenä työkaluna menetelmässä hyödynnetään sqlmapia yhdistettynä komentosarja- ja lokitustoimintoihin, testausympäristöinä toimivat Windows batch- ja Linux Bash -komentosarjat.
-
-   Vertailussa manuaaliseen testaukseen 24 kokeen otoksessa menetelmä suoritti 110 970 HTTP-kyselyä (noin 2813 \% enemmän), vähensi virheitä 66,7 \%, lyhensi yksittäisen testin ajankulun 30 \% ja lisäsi todennettuja löydöksiä 21 \%.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} Automatisoitu scriptaus mahdollistaa testien jatkuvan suorittamisen, mikä tukee epäsuorasti CI/CD-integraatiota.
-        \item \textbf{RQ2:} Automatisoitu testaus vähentää virheitä, parantaa skaalautuvuutta ja säästää aikaa, kun taas manuaalinen testaus on altis ihmisvirheille ja hidastaa suurten testimäärien käsittelyä.
-        \item \textbf{RQ3:} Työkaluina käytettiin sqlmap:ia sekä automatisoiduissa että manuaalisissa testeissä.
-        \item \textbf{RQ4:} -
-    \end{itemize}
-
-    Vahvuuksia ovat kvantitatiiviset tulokset (esim. HTTP-pyynnöt, virhemäärät), realistinen testausympäristö sekä selkeä vertailu manuaalisen ja automatisoidun lähestymistavan välillä. Rajoituksiin kuuluvat keskittyminen vain web-sovelluksiin (ei mobiilia), rajattu työkalukattavuus (vain sqlmap) ja keskittyminen SQL injektioiden testaukseen.
-\end{description}
-
-\begin{description}
-    \item[\cite{gottel2023_validating}] esittävät kvalitatiivisen analyysin IEC 62443-4-2 -standardin mukaisten teollisuusautomaation ja ohjausjärjestelmien (IACS) komponenttien kyberturvavaatimusten automatisoidusta validoinnista DevSecOps-prosessissa. Analyysi kartoittaa standardin komponenttivaatimukset (CR:t) ja liittää ne CI/CD-putken vaiheisiin käyttämällä valko-, harmaa- ja mustalaatikkotestausta. Kirjoittajat tunnistavat CR-kohtaisesti sopivat kaupalliset työkalut sekä avoimen lähdekoodin vaihtoehdot.
-
-    Tuloksena syntyy kattavuusmatriisi, joka osoittaa, että suurin osa mustalaatikkotesteistä voidaan automatisoida, mutta valkolaatiikkotestauksen kattavuus on heikko. Useiden CR-kohtien validointi vaatii edelleen manuaalista työtä.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} Parhaat käytännöt: shift-left ja kaupallisten sekä avointen ratkaisuiden yhdistäminen.
-        \item \textbf{RQ2:} Artikkeli käsittelee joitain automaation etuja ja manuaalisen testauksen tarvetta.
-        \item \textbf{RQ3:} Keskeisiä työkaluja ovat CRT- ja VIT-sertifioidut kaupalliset fuzzerit ja skannerit (Acheron, Achilles, Defensics, Nessus, Raven ES, VHunter) sekä avoimen lähdekoodin ratkaisut kuten AFL++, Burp Suite, JMeter, nmap, OpenVAS, Scapy, Selenium ja SymCC.
-        \item \textbf{RQ4:} -
-    \end{itemize}
-
-    Artikkelin vahvuuksia ovat kattava työkaluvertailu sekä standardiin sidottu, yksityiskohtainen CR-tason kattavuusanalyysi. Rajoituksiin kuuluvat mobiilikontekstin puuttuminen, kvantitatiivisten tulosten vähyys sekä teollisten järjestelmien erityispiirteisiin (kuten HMI-rajapintojen rajoitukset) liittyvät haasteet.
-\end{description}
-
-\begin{description}
-    \item[\cite{aljohani2023_automating}] Artikkeli esittelee yhtenäisen kehyksen DevSecOps-prosessin automatisoidulle tietoturva-analyysille. Kehikko koostuu CI-putkeen liitettävästä agentista ja mikropalvelupohjaisesta moottorista, joka automatisoi SAST- ja DAST-skannaukset Shuffle-pohjaisessa SOAR-ympäristössä Docker-kontteja käyttäen.
-
-    Tapaustutkimuksessa DVJA-verkkosovellus skannattiin GitHub Actions- ja Jenkins-putkissa Dependency-Checkin, Detect Secretesin ja Nikton avulla, ja koko suoritus vei 15 min 50 s, josta SAST 4 min 30 s (4 löydöstä) ja DAST 50 s (20 löydöstä)
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} - % TODO: Lue tarkemmin
-        \item \textbf{RQ2:} Automaattiset työkalut nopeuttavat testausta ja vähentävät manuaalista työtä, mutta rajoituksina ovat väärien positiivisten tulosten määrä ja työkalujen konfiguroinnin vaativuus.
-        \item \textbf{RQ3:} Artikkelissa mainitut työkalut ovat automatisoituja työkaluja: Dependency-Check (SAST), Detect Secrets (SAST) ja Nikto Scanner (DAST).
-        \item \textbf{RQ4:} -
-    \end{itemize}
-
-    Tutkimuksen vahvuuksia ovat konkreettinen tapaustutkimus ja viitekehyksen käytännön sovellettavuuden osoittaminen, realistisen ympäristön käyttö testauksessa sekä kvantitatiivisten tulosten (suoritusajat, löydetyt haavoittuvuudet) esittäminen. Rajoituksia ovat rajattu teknologia (vain tietyt SAST- ja DAST-työkalut) sekä mobiilisovellusten sijaan yksittäisen Java-verkkosovelluksen testaus. Artikkelissa tunnistetaan myös Nikto-työkalun puute vakavuusluokituksessa rajoitteena.
-\end{description}
-
-\begin{description}
-    \item[\cite{dupont2021_incremental}] esittelevät Common Criteria (CC) -sertifiointiprosessin integrointia DevSecOps-malliin tavoitteena automatisoida tietoturvasertifioinnin todisteiden keräämistä. Prosessia havainnollistetaan palomuurikomponentin (iptables/netfilter) päivityksellä autoalan platooning-järjestelmässä. Sertifiointiputkeen sisällytettiin SAST- ja DAST-työkalut sekä GitLab CI/CD- ja Jenkins-ympäristöt. Automatisoidulla lähestymistavalla vaikutusanalyysiraporttien (IAR) valmisteluaika lyheni merkittävästi ilman laadun heikkenemistä.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} Integraatio toteutettiin mallintamalla CC- ja DevSecOps-vaiheet rinnakkain, parhaiksi käytännöiksi nousivat SARIF-standardin hyödyntäminen ja kaksivaiheinen raportointi.
-        \item \textbf{RQ2:} Automatisointi nopeutti testejä ja vähensi virheitä, mutta monimutkaiset tapaukset vaativat yhä manuaalista tarkastusta.
-        \item \textbf{RQ3:} Käytetyiksi automatisoinnin työkaluiksi nimetään SAST-työkalut Frama-C, SonarQube, Eclipse Steady, DAST-työkalut OpenSCAP, OpenVAS, OWASP ZAP, uhkamallinnustyökalut Threat Dragon ja Threagile sekä seurantaan ja operatiiviseen tietoturvaan tarkoitetut SIEM- ja SOAR-ratkaisut.
-        \item \textbf{RQ4:} % TODO: lue lähde tarkemmin ja pohdi hyödyllisyyttä.
-    \end{itemize}
-
-    Artikkelin vahvuuksia ovat konkreettinen tapaustutkimus autoteollisuuden palomuurin päivityksestä, DevSecOps-prosessin mallintaminen aktiviteettidiagrammeilla  ja esitys siitä, miten automaattisesti kerättyjä todisteita (SAST, DAST) voidaan hyödyntää sertifioinnissa. Rajoituksia ovat, että tapaustutkimus keskittyy vain vaikutusanalyysivaiheeseen, mobiilisovelluskontekstin puute. Vaikka työkaluja nimetään, kvantitatiivista dataa niiden tehokkuudesta tai vertailua eri työkalujen välillä ei esitetä yksityiskohtaisesti.
-\end{description}
-
-\begin{description}
-    \item[\cite{nutalapati2023_tools_techniques}] Artikkeli kuvaa automatisoidun mobiilisovellusten tietoturvatestauksen kehikkoa: rakennetaan testauskokonaisuus, joka yhdistää SAST-, DAST- ja IAST-tekniikat ja käyttää työkaluja OWASP ZAP, Burp Suite, Fortify, AppScan ja Veracode kehitysputken (CI/CD) yhteydessä. Tuloksina todetaan automatisoinnin parempi kattavuus, nopeus ja johdonmukaisuus sekä haavoittuvuuksien varhaisempi havaitseminen, mutta kvantitatiivisia mittareita ei raportoida.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} -
-        \item \textbf{RQ2:} Automaattinen testaus tuo tehokkuutta, skaalautuvuutta ja toistettavuutta, mutta kärsii vääristä positiivisista ja negatiivisista tuloksista. Manuaalinen testaus on hitaampaa ja virhealttiimpaa, mutta löytää kriittisiä ongelmia.
-        \item \textbf{RQ3:} Mainitut automatisoidut työkalut ovat OWASP ZAP, Burp Suite, Fortify, AppScan ja Veracode.
-        \item \textbf{RQ4:} -
-    \end{itemize}
-
-    Laadun vahvuuksia ovat kattava työkalujen ja tekniikoiden kartoitus, realistinen kuvaus mobiilihaasteista ja selkeä analyysi haasteista.
-\end{description}
-
-\begin{description}
-    \item[\cite{saleem2023_survey}] kyselytutkimuksessa tarkastellaan DevOps-käytäntöjen vaikutusta ohjelmistojen laatuun Pakistanissa.
-
-    Tutkimuksen tulokset osoittivat, että automaatiolla on vahvin positiivinen vaikutus ohjelmiston laatuun, kun taas jatkuvalla integraatiolla ja käyttöönotolla ei ollut yhtä merkittävää vaikutusta. Kommunikaatiolla ja kollaboraatiolla sekä mittauksella ja monitoroinnilla todettiin myös olevan vahva positiivinen yhteys ohjelmiston laatuun.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} -
-        \item \textbf{RQ2:} -
-        \item \textbf{RQ3:} Artikkeli nimeää useita CI/CD työkaluja, kuten GitLab ja Jenkins
-        \item \textbf{RQ4:} Artikkeli keskittyy yleiseen ohjelmiston laatuun DevOpsissa.
-    \end{itemize}
-
-    Rajoitteena otoskoko (14 ohjelmistoyrityksestä) ja maantieteellinen alue (Pakistan).
-\end{description}
-
-\begin{description}
-    \item[\cite{chatterjee2024_operational_efficiency}] Tapaustutkimus tarkasteli jatkuvan integraation ja jatkuvan toimituksen (CI/CD) sekä DevOps-käytäntöjen integrointia ohjelmistotoimitusprosessiin tehokkuuden parantamiseksi.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} Artikkeli tarjoaa konkreettisen mallin CI/CD-integroinnille DevOpsiin. Parhaiksi käytännöiksi nostettiin sprinttipohjainen kehitys, monen ympäristön (Dev, Prod) käyttö sekä testauksen automatisointi.
-        \item \textbf{RQ2:} Tutkimuksessa todettiin, että automatisointi vähensi virheitä, nopeutti käyttöönottoa ja paransi laatua, kun taas manuaalinen testaus oli hidasta ja virhealtista, aiheuttaen viivästyksiä ja laadullisia ongelmia. Tietoturvaa ei tarkasteltu, mutta voidaan osittain soveltaa.
-        \item \textbf{RQ3:} Artikkeli listaa CI/CD-työkaluja, mutta ei tietoturvatestaus-työkaluja
-        \item \textbf{RQ4:} Tutkimuksen tapausesimerkki osoittaa merkittävät hyödyt automaatiosta verrattuna manuaalisiin menetelmiin: automatisoitu CI/CD-putki vähensi merkittävästi käyttöönottoaikaa, paransi ohjelmiston laatua sekä lisäsi asiakastyytyväisyyttä ja liiketoiminnan tehokkuutta.
-    \end{itemize}
-
-    Vahvuutena realistinen AWS toteutus ja selkeä liike-elämään esimerkki tapaus.
-    Rajoitteena tutkimuksessa ei käsitellä tietoturvaa taikka mobiilisovelluksia.
-\end{description}
-
-\begin{description}
-    \item[\cite{savor2016_facebook}] Artikkeli tarkastelee jatkuvaa käyttöönottoa kahdessa hyvin erilaisessa yrityksessä, Facebookissa ja OANDAssa, analysoiden sen käytäntöjä ja vaikutuksia kvantitatiivisesti ja kvalitatiivisesti usean vuoden ajalta.
-
-    Keskeisenä tuloksena todetaan, että jatkuva käyttöönotto ei estä tuottavuuden ja laadun skaalautumista insinööritiimin koon ja koodikannan kasvaessa merkittävästi. Facebookilla raportoitiin kriittisten ongelmien määrän pysyneen vakaana, vaikka julkaisumäärät kasvoivat merkittävästi.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} Artikkelissa kuvataan jatkuvan käyttöönoton prosessia, mutta tietoturvaa ei käsitellä.
-        \item \textbf{RQ2:} -
-        \item \textbf{RQ3:} Tietoturva-työkaluja (kuten SAST/DAST) ei käsitellä
-        \item \textbf{RQ4:} Jatkuva käyttöönotto nopeutti kehittäjien toimituskykyä (esim. päivittäiset vs. viikottaiset julkaisut) ja paransi motivaatiota, mutta vaati jatkuvaa työkalujen ja koulutuksen investointia. Vaikutuksia mobiilisovellusten käyttöönottoon tarkastellaan epäsuorasti.
-    \end{itemize}
-
-    Artikkelin vahvuuksia ovat kahden erikokoisen yrityksen tapaustutkimus ja pitkän aikavälin (7 ja 5 vuotta) kvantitatiivinen ja kvalitatiivinen analyysi, jotka tuottavat realistisia tuloksia skaalautuvuudesta ja laadusta.
-    Rajoitteena mobiilikehityksen konteksti puuttuu eikä tietoturvaa käsitellä.
-
-
-\end{description}
-
-\begin{description}
-    \item[\cite{offerman2022_practices}] kyselytutkimus käsittelee DevOps-käytäntöjen käyttöönottoa ja vaikutuksia organisaation suorituskykyyn. Tulokset perustuvat kyselyyn, jossa selvitettiin 14 DevOps-käytännön omaksumisastetta sekä koettuja vaikutuksia ohjelmistotoimitukseen ja organisaation suorituskykyyn.
-
-    DevOps-käytäntöjen käyttöönotolla oli myönteinen vaikutus erityisesti toimitusten tiheyteen, kehitysajan lyhentymiseen ja virheiden aikaisempaan tunnistamiseen, mikä vaikutti positiivisesti koko organisaation suorituskykyyn.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} -
-        \item \textbf{RQ2:} -
-        \item \textbf{RQ3:} Keskeiset työkalut ja ympäristöt mainitaan yleisellä tasolla käytäntöjä tukevina teknologioina.
-        \item \textbf{RQ4:} Vaikutusta käyttöönottoon ja ylläpitoon tarkastellaan ohjelmistotoimituskyvyn (esim. käyttöönoton tiheys ja aika) ja yleisen organisaation suorituskyvyn kautta, ja vaikutukset koettiin pääasiassa positiivisiksi, joskin jotkin käytännöt korreloivat heikommin tai negatiivisesti tiettyihin suorituskykymittareihin.
-    \end{itemize}
-
-    Vahvuutena laaja kansainvälinen kyselytutkimus eri toimialoilla, kvantitatiivisen datan kerääminen käytäntöjen omaksumisesta ja koetuista vaikutuksista sekä kattava katsaus yleisimpiin DevOps-käytäntöihin.
-    Rajoitteina tutkimus perustuu subjektiivisiin, itsearvioituihin tuloksiin ja tutkimuksessa ei tarkastella mobiilikontekstia tai tietoturvaa.
-\end{description}
-
-\begin{description}
-    \item[\cite{hsu2019_practical}]
-\end{description}
-
-\begin{description}
-    \item[\cite{rohin2018_book}]
-\end{description}
-
-\begin{description}
-    \item[\cite{chung2024_devsecops}] laadullinen tutkimus käsittelee tärkeimpiä mittareita DevSecOpsin menestyksen arvioimiseksi ja sen etuja sekä parannusmahdollisuuksia.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} Integraatio tehdään vaiheittain tuomalla turvallisuustestit jo kehitysympäristö-tasolle ja automatisoimalla ne pipelineen.
-        \item \textbf{RQ2:} Tutkimus korostaa automatisoidun testauksen (SAST/DAST) nopeutta ja toistettavuutta, mutta huomauttaa manuaalisen pentestin tarpeesta kriittisten reunatapausten varmistamisessa. Automatisointi voi silti tuottaa vääriä positiivisia tuloksia.
-        \item \textbf{RQ3:} Mainitut työkalut sisältävät uhkamallinnus-työpajat, penetraatiotestauksen, SAST-, DAST-, IAST- ja infrastruktuuriskannerit, CI/CD-orkestraattorit sekä Quirkos-analytiikan.
-        \item \textbf{RQ4:} Jatkuva integraatio ja -julkistus (CI/CD) lyhensivät julkaisuaikoja. DevSecOps-putkeen upotetut SAST-, DAST- ja konttien konfiguraatio skannaukset pienensivät tuotanto korjausten määrää, mikä näkyi ylläpitokustannusten laskuna. Jatkuva valvonta (ylläpito → monitorointi → palaute) ja IaC-pohjaiset päivitysmekanismit tehostivat elinkaaren aikaisia päivityksiä, jolloin käyttökatkot ja rollback-tapaukset vähenevät.
-    \end{itemize}
-
-    Tutkimus hyödyntää useita eri aineistonkeruumenetelmiä (haastattelut, kirjallisuuskatsaus, video- ja lehtianalyysi)
-    Rajoituksina voidaan pitää mobiilisovelluskehityksen kontekstin puuttumista, sillä tutkimus käsittelee DevSecOpsia yleisesti ohjelmistokehityksessä.
-\end{description}
-
-\begin{description}
-    \item[\cite{ozdenizci2024mobilizing}] Artikkeli tarkastelee keskikokoisen ohjelmistoyrityksen Mobile DevOps-toteutusta, jossa rakennettiin GitHub Actions- ja Jenkins-pohjainen CI/CD-putki sekä liitettiin mobiilikohtaiset testaus-, julkaisu- ja tietoturvatoiminnot.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} Tutkimus esittelee toiminnallisia strategioita tunnistettujen haasteiden ratkaisemiseksi.
-        \item \textbf{RQ2:} Automaattinen testaus tunnistaa laitekohtaisia ongelmia, mutta ei visuaalisia virheitä.
-        \item \textbf{RQ3:} Mainitut työkalut ovat Appium, Espresso, TestFlight, OWASP ZAP ja Nessus automatisoituihin tarkastuksiin sekä GitHub-koodikatselmukset ja TestFlightin beetatestaajat manuaalisiin arviointeihin.
-        \item \textbf{RQ4:} Mobiili kontekstissa hitaampi prosessi web kontekstiin verrattuna.
-    \end{itemize}
-
-    Vahvuutena on realistinen tapaustutkimus yhdessä yrityksessä ja ...
-    Rajoitteena vain yhden yrityksen tapauksen tarkastelu.
-\end{description}
-
-\begin{description}
-    \item[\cite{byman2024continuous}] tutki jatkuvan toimituksen soveltamista terveysmobiilisovelluksiin ja esitteli suunnitelman sekä toteutuksen CI/CD-putkelle tähän tarkoitukseen.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:}
-        \item \textbf{RQ2:} Manuaalisen prosessin rajoituksena on alttius virheille ja epäjohdonmukaisuus, kun taas automatisoinnin etuja ovat toistettavuus, tehokkuus ja vakaus toistuviin tehtäviin.
-        \item \textbf{RQ3:} Mainittuja työkaluja ovat muun muassa GitLab CI/CD, Fastlane, Gradle, Android Studio, Google Play Console API. Tietoturvaan liittyen mainitaan SonarQube staattiseen analyysiin ja Docker Scout konttien skannaukseen
-        \item \textbf{RQ4:} Jatkuvan toimituksen prosessi mahdollistaa nopeammat päivitykset ja virheenkorjaukset.
-    \end{itemize}
-
-    Työn vahvuuksia ovat konkreettisen CI/CD-putken suunnittelu ja toteutus terveysmobiilisovellusten kontekstissa, realistisen kehitysympäristön käyttö ja automaation hyötyjen vertailu manuaaliseen prosessiin. Rajoitteina keskittyminen terveys sovelluksiin niiden poikkeuksellisten regulatiivisten vaatimusten vuoksi.
-\end{description}
-
-
-\begin{description}
-    \item[\cite{eramo2024empirical}] Artikkelissa tutkitaan DevOps-käytäntöjen roolia mobiilisovellusten kehityksessä analysoimalla Android-sovellusten kehitystyötä 7 441 GitHub-repositorion pohjalta. Tutkimus keskittyy commit-viestien luokitteluun ja niiden yhdistämiseen DevOps-prosessin eri vaiheisiin.
-
-    Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
-    \begin{itemize}
-        \item \textbf{RQ1:} -
-        \item \textbf{RQ2:} Automaattisen testauksen eduiksi mainittiin tehokkuuden lisääntyminen ja nopea palaute, kun taas manuaalisen testauksen etuina nähtiin sen korvaamattomuus erityisesti käytettävyystestauksessa ja monimutkaisissa skenaarioissa.
-        \item \textbf{RQ3:} -
-        \item \textbf{RQ4:} -
-    \end{itemize}
-
-    Vahvuuksina tutkimuksessa olivat realistinen ympäristö todellisten Android-sovellusten repositorioista, laaja kvantitatiivinen aineisto sekä selkeä yhteys DevOps-käytäntöihin. Rajoitteina olivat vain avoimen lähdekoodin repositorioiden analysointi ja potentiaaliset virheet manuaalisessa luokittelussa.
-\end{description}
+
+
+    \section{RQ1 – Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusta DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?}
+    \label{sec:rq1}
+
+    Tähän tutkimuskysymykseen löytyi 24 relevanttia lähdettä. Niistä 9 käsitteli mobiilisovelluksia, esimerkiksi automatisoitua Android-fuzzingia \cite{schneider_2020_fuzzing} ja kontekstia hyödyntävää DroidSecTester-mallia \cite{baheux2023_droidsectester}. 13 lähdettä käsittelee DevSecOps-integraatiota, kuten dynaamisen, staattisen ja ohjelmistokomponentti-analyysin yhdistämistä Docker-pohjaisiin GitHub Actions-putkiin \cite{marandi2023_ias}, uhkamallinnusta Jenkins-ympäristössä \cite{nikolov2024_fit}, Azure DevOpsiin rakennetun monivaiheisen putken SAST/DAST/SCA-ketjua \cite{kushwaha2024_cct} sekä laaja-alaisia jatkuvan turvallisuustestauksen kehyksiä \cite{feio2024_empirical,aljohani2023_automating}.
+
+    Tulosten esitystä varten aineisto jäsentyy kahteen alalukuu: ensin tarkastellaan integrointia CI/CD-putkessa ja sen jälkeen parhaimpia DevSecOps-käytäntöjä. Lopuksi esitetään tiivis yhteenveto, joka kokoaa vastauksen RQ1:een.
+
+    \subsection{Integrointimallit CI/CD-putkessa}
+
+    Tutkimusaineistossa mobiilisovellusten tietoturvatestaus integroitiin tyypillisesti jatkuvan integraation ja toimituksen (CI/CD) putkeen erillisissä kontitetuissa vaiheissa. Näiden vaiheiden suoritus käynnistettiin jokaisen ohjelmistomuutoksen yhteydessä, ja niiden tarkoituksena oli pitää kehityssyklin kokonaiskesto mahdollisimman lyhyenä. Tutkituissa lähteissä yleisimpiä CI/CD-automaatioalustoja olivat GitHub Actions ja Jenkins, joita käytettiin usein yhdessä Docker-konttien kanssa.
+
+    GitHub Actions valittiin useassa aineistossa työkaluksi DevSecOps-testauksen automatisoinnissa. \cite{marandi2023_ias} kehittivät CI/CD-putken, jossa Snyk- ja StackHawk-työkalut suorittavat sovelluksen staattisen (SAST) ja dynaamisen (DAST) analyysin automaattisesti Docker-konttien rakennuksen yhteydessä. Tämä lähestymistapa nopeutti haavoittuvuuksien havaitsemista merkittävästi. \cite{afifah2024_coi} puolestaan hyödynsivät GitHub Actionsia automaattisen koodin peittämisen (obfuskoinnin) toteuttamiseen CI/CD-putkessa PHP-sovelluksen lähdekoodin suojaamiseksi kaappausyrityksiltä. Molemmat tutkimukset osoittivat, että GitHub Actionsia voidaan käyttää automaattisten tietoturvatoimenpiteiden, kuten haavoittuvuustestauksen ja koodin suojauksen, integroimiseen ja suorittamiseen osana jatkuvaa kehitysprosessia, edistäen tietoturvan testausta.
+
+    Useissa tarkastelluissa ratkaisuissa Jenkins-alustaa hyödynnettiin tietoturvatestauksen vaiheistamiseen ja automaattisten testausprosessien integroimiseen osaksi kehitysprosessia. \cite{nikolov2024_fit} rakensivat Jenkins-putken, jossa ensin laadittiin uhkamallit OWASP Threat Dragonilla, jonka jälkeen nämä uhkamallit tallennettiin tietokantaan ohjaamaan myöhemmin toteutettavia automaattisia haavoittuvuusskannauksia OWASP ZAP -työkalulla. Tämä mahdollisti tietoturvariskien järjestelmällisen tunnistamisen ja kohdennetun testauksen ilman merkittävää haittaa kehityksen nopeudelle. \cite{feio2024_empirical} puolestaan loivat Jenkins-pohjaisen DevSecOps-kehyksen, joka jakautui kahdeksaan eri vaiheeseen ja yhdisti useita automatisoituja tietoturvatyökaluja, kuten SonarQuben (SAST), OWASP ZAP:n (DAST) sekä Dependency-Checkin (riippuvuuksien analyysi). Tämän ratkaisun avulla kehittäjät pystyivät tunnistamaan suuren määrän haavoittuvuuksia tehokkaasti osana jatkuvaa kehitysprosessia.
+
+    Azure DevOps -ympäristössä \cite{kushwaha2024_cct} toteuttivat finanssisovellukselle monivaiheisen, YAML-pohjaisen DevSecOps-putken, jossa turvallisuustyökalut integroitiin jatkuvan integraation ja toimituksen eri vaiheisiin. Putkeen kuuluivat uhkamallinnus Microsoft Threat Modeling Toolilla, staattinen analyysi Codacylla sekä dynaaminen testaus OWASP ZAP -työkalulla, mikä mahdollisti uhkien varhaisen tunnistamisen ja nopean reagoinnin jo kehitysvaiheessa. \cite{putra2022_devsecops} käyttivät puolestaan Dockeria ja GitLab Runneria automatisoidakseen Node.js- ja Flutter-sovellusten jatkuvan integraation, tietoturvatestauksen ja käyttöönoton. Tällä saavutettiin merkittävä ajallinen säästö, sillä aiemmin useita tunteja kestänyt manuaalinen prosessi lyheni muutamaan minuuttiin. \cite{dupont2021_incremental} puolestaan havainnollistivat DevSecOps-käytäntöihin perustuvaa lähestymistapaa Common Criteria -sertifioinnin vaikutusanalyysivaiheen automatisointiin. Tässä lähestymistavassa sertifiointia varten tarvittava todistusaineisto tietoturvatestausten tuloksista kerättiin automatisoidusti hyödyntämällä GitLab-ympäristöä.
+
+    Mobiilisovelluksiin keskittyvissä tutkimuksissa käytettiin lisäksi juuri mobiilialustoille kehitettyjä ratkaisuja. \cite{schneider_2020_fuzzing} ajoivat automatisoidun fuzzing-testauksen pankkisovelluksen taustapalveluihin osana automatisoitua testausprosessia, minkä ansiosta voitiin nopeasti suorittaa suuri määrä testejä ja tunnistaa mahdollisia heikkouksia ja parannuskohteita syötteiden käsittelyssä. Fuzzing-menetelmä auttoi erityisesti tunnistamaan odottamattomien syötteiden aiheuttamia virhetilanteita palvelujen rajapinnoissa, vaikka suoraan hyväksikäytettäviä haavoittuvuuksia ei löytynytkään. \cite{baheux2023_droidsectester} kehittivät Android-sovelluksille suunnatun DroidSecTester-työkaluketjun, joka käyttää mallipohjaista (eng. model based) tietoturvatestausta huomioiden sekä staattisen että dynaamisen kontekstin. Työkaluketjun osana oleva VPatChecker pystyy tunnistamaan haavoittuvuuksia ja tuottamaan abstrakteja hyökkäysmalleja hyödyntämällä sovelluksen toimintamalleja ja tunnettuja haavoittuvuusmalleja. \cite{ozdenizci2024mobilizing}. puolestaan hyödynsivät GitHub Actions- ja Jenkins-alustoja mobiilisovellusten käyttöliittymä- ja tietoturvatestauksen orkestroinnissa käyttäen esimerkiksi Appiumia ja OWASP ZAPia. He havaitsivat, että jatkuvan integraation ja jakelun (CI/CD) prosesseissa esiintyy erityisesti mobiilialustoille tyypillisiä haasteita, kuten työkalujen yhteensopivuuteen, eri laitteiden ja käyttöjärjestelmien testaukseen sekä sovelluskauppojen julkaisuprosesseihin liittyviä ongelmia. Lisäksi \cite{byman2024continuous} toteutti CI/CD-putken terveysalan mobiilisovelluksille huomioiden erityisesti lainsäädännön vaatimukset, minkä vuoksi automatisoitua julkaisuprosessia piti mukauttaa säädösten edellyttämiin manuaalisiin tarkastuksiin. Toteutuksessa huomioitiin tietoturva, ja esimerkiksi Docker Scout -työkalua ehdotettiin käytettäväksi konttien haavoittuvuuksien tarkastamiseen. Turvallisuustestauksen integrointi oli osa CI/CD-putkea, mikä mahdollisti tietoturvan tarkastamisen tehokkaasti.
+
+    Useimmissa tutkimuksissa (\cite{marandi2023_ias,dupont2021_incremental,kushwaha2024_cct,feio2024_empirical}) yhteinen tavoite on sijoittaa tietoturvatestauksen vaiheet mahdollisimman aikaisin (shift-left) kehityssykliin  \cite{marandi2023_ias} toteuttaa SAST- ja DAST-skannaukset kontitetussa CI/CD-putkessa ja käsittelee myös skannausten rinnakkaistamista , kun taas \cite{kushwaha2024_cct} esittelee konttipohjaisen, automatisoidun Azure-pipeline-ratkaisun. Näiden ratkaisujen tavoitteena on, että haavoittuvuudet havaitaan ja korjataan nopeasti ilman merkittävää vaikutusta ohjelmiston kokonaistoimitusaikaan. Kokonaisuutena integroidut, automatisoidut monivaiheiset testausmallit osoittavat, että korkea testauskattavuus ja laatu voidaan saavuttaa heikentämättä kehitystehokkuutta.
+
+    \subsection{Parhaat DevSecOps-käytännöt}
+
+    Tutkimuksen perusteella voidaan tunnistaa kymmenen parasta käytäntöä mobiilisovellusten tietoturvatestauksen integroimiseksi DevSecOps-prosessiin:
+
+    \subsubsection{1. Shift-left: turvallisuustestaus mahdollisimman aikaisin kehityssyklissä}
+
+    Shift-left on yksi tärkeimmistä DevSecOps-käytännöistä. Sen tarkoituksena on tuoda tietoturvatestaus ja siihen liittyvät aktiviteetit mahdollisimman varhaisiksi osiksi ohjelmistokehityksen elinkaarta. Käytännössä tämä tarkoittaa esimerkiksi uhkamallinnuksen hyödyntämistä jo kehityksen suunnitteluvaiheessa sekä sen integroimista automatisoituun jatkuvan integraation prosessiin. \cite{nikolov2024_fit} esittävät tutkimuksessaan, miten uhkamallit voidaan sisällyttää Jenkins-pohjaiseen CI/CD-putkeen niin, että niiden tuloksia käytetään automatisoidusti ohjaamaan myöhemmin suoritettavia haavoittuvuusskannauksia. Tämä varmistaa, että tunnistetut uhkat voidaan käsitellä tehokkaasti ja järjestelmällisesti kehitysprosessin aikana.
+
+    Shift-left-lähestymistavan hyötyjä ovat myös korostaneet \cite{kushwaha2024_cct} finanssisovellusten kehityskontekstissa sekä \cite{feio2024_empirical} laajemmassa DevSecOps-kehyksessä. Tutkimukset osoittavat, että varhain suoritettu uhkamallinnus ja automatisoidut SAST- ja DAST-testaukset mahdollistavat haavoittuvuuksien nopean havaitsemisen ja korjaamisen. Tämä vähentää ohjelmistokehityksen riskejä ja parantaa ohjelmistojen yleistä turvallisuutta. Lisäksi \cite{kushwaha2024_cct} raportoivat, että integroitu uhkamallinnus ja automaattiset testit vähensivät manuaalisen tarkistustyön määrää, mikä kevensi kehitysprosessia.
+
+    \subsubsection{2. SAST-, DAST- ja SCA-testauksen automatisoitu integrointi CI/CD-putkeen}
+
+    DevSecOps-menetelmissä staattisen (SAST) ja dynaamisen (DAST) tietoturvatestauksen automatisoitu yhdistäminen CI/CD-putkeen on keskeinen osa tehokasta ja jatkuvaa turvallisuuden varmistamista. SAST-testauksessa analysoidaan lähdekoodia jo ennen sovelluksen rakentamista, kun taas DAST-testauksella havaitaan ajonaikaisia ongelmia suorittamalla sovellukseen reaaliaikaisia hyökkäyssimulaatioita. Automatisoimalla nämä vaiheet DevSecOps-putkeen voidaan saavuttaa huomattavia etuja, kuten nopeampi haavoittuvuuksien havaitseminen ja korjaaminen, korkea testauksen kattavuus sekä kehityksen tehokkuuden parantuminen \cite{feio2024_empirical,kushwaha2024_cct}.
+
+    \cite{kushwaha2024_cct} integroivat Azure DevOps -ympäristöön automatisoidut turvallisuustestit Codacy- ja OWASP ZAP -työkaluilla, mahdollistaen aikaisessa vaiheessa tehtävät staattiset ja dynaamiset testit. He havaitsivat tämän parantavan finanssisovellusten tietoturvaa sekä vähentävän manuaaliseen tarkistukseen kuluvaa aikaa \cite{kushwaha2024_cct}. Vastaavasti \cite{marandi2023_ias} osoittivat Docker-kontteja hyödyntävällä GitHub Actions -putkella, miten Snykin (SAST) ja StackHawkin (DAST) automatisoitu yhdistäminen nopeuttaa merkittävästi haavoittuvuuksien tunnistamista ja korjaamista jo sovelluksen kehitysvaiheessa.
+
+    Näin SAST- ja DAST-testauksen yhdistäminen automatisoiduksi prosessiksi CI/CD-putkessa muodostaa DevSecOpsin ytimen, jossa tietoturvatestaaminen integroidaan ohjelmistokehityksen arkeen.
+
+    \subsubsection{3. Salaisuuksien hallinta ja turvallinen käsittely CI/CD-prosesseissa}
+
+    Salaisuuksien turvallinen käsittely on olennainen osa CI/CD-prosessin tietoturvaa. Automatisoiduissa kehitysputkissa salaisuuksien, kuten salasanojen, API-avaimien ja sertifikaattien turvallinen käsittely on välttämätöntä, jotta voidaan välttää niiden päätyminen vääriin käsiin. Tutkimusten mukaan automatisoitu salaisuuksien tunnistus ja hallinta CI/CD-putkissa, esimerkiksi käyttämällä Detect Secrets -työkalua, mahdollistaa salaisuuksien tehokkaan skannauksen jo lähdekoodin analysointivaiheessa. Tämä vähentää merkittävästi riskiä salaisuuksien joutumisesta vääriin käsiin kehitysprosessin aikana \cite{aljohani2023_automating}.
+
+    Lisäksi käytännössä tehokas salaisuuksien hallinta edellyttää selkeitä menettelytapoja (eng. policy) ja jatkuvaa valvontaa, jonka avulla voidaan estää luvaton pääsy ja väärinkäytökset. Käyttämällä automatisoituja turvallisuustyökaluja sekä keskitettyjä salaisuushallinnan palveluita voidaan saavuttaa kattava näkyvyys ja hallinta salaisuuksien käytöstä ja säilyttämisestä kaikissa kehitys- ja tuotantoympäristöissä. Tämä lähestymistapa tukee myös säädösten noudattamista ja auditointia, mikä on erityisen tärkeää tiukasti säädellyillä aloilla kuten terveysalalla ja finanssisektorilla \cite{byman2024continuous}.
+
+    \subsubsection{4. Infrastructure-as-Code (IaC) ja konttien turvallinen hallinta}
+
+    Konttiteknologiat (Docker) ja Infrastructure-as-Code (IaC) ovat olennaisia elementtejä DevSecOps-lähestymistavassa, sillä ne tukevat vakioituja, toistettavia ja skaalautuvia testiympäristöjä. Docker-kontit mahdollistavat sovellusten yhtenäisen toiminnan eri kehitys- ja tuotantoympäristöissä, mikä vähentää ympäristöjen välisten erojen aiheuttamia virheitä ja nopeuttaa ohjelmistojen toimitusprosessia. Konttien avulla voidaan toteuttaa automaattiset tietoturvatarkistukset jatkuvan integraation ja toimituksen (CI/CD) vaiheissa, hyödyntäen sekä staattisia (SAST) että dynaamisia (DAST) testausmenetelmiä. \cite{marandi2023_ias,putra2022_devsecops,feio2024_empirical}
+
+    Esimerkiksi GitHub Actions -alustalla toteutetut automatisoidut Snyk- ja StackHawk-työkalut tunnistavat haavoittuvuuksia Docker-konttien rakennuksen aikana, mikä edistää merkittävästi tietoturvan havainnointia ja korjaamista kehityssyklin varhaisissa vaiheissa \cite{marandi2023_ias}IaC:n käyttö puolestaan mahdollistaa infrastruktuurin määrittelyn ja ylläpidon koodina, mikä tukee ympäristöjen toistettavuutta ja automaatiota. IaC-skannereilla (esim. Terraform- tai CloudFormation-kohtaiseen staattiseen analyysiin erikoistuneilla työkaluilla) voidaan tarkistaa infrastruktuurikoodi jo ennen käyttöönottoa \cite{marandi2023_ias}. Kokonaisuutena konttien ja IaC:n yhdistelmä edistää toistettavuutta ja vähentää ympäristöjen välisiä eroja testauksessa ja tuotannossa, mikä parantaa sovellusten tietoturvaa ja vakautta.
+
+    \subsubsection{5. Automatisoitu raportointi ja hallintapaneelit}
+
+    Automatisoitu raportointi ja selkeät hallintapaneelit ovat osa tehokasta DevSecOps-prosessia. Kun skannerit (esim. SAST, DAST ja secrets-tunnistus) ajetaan jokaisen CI/CD-ajon yhteydessä, tulokset kerätään ja visualisoidaan samassa putkessa ilman erillistä manuaalista vaihetta. Tämä tarjoaa kehitystiimeille ajantasaisen näkymän haavoittuvuuksien tilaan. \cite{marandi2023_ias,aljohani2023_automating}.
+
+    \cite{aljohani2023_automating} kuvaavat portaaliratkaisua, joka kokoaa Codacy-, OWASP ZAP- ja Detect Secrets-ajojen tulokset yhteen näkymään, kun taas \cite{marandi2023_ias} demonstroivat GitHub Actions -putkea, jossa Snykin ja StackHawkin tuottamat havainnot esitetään raportteina kehittäjille.
+
+    \subsubsection{6. Mobiilispesifisten työkalujen käyttö ja haasteiden ratkaiseminen}
+
+    Mobiilisovellusten kehittämisessä DevSecOps-lähestymistapa kohtaa erityisiä haasteita, joita ovat esimerkiksi laaja laite- ja käyttöjärjestelmäversioiden-hajanaisuus sekä mobiililaitteiden nopea teknologinen kehitys, mikä asettaa erityisiä vaatimuksia turvallisuudelle. Näiden haasteiden ratkaisemiseksi on kehitetty mobiililaitteille tarkoitettuja turvallisuustyökaluja ja -menetelmiä, joita voidaan tehokkaasti integroida jatkuvan integraation ja toimituksen (CI/CD) prosesseihin. DroidSecTester-työkaluketju on mallipohjainen tietoturvatestausratkaisu, joka kykenee hyödyntämään sekä sovelluksen staattista analyysiä että ajon aikaista toimintaa Android-sovellusten haavoittuvuuksien tunnistamiseen ja hyökkäysmallien generointiin, mahdollistaen näin tehokkaamman ja tarkemman turvallisuustestauksen mobiilisovelluskontekstissa \cite{baheux2023_droidsectester}.
+
+    Lisäksi mobiilisovellusten erityisiin riskeihin, kuten rootattujen laitteiden aiheuttamiin haavoittuvuuksiin, voidaan vastata lisäämällä sovelluksiin erityisiä suojausmekanismeja kuten roottaus-tunnistus. Esimerkiksi \cite{mukti2023_passwordmanager} osoittavat, että roottaus-tunnistuksen implementointi mobiilisovellukseen parantaa merkittävästi sen turvallisuutta ja estää arkaluontoisten tietojen, kuten salasanojen ja käyttäjätunnusten, luvattoman käytön, mikä on erityisen kriittistä sovelluksille, jotka käsittelevät arkaluonteisia tietoja \cite{mukti2023_passwordmanager}. Lisäksi mobiilisovellusten DevSecOps-toimitusketjuissa on huomioitava sovelluskauppojen erityisvaatimukset sekä sääntelyyn liittyvät menettelyt, joiden vuoksi täysin automatisoitu julkaisuputki ei aina ole mahdollinen. Esimerkiksi terveysmobiilisovellusten kohdalla jatkuvan toimituksen prosessia joudutaan usein mukauttamaan ja tauottamaan manuaalisilla tarkastuksilla, mikä rajoittaa jatkuvan toimituksen täyttä automaatiota, mutta turvaa samalla säädösten mukaisen toiminnan \cite{byman2024continuous}.
+
+    Näiden mobiilispesifisten työkalujen ja käytäntöjen käyttö sekä integrointi CI/CD-putkiin edellyttää aktiivista ylläpitoa ja työkalujen säännöllistä päivittämistä vastaamaan uusimpia teknisiä ja turvallisuusvaatimuksia \cite{ozdenizci2024mobilizing}.
+
+    \subsubsection{7. Automaattinen uhkamallinnus ja riskipohjainen testaus}
+
+    Automaattinen uhkamallinnus ja riskipohjainen testaus muodostavat osan DevSecOps-prosessia. Integroimalla uhkamallinnus CI/CD-putkeen, voidaan tunnistetut uhat järjestelmällisesti tallentaa tietokantaan, josta ne ohjaavat automaattisesti kohdennettua turvallisuustestausta. Tämä lähestymistapa mahdollistaa haavoittuvuuksien nopean tunnistamisen ja korjaamisen, mikä vähentää merkittävästi turvallisuusriskejä ilman, että kehityksen nopeus kärsii \cite{nikolov2024_fit}.
+
+    Myös Azure DevOps -ympäristössä toteutettu monivaiheinen putki, jossa käytetään Microsoft Threat Modeling työkalua uhkamallinnukseen sekä Codacyn ja OWASP ZAP:n kaltaisia työkaluja staattiseen ja dynaamiseen testaukseen, mahdollistaa turvallisuusriskien aikaisen tunnistamisen ja nopean reagoinnin jo kehitysvaiheessa. Tämä on erityisen arvokasta finanssisovelluksissa, joissa riskienhallinnan merkitys on erityisen suuri ja turvallisuusuhat voivat aiheuttaa merkittäviä taloudellisia seurauksia \cite{kushwaha2024_cct}. Kokonaisuutena automatisoidun uhkamallinnuksen ja riskipohjaisen testauksen yhdistelmä tarjoaa tehokkaan ja ennakoivan ratkaisun sovellusten tietoturvan jatkuvaan kehittämiseen ja ylläpitoon DevSecOps-ympäristössä.
+
+    \subsubsection{8. Sertifiointi- ja sääntelyvaatimusten huomioiminen ja automaattinen validointi}
+
+    Sertifiointi- ja sääntelyvaatimusten jatkuva huomiointi on keskeinen osa DevSecOps-käytäntöjä erityisesti mobiili- ja teollisuussovelluksissa, joissa regulaatiot ja standardit ovat tiukkoja ja vaatimustenmukaisuuden osoittaminen on kriittistä. DevSecOps mahdollistaa sertifiointivaatimusten ja standardien huomioimisen jo kehitysprosessin aikaisessa vaiheessa, mikä vähentää myöhäisessä vaiheessa tapahtuvan muutoksen aiheuttamia kustannuksia ja toimitusaikojen venymistä. Esimerkiksi \cite{dupont2021_incremental} esittävät, kuinka Common Criteria -sertifiointiin liittyvä vaikutusanalyysi voidaan automatisoida ja integroida DevSecOps-putkeen, jolloin tuotemuutosten vaikutukset tietoturvaominaisuuksiin analysoidaan ja todistusaineisto kerätään automatisoidusti. Tämä keventää ja nopeuttaa merkittävästi sertifiointiprosessia, mahdollistaen joustavan ja inkrementaalisen sertifioinnin ohjelmiston jatkuvan kehityksen yhteydessä.
+
+    Teollisten automaatiojärjestelmien turvallisuutta säätelevä ISA/IEC 62443 -standardi asettaa tarkat vaatimukset turvallisuuden validoinnille, mikä lisää tarvetta automatisoida validointiprosessit CI/CD-putkessa. \cite{gottel2023_validating} osoittavat, että automatisoitu validointi ISA/IEC 62443-4-2 standardin mukaisista komponenttivaatimuksista on välttämätöntä, jotta turvallisuusvaatimustenmukaisuus voidaan integroida saumattomasti osaksi jatkuvaa kehitysprosessia. Heidän analyysinsa tunnistaa myös aukkoja nykyisten työkalujen kyvyssä kattaa kaikki standardien vaatimukset, mikä korostaa jatkuvan työkalujen arvioinnin ja kehittämisen tarvetta.
+
+    Erityisesti terveysalan mobiilisovelluksissa regulaatiovaatimukset rajoittavat jatkuvan toimituksen täydellistä automaatiota. Byman (2024) korostaa, että vaikka jatkuvan toimituksen periaatteita voidaan soveltaa mobiiliterveyssovelluksiin, niiden täysimittainen automatisointi ei ole mahdollista ilman mukautuksia sääntelyprosessien vuoksi. Tämä tarkoittaa käytännössä julkaisuprosessin tauottamista merkittävien muutosten kohdalla, jolloin tarvitaan manuaalista vaikutusanalyysia ja mahdollisesti uudelleensertifiointia \cite{byman2024continuous}. Kokonaisuutena DevSecOpsin avulla organisaatiot voivat tehokkaasti ja jatkuvasti huomioida sertifiointi- ja sääntelyvaatimukset, mikä edistää turvallisuuden ja säädösten noudattamisen integroitumista osaksi jokapäiväistä ohjelmistokehitystä.
+
+    \subsubsection{9. Turvallisuuskulttuurin kehittäminen ja organisaation sisäinen koulutus}
+
+    Teknisten käytäntöjen rinnalla organisaation turvallisuuskulttuurin vahvistaminen on keskeistä onnistuneelle DevSecOpsin omaksumiselle. \cite{offerman2022_practices} painottavat, että DevOpsin käyttöönotto vaatii organisaatioilta merkittävää kulttuurista muutosta, erityisesti korostaen avoimen kommunikaation ja yhteistyön merkitystä eri toimintojen välillä. Heidän mukaansa kulttuurinen muutos edellyttää johdon sitoutumista, henkilöstön jatkuvaa koulutusta sekä aktiivista tiimien välistä vuorovaikutusta siilojen purkamiseksi ja tehokkaan yhteistyön mahdollistamiseksi.
+
+    \cite{chung2024_devsecops} puolestaan toteavat, että turvallisuuskulttuurin rakentaminen DevSecOps-ympäristössä edellyttää jatkuvaa turvallisuustietoisuuden lisäämistä, minkä tulisi heijastua koko organisaation toimintaan aina ylimmästä johdosta kehitystiimeihin saakka. Turvallisuuskulttuurin mittaaminen ja sen jatkuva kehittäminen auttavat organisaatioita tunnistamaan kehityskohteita ja edistämään turvallisuusnäkökulman integrointia osaksi jokapäiväistä työtä \cite{chung2024_devsecops, saleem2023_survey}.
+
+    \subsubsection{10. Mittaaminen, palauteloopit ja jatkuva DevSecOps-kehitys}
+
+    DevSecOps-toimintamalli nojaa tiiviiseen mittaamiseen ja palautteenkiertoon, joiden avulla turvallisuustaso pysyy läpinäkyvänä ja kehittyy inkrementaalisesti. Keskeisiä mittareita ovat havaittujen haavoittuvuuksien määrä, korjausaikojen mediaani ja väärien positiivisten osuus, joiden seuraaminen auttaa suuntaamaan resursseja ja arvioimaan työkalujen tehokkuutta \cite{chung2024_devsecops}. CI/CD-putkeen integroidut SAST-, DAST- ja SCA-skannerit, tuottavat datan automaattisesti, minkä jälkeen hallintapaneelit visualisoivat tulokset reaaliaikaisesti kehittäjille ja projektijohdolle \cite{marandi2023_ias,feio2024_empirical}.
+
+    Nopeat palauteloopit varmistavat, että kriittiset löydökset ohjataan suoraan oikeille tiimeille korjattavaksi, mikä ehkäisee riskien kumuloitumisen ja ylläpitää PDCA-sykliä (Plan–Do–Check–Act) keskeytyksettä. Kun mittaus, analyysi ja palaute kytkeytyvät saumattomasti, organisaatio voi jatkuvasti hienosäätää prosessejaan ja työkalujaan ilman päällekkäisyyttä muiden DevSecOps-käytäntöjen kanssa, säilyttäen vahvan turvallisuuskulttuurin ja nopean reagointikyvyn \cite{feio2024_empirical}.
 
 %----------------------------------------------------------------------
-\section{RQ1 – Miten mobiilisovellusten tietoturvatestaus voidaan integroida osaksi jatkuvaa integraatiota ja toimitusprosessia DevSecOps-prosessissa, ja mitkä ovat tähän liittyvät parhaat käytännöt?}
-\label{sec:rq1}
-
-Tähän tutkimuskysymykseen löytyi 24 relevanttia lähdettä. Niistä 9 käsitteli mobiilisovelluksia, esimerkiksi automatisoitua Android-fuzzingia \cite{schneider_2020_fuzzing} ja kontekstia hyödyntävää DroidSecTester-mallia \cite{baheux2023_droidsectester}. 13 lähdettä käsittelee DevSecOps-integraatiota, kuten dynaamisen, staattisen ja ohjelmistokomponentti-analyysin yhdistämistä Docker-pohjaisiin GitHub Actions-putkiin \cite{marandi2023_ias}, uhkamallinnusta Jenkins-ympäristössä \cite{nikolov2024_fit}, Azure DevOpsiin rakennetun monivaiheisen putken SAST/DAST/SCA-ketjua \cite{kushwaha2024_cct} sekä laaja-alaisia jatkuvan turvallisuustestauksen kehyksiä \cite{feio2024_empirical,aljohani2023_automating}.
-
-Tulosten esitystä varten aineisto jäsentyy kahteen alalukuu: ensin tarkastellaan integrointia CI/CD-putkessa ja sen jälkeen parhaimpia DevSecOps-käytäntöjä. Lopuksi esitetään tiivis yhteenveto, joka kokoaa vastauksen RQ1:een.
-
-\subsection{Integrointimallit CI/CD-putkessa}
-
-Tutkimusaineistossa mobiilisovellusten tietoturvatestaus integroitiin tyypillisesti jatkuvan integraation ja toimituksen (CI/CD) putkeen erillisissä kontitetuissa vaiheissa. Näiden vaiheiden suoritus käynnistettiin jokaisen ohjelmistomuutoksen yhteydessä, ja niiden tarkoituksena oli pitää kehityssyklin kokonaiskesto mahdollisimman lyhyenä. Tutkituissa lähteissä CI/CD-putkien yleisimpiä orkestrointityökaluja olivat GitHub Actions ja Jenkins, joita käytettiin usein yhdessä Docker-konttien kanssa.
-
-GitHub Actions nousi aineistossa keskeiseksi työkaluksi DevSecOps-testauksen automatisoinnissa. \cite{marandi2023_ias} kehittivät CI/CD-putken, jossa Snyk- ja StackHawk-työkalut suorittavat sovelluksen staattisen (SAST) ja dynaamisen (DAST) analyysin automaattisesti Docker-konttien rakennuksen yhteydessä. Tämä lähestymistapa nopeutti haavoittuvuuksien havaitsemista merkittävästi. \cite{afifah2024_coi} puolestaan hyödynsivät GitHub Actionsia automaattisen koodin peittämisen (obfuskoinnin) toteuttamiseen CI/CD-putkessa PHP-sovelluksen lähdekoodin suojaamiseksi kaappausyrityksiltä. Molemmat tutkimukset osoittivat, että GitHub Actionsia voidaan käyttää automaattisten tietoturvatoimenpiteiden, kuten haavoittuvuustestauksen ja koodin suojauksen, integroimiseen ja suorittamiseen osana jatkuvaa kehitysprosessia, edistäen tietoturvan testausta.
-
-Jenkins-pohjaisissa ratkaisuissa korostui tietoturvatestauksen selkeä vaiheistaminen ja työnkulun johdonmukainen integrointi. \cite{nikolov2024_fit} rakensivat Jenkins-putken, jossa ensin laadittiin uhkamallit OWASP Threat Dragonilla, jonka jälkeen nämä uhkamallit tallennettiin tietokantaan ohjaamaan myöhemmin toteutettavia automaattisia haavoittuvuusskannauksia OWASP ZAP -työkalulla. Tämä mahdollisti tietoturvariskien järjestelmällisen tunnistamisen ja kohdennetun testauksen ilman merkittävää haittaa kehityksen nopeudelle. \cite{feio2024_empirical} puolestaan loivat Jenkins-pohjaisen DevSecOps-kehyksen, joka jakautui kahdeksaan eri vaiheeseen ja yhdisti useita automatisoituja tietoturvatyökaluja, kuten SonarQuben (SAST), OWASP ZAP:n (DAST) sekä Dependency-Checkin (ohjelmistokomponenttianalyysi). Tämän ratkaisun avulla kehittäjät pystyivät tunnistamaan suuren määrän haavoittuvuuksia tehokkaasti osana jatkuvaa kehitysprosessia.
-
-Azure DevOps -ympäristössä \cite{kushwaha2024_cct} toteuttivat finanssisovellukselle monivaiheisen, YAML-pohjaisen DevSecOps-putken, jossa turvallisuustyökalut integroitiin jatkuvan integraation ja toimituksen eri vaiheisiin. Putkeen kuuluivat uhkamallinnus Microsoft Threat Modeling Toolilla, staattinen analyysi Codacylla sekä dynaaminen testaus OWASP ZAP -työkalulla, mikä mahdollisti uhkien varhaisen tunnistamisen ja nopean reagoinnin jo kehitysvaiheessa. \cite{putra2022_devsecops} käyttivät puolestaan Dockeria ja GitLab Runneria automatisoidakseen Node.js- ja Flutter-sovellusten jatkuvan integraation, tietoturvatestauksen ja käyttöönoton. Tällä saavutettiin merkittävä ajallinen säästö, sillä aiemmin useita tunteja kestänyt manuaalinen prosessi lyheni muutamaan minuuttiin. \cite{dupont2021_incremental} puolestaan havainnollistivat DevSecOps-käytäntöihin perustuvaa lähestymistapaa Common Criteria -sertifioinnin vaikutusanalyysivaiheen automatisointiin. Tässä lähestymistavassa sertifiointia varten tarvittava todistusaineisto tietoturvatestausten tuloksista kerättiin automatisoidusti hyödyntämällä GitLab-ympäristöä.
-
-Mobiilisovellusten kehityksessä käytettiin lisäksi erityisesti mobiilialustoille tarkoitettuja DevOps-ratkaisuja. \cite{schneider_2020_fuzzing} ajoivat automatisoidun fuzzing-testauksen pankkisovelluksen taustapalveluihin osana automatisoitua testausprosessia, minkä ansiosta voitiin nopeasti suorittaa suuri määrä testejä ja tunnistaa mahdollisia heikkouksia ja parannuskohteita syötteiden käsittelyssä. Fuzzing-menetelmä auttoi erityisesti tunnistamaan odottamattomien syötteiden aiheuttamia virhetilanteita palvelujen rajapinnoissa, vaikka suoraan hyväksikäytettäviä haavoittuvuuksia ei löytynytkään. \cite{baheux2023_droidsectester} kehittivät Android-sovelluksille suunnatun DroidSecTester-työkaluketjun, joka käyttää mallipohjaista (eng. model based) tietoturvatestausta huomioiden sekä staattisen että dynaamisen kontekstin. Työkaluketjun osana oleva VPatChecker pystyy tunnistamaan haavoittuvuuksia ja tuottamaan abstrakteja hyökkäysmalleja hyödyntämällä sovelluksen toimintamalleja ja tunnettuja haavoittuvuusmalleja. \cite{ozdenizci2024mobilizing}. puolestaan hyödynsivät GitHub Actions- ja Jenkins-alustoja mobiilisovellusten käyttöliittymä- ja tietoturvatestauksen orkestroinnissa käyttäen esimerkiksi Appiumia ja OWASP ZAPia. He havaitsivat, että jatkuvan integraation ja jakelun (CI/CD) prosesseissa esiintyy erityisesti mobiilialustoille tyypillisiä haasteita, kuten työkalujen yhteensopivuuteen, eri laitteiden ja käyttöjärjestelmien testaukseen sekä sovelluskauppojen julkaisuprosesseihin liittyviä ongelmia. Lisäksi \cite{byman2024continuous} toteutti CI/CD-putken terveysalan mobiilisovelluksille huomioiden erityisesti lainsäädännön vaatimukset, minkä vuoksi automatisoitua julkaisuprosessia piti mukauttaa säädösten edellyttämiin manuaalisiin tarkastuksiin. Toteutuksessa huomioitiin tietoturva, ja esimerkiksi Docker Scout -työkalua ehdotettiin käytettäväksi konttien haavoittuvuuksien tarkastamiseen. Turvallisuustestauksen integrointi oli osa CI/CD-putkea, mikä mahdollisti tietoturvan tarkastamisen tehokkaasti.
-
-Useimmissa tutkimuksissa (\cite{marandi2023_ias,dupont2021_incremental,kushwaha2024_cct,feio2024_empirical}) yhteinen tavoite on sijoittaa tietoturvatestauksen vaiheet mahdollisimman aikaisin (shift-left) kehityssykliin  \cite{marandi2023_ias} toteuttaa SAST- ja DAST-skannaukset kontitetussa CI/CD-putkessa ja käsittelee myös skannausten rinnakkaistamista , kun taas \cite{kushwaha2024_cct} esittelee konttipohjaisen, automatisoidun Azure-pipeline-ratkaisun. Näiden ratkaisujen tavoitteena on, että haavoittuvuudet havaitaan ja korjataan nopeasti ilman merkittävää vaikutusta ohjelmiston kokonaistoimitusaikaan. Kokonaisuutena integroidut, automatisoidut monivaiheiset testausmallit osoittavat, että korkea testauskattavuus ja laatu voidaan saavuttaa heikentämättä kehitystehokkuutta.
-
-\subsection{Parhaat DevSecOps-käytännöt}
-
-Tutkimuksen perusteella voidaan tunnistaa kymmenen parasta käytäntöä mobiilisovellusten tietoturvatestauksen integroimiseksi DevSecOps-prosessiin:
-
-\subsubsection{1. Shift-left: turvallisuustestaus mahdollisimman aikaisin kehityssyklissä}
-
-Shift-left on yksi tärkeimmistä DevSecOps-käytännöistä, jonka tarkoituksena on tuoda tietoturvatestaus ja siihen liittyvät aktiviteetit mahdollisimman varhaisiksi osiksi ohjelmistokehityksen elinkaarta. Käytännössä tämä tarkoittaa esimerkiksi uhkamallinnuksen hyödyntämistä jo kehityksen suunnitteluvaiheessa sekä sen integroimista automatisoituun jatkuvan integraation prosessiin. \cite{nikolov2024_fit} esittävät tutkimuksessaan, miten uhkamallit voidaan sisällyttää Jenkins-pohjaiseen CI/CD-putkeen niin, että niiden tuloksia käytetään automatisoidusti ohjaamaan myöhemmin suoritettavia haavoittuvuusskannauksia. Tämä varmistaa, että tunnistetut uhkat voidaan käsitellä tehokkaasti ja järjestelmällisesti kehitysprosessin aikana.
-
-Shift-left-lähestymistavan hyötyjä ovat myös korostaneet \cite{kushwaha2024_cct} finanssisovellusten kehityskontekstissa sekä \cite{feio2024_empirical} laajemmassa DevSecOps-kehyksessä. Tutkimukset osoittavat, että varhain suoritettu uhkamallinnus ja automatisoidut SAST- ja DAST-testaukset mahdollistavat haavoittuvuuksien nopean havaitsemisen ja korjaamisen. Tämä vähentää ohjelmistokehityksen riskejä ja parantaa ohjelmistojen yleistä turvallisuutta. Lisäksi \cite{kushwaha2024_cct} raportoivat, että integroitu uhkamallinnus ja automaattiset testit vähensivät manuaalisen tarkistustyön määrää, mikä kevensi kehitysprosessia.
-
-\subsubsection{2. SAST-, DAST- ja SCA-testauksen automatisoitu integrointi CI/CD-putkeen}
-
-DevSecOps-menetelmissä staattisen (SAST) ja dynaamisen (DAST) tietoturvatestauksen automatisoitu yhdistäminen CI/CD-putkeen on keskeinen osa tehokasta ja jatkuvaa turvallisuuden varmistamista. SAST-testauksessa analysoidaan lähdekoodia jo ennen sovelluksen rakentamista, kun taas DAST-testauksella havaitaan ajonaikaisia ongelmia suorittamalla sovellukseen reaaliaikaisia hyökkäyssimulaatioita. Automatisoimalla nämä vaiheet DevSecOps-putkeen voidaan saavuttaa huomattavia etuja, kuten nopeampi haavoittuvuuksien havaitseminen ja korjaaminen, korkea testauksen kattavuus sekä kehityksen tehokkuuden parantuminen \cite{feio2024_empirical,kushwaha2024_cct}.
-
-\cite{kushwaha2024_cct} integroivat Azure DevOps -ympäristöön automatisoidut turvallisuustestit Codacy- ja OWASP ZAP -työkaluilla, mahdollistaen aikaisessa vaiheessa tehtävät staattiset ja dynaamiset testit. He havaitsivat tämän parantavan finanssisovellusten tietoturvaa sekä vähentävän manuaaliseen tarkistukseen kuluvaa aikaa \cite{kushwaha2024_cct}. Vastaavasti \cite{marandi2023_ias} osoittivat Docker-kontteja hyödyntävällä GitHub Actions -putkella, miten Snykin (SAST) ja StackHawkin (DAST) automatisoitu yhdistäminen nopeuttaa merkittävästi haavoittuvuuksien tunnistamista ja korjaamista jo sovelluksen kehitysvaiheessa.
-
-Näin SAST- ja DAST-testauksen yhdistäminen automatisoiduksi prosessiksi CI/CD-putkessa muodostaa DevSecOpsin ytimen, jossa tietoturvatestaaminen integroidaan ohjelmistokehityksen arkeen.
-
-\subsubsection{3. Salaisuuksien hallinta ja turvallinen käsittely CI/CD-prosesseissa}
-
-Salaisuuksien hallinta ja turvallinen käsittely ovat kriittisiä osia DevSecOps-käytäntöjä CI/CD-prosesseissa. Automatisoiduissa kehitysputkissa salaisuudet, kuten salasanat, API-avaimet ja sertifikaatit, on välttämätöntä hallita turvallisesti, jotta voidaan välttää niiden vuotaminen ja väärinkäyttö. Tutkimusten mukaan automatisoitu salaisuuksien tunnistus ja hallinta CI/CD-putkissa, esimerkiksi käyttämällä Detect Secrets -työkalua, mahdollistaa salaisuuksien tehokkaan skannauksen jo lähdekoodin analysointivaiheessa. Tämä vähentää merkittävästi riskiä salaisuuksien joutumisesta julkisesti saataville tai vaarantumisesta kehitysprosessin aikana \cite{aljohani2023_automating}.
-
-Lisäksi käytännössä tehokas salaisuuksien hallinta edellyttää selkeää politiikkaa ja jatkuvaa valvontaa, jonka avulla voidaan estää luvattomien pääsyjen ja väärinkäytösten tapahtuminen. Käyttämällä automatisoituja turvallisuustyökaluja sekä keskitettyjä salaisuushallinnan palveluita voidaan saavuttaa kattava näkyvyys ja hallinta salaisuuksien käytöstä ja säilyttämisestä kaikissa kehitys- ja tuotantoympäristöissä. Tämä lähestymistapa tukee myös säädösten noudattamista ja auditointia, mikä on erityisen tärkeää tiukasti säädellyillä aloilla kuten terveysalalla ja finanssisektorilla \cite{byman2024continuous}.
 
 
-\subsubsection{4. Infrastructure-as-Code (IaC) ja konttien turvallinen hallinta}
+    \section{RQ2 – Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?}
+    \label{sec:rq2}
 
-Konttiteknologiat (Docker) ja Infrastructure-as-Code (IaC) ovat olennaisia elementtejä DevSecOps-lähestymistavassa, sillä ne tukevat vakioituja, toistettavia ja skaalautuvia testiympäristöjä. Docker-kontit mahdollistavat sovellusten yhtenäisen toiminnan eri kehitys- ja tuotantoympäristöissä, mikä vähentää ympäristöjen välisten erojen aiheuttamia virheitä ja nopeuttaa ohjelmistojen toimitusprosessia. Konttien avulla voidaan toteuttaa automaattiset tietoturvatarkistukset jatkuvan integraation ja toimituksen (CI/CD) vaiheissa, hyödyntäen sekä staattisia (SAST) että dynaamisia (DAST) testausmenetelmiä. \cite{marandi2023_ias,putra2022_devsecops,feio2024_empirical}
+    \subsection{Lähdeviittaukset}
+    Marandi \emph{et al.}\ (\citeyear{marandi2023_ias}),
+    Rangnau \emph{et al.}\ (\citeyear{putra2022_devsecops}) ja Nikolov \emph{et al.}\ (\citeyear{rangnau2020_cst}) raportoivat automatisoinnin vaikutuksista manuaaliseen testaukseen (ks. liite~\ref{app:rq_matrix}).
 
-Esimerkiksi GitHub Actions -alustalla toteutetut automatisoidut Snyk- ja StackHawk-työkalut tunnistavat haavoittuvuuksia Docker-konttien rakennuksen aikana, mikä edistää merkittävästi tietoturvan havainnointia ja korjaamista kehityssyklin varhaisissa vaiheissa \cite{marandi2023_ias}IaC:n käyttö puolestaan mahdollistaa infrastruktuurin määrittelyn ja ylläpidon koodina, mikä tukee ympäristöjen toistettavuutta ja automaatiota. IaC-skannereilla (esim. Terraform- tai CloudFormation-kohtaiseen staattiseen analyysiin erikoistuneilla työkaluilla) voidaan tarkistaa infrastruktuurikoodi jo ennen käyttöönottoa \cite{marandi2023_ias}. Kokonaisuutena konttien ja IaC:n yhdistelmä edistää toistettavuutta ja vähentää ympäristöjen välisiä eroja testauksessa ja tuotannossa, mikä parantaa sovellusten tietoturvaa ja vakautta.
-
-\subsubsection{5. Automatisoitu  raportointi ja hallintapaneelit}
-
-Automatisoitu raportointi ja selkeät hallintapaneelit ovat keskeinen osa tehokasta DevSecOps-prosessia. Kun skannerit (esim. SAST, DAST ja secrets-tunnistus) ajetaan jokaisen CI/CD-ajon yhteydessä, tulokset kerätään ja visualisoidaan samassa putkessa ilman erillistä manuaalista vaihetta. Tämä tarjoaa kehitystiimeille ajantasaisen näkymän haavoittuvuuksien tilaan. \cite{marandi2023_ias,aljohani2023_automating}.
-
-\cite{aljohani2023_automating} kuvaavat portaaliratkaisua, joka kokoaa Codacy-, OWASP ZAP- ja Detect Secrets-ajojen tulokset yhteen näkymään, kun taas \cite{marandi2023_ias} demonstroivat GitHub Actions -putkea, jossa Snykin ja StackHawkin tuottamat havainnot esitetään raportteina kehittäjille.
-
-\subsubsection{6. Mobiilispesifisten työkalujen käyttö ja haasteiden ratkaiseminen}
-
-Mobiilisovellusten kehittämisessä DevSecOps-lähestymistavan soveltaminen kohtaa erityisiä haasteita, joita ovat esimerkiksi laaja laite- ja käyttöjärjestelmäfragmentaatio sekä mobiililaitteiden nopea teknologinen kehitys, mikä asettaa erityisiä vaatimuksia turvallisuuden varmistamiselle. Näiden haasteiden ratkaisemiseksi on kehitetty mobiililaitteille räätälöityjä turvallisuustyökaluja ja -menetelmiä, joita voidaan tehokkaasti integroida jatkuvan integraation ja toimituksen (CI/CD) prosesseihin. DroidSecTester-työkaluketju on mallipohjainen tietoturvatestausratkaisu, joka kykenee hyödyntämään sekä sovelluksen staattista analyysiä että dynaamista käyttäytymistä Android-sovellusten haavoittuvuuksien tunnistamiseen ja hyökkäysmallien generointiin, mahdollistaen näin tehokkaamman ja tarkemman turvallisuustestauksen mobiilisovelluskontekstissa \cite{baheux2023_droidsectester}.
-
-Lisäksi mobiilisovellusten erityisiin riskeihin, kuten rootattujen laitteiden aiheuttamiin haavoittuvuuksiin, voidaan vastata lisäämällä sovelluksiin erityisiä suojausmekanismeja kuten roottaus-tunnistus. Esimerkiksi \cite{mukti2023_passwordmanager} osoittavat, että roottaus-tunnistuksen implementointi mobiilisovellukseen parantaa merkittävästi sen turvallisuutta ja estää sensitiivisten tietojen, kuten salasanojen ja käyttäjätunnusten, luvattoman käytön, mikä on erityisen kriittistä sovelluksille, jotka käsittelevät arkaluonteisia tietoja \cite{mukti2023_passwordmanager}. Lisäksi mobiilisovellusten DevSecOps-toimitusketjuissa on huomioitava sovelluskauppojen erityisvaatimukset sekä regulatiiviset prosessit, joiden vuoksi täysin automatisoitu julkaisuputki ei aina ole mahdollinen. Esimerkiksi terveysmobiilisovellusten kohdalla jatkuvan toimituksen prosessia joudutaan usein mukauttamaan ja tauottamaan manuaalisilla tarkastuksilla, mikä rajoittaa jatkuvan toimituksen täyttä automaatiota, mutta turvaa samalla säädösten mukaisen toiminnan \cite{byman2024continuous}.
-
-Näiden mobiilispesifisten työkalujen ja käytäntöjen käyttö sekä integrointi CI/CD-putkiin edellyttää aktiivista ylläpitoa ja työkalujen säännöllistä päivittämistä vastaamaan uusimpia teknisiä ja turvallisuusvaatimuksia \cite{ozdenizci2024mobilizing}.
-
-\subsubsection{7. Automaattinen uhkamallinnus ja riskipohjainen testaus}
-
-Automaattinen uhkamallinnus ja riskipohjainen testaus muodostavat keskeisen osan DevSecOps-prosessia, jossa turvallisuus integroidaan saumattomasti ja automatisoidusti koko ohjelmistokehityksen elinkaareen. Integroimalla uhkamallinnus esimerkiksi Jenkins-pohjaiseen CI/CD-putkeen, voidaan tunnistetut uhat järjestelmällisesti tallentaa tietokantaan, josta ne ohjaavat automaattisesti kohdennettua turvallisuustestausta. Tämä lähestymistapa mahdollistaa haavoittuvuuksien nopean tunnistamisen ja korjaamisen, mikä vähentää merkittävästi turvallisuusriskejä ilman, että kehityksen nopeus kärsii \cite{nikolov2024_fit}.
-
-Myös Azure DevOps -ympäristössä toteutettu monivaiheinen putki, jossa käytetään Microsoft Threat Modeling Toolia uhkamallinnukseen sekä Codacyn ja OWASP ZAP:n kaltaisia työkaluja staattiseen ja dynaamiseen testaukseen, mahdollistaa turvallisuusriskien aikaisen tunnistamisen ja nopean reagoinnin jo kehitysvaiheessa. Tämä on erityisen arvokasta finanssisovelluksissa, joissa riskienhallinnan merkitys on erityisen suuri ja turvallisuusuhat voivat aiheuttaa merkittäviä taloudellisia seurauksia \cite{kushwaha2024_cct}. Kokonaisuutena automatisoidun uhkamallinnuksen ja riskipohjaisen testauksen yhdistelmä tarjoaa tehokkaan ja ennakoivan ratkaisun sovellusten tietoturvan jatkuvaan kehittämiseen ja ylläpitoon DevSecOps-ympäristössä.
-
-\subsubsection{8. Sertifiointi- ja sääntelyvaatimusten huomioiminen ja automaattinen validointi}
-
-Sertifiointi- ja sääntelyvaatimusten jatkuva huomiointi on keskeinen osa DevSecOps-käytäntöjä erityisesti mobiili- ja teollisuussovelluksissa, joissa regulaatiot ja standardit ovat tiukkoja ja vaatimustenmukaisuuden osoittaminen on kriittistä. DevSecOps mahdollistaa sertifiointivaatimusten ja standardien huomioimisen jo kehitysprosessin aikaisessa vaiheessa, mikä vähentää myöhäisessä vaiheessa tapahtuvan muutoksen aiheuttamia kustannuksia ja toimitusaikojen venymistä. Esimerkiksi \cite{dupont2021_incremental} esittävät, kuinka Common Criteria -sertifiointiin liittyvä vaikutusanalyysi voidaan automatisoida ja integroida DevSecOps-putkeen, jolloin tuotemuutosten vaikutukset tietoturvaominaisuuksiin analysoidaan ja todistusaineisto kerätään automatisoidusti. Tämä keventää ja nopeuttaa merkittävästi sertifiointiprosessia, mahdollistaen joustavan ja inkrementaalisen sertifioinnin ohjelmiston jatkuvan kehityksen yhteydessä.
-
-Teollisten automaatiojärjestelmien turvallisuutta säätelevä ISA/IEC 62443 -standardi asettaa tarkat vaatimukset turvallisuuden validoinnille, mikä lisää tarvetta automatisoida validointiprosessit CI/CD-putkessa. \cite{gottel2023_validating} osoittavat, että automatisoitu validointi ISA/IEC 62443-4-2 standardin mukaisista komponenttivaatimuksista on välttämätöntä, jotta turvallisuusvaatimustenmukaisuus voidaan integroida saumattomasti osaksi jatkuvaa kehitysprosessia. Heidän analyysinsa tunnistaa myös aukkoja nykyisten työkalujen kyvyssä kattaa kaikki standardien vaatimukset, mikä korostaa jatkuvan työkalujen arvioinnin ja kehittämisen tarvetta.
-
-Erityisesti terveysalan mobiilisovelluksissa regulaatiovaatimukset rajoittavat jatkuvan toimituksen täydellistä automaatiota. Byman (2024) korostaa, että vaikka jatkuvan toimituksen periaatteita voidaan soveltaa mobiiliterveyssovelluksiin, niiden täysimittainen automatisointi ei ole mahdollista ilman mukautuksia sääntelyprosessien vuoksi. Tämä tarkoittaa käytännössä julkaisuprosessin tauottamista merkittävien muutosten kohdalla, jolloin tarvitaan manuaalista vaikutusanalyysia ja mahdollisesti uudelleensertifiointia \cite{byman2024continuous}. Kokonaisuutena DevSecOpsin avulla organisaatiot voivat tehokkaasti ja jatkuvasti huomioida sertifiointi- ja sääntelyvaatimukset, mikä edistää turvallisuuden ja säädösten noudattamisen integroitumista osaksi jokapäiväistä ohjelmistokehitystä.
-
-
-\subsubsection{9. Turvallisuuskulttuurin kehittäminen ja organisaation sisäinen koulutus}
-
-Turvallisuuskulttuurin kehittäminen on keskeinen tekijä DevSecOpsin onnistumisessa, sillä teknisten käytäntöjen lisäksi organisaation kulttuurin muutos on merkittävässä asemassa. \cite{offerman2022_practices} painottavat, että DevOpsin käyttöönotto vaatii organisaatioilta merkittävää kulttuurista muutosta, erityisesti korostaen avoimen kommunikaation ja yhteistyön merkitystä eri toimintojen välillä. Heidän mukaansa kulttuurinen muutos edellyttää johdon sitoutumista, henkilöstön jatkuvaa koulutusta sekä aktiivista tiimien välistä vuorovaikutusta siilojen purkamiseksi ja tehokkaan yhteistyön mahdollistamiseksi.
-
-\cite{chung2024_devsecops} puolestaan toteavat, että turvallisuuskulttuurin rakentaminen DevSecOps-ympäristössä edellyttää jatkuvaa turvallisuustietoisuuden lisäämistä, minkä tulisi heijastua koko organisaation toimintaan aina ylimmästä johdosta kehitystiimeihin saakka. Turvallisuuskulttuurin mittaaminen ja sen jatkuva kehittäminen auttavat organisaatioita tunnistamaan kehityskohteita ja edistämään turvallisuusnäkökulman integrointia osaksi jokapäiväistä työtä \cite{chung2024_devsecops, saleem2023_survey}.
-
-\subsubsection{10. Mittaaminen, palauteloopit ja jatkuva DevSecOps-kehitys}
-
-DevSecOps-toimintamalli nojaa tiiviiseen mittaamiseen ja palautteenkiertoon, joiden avulla turvallisuustaso pysyy läpinäkyvänä ja kehittyy inkrementaalisesti. Keskeisiä mittareita ovat havaittujen haavoittuvuuksien määrä, korjausaikojen mediaani ja väärien positiivisten osuus, joiden seuraaminen auttaa suuntaamaan resursseja ja arvioimaan työkalujen tehokkuutta \cite{chung2024_devsecops}. CI/CD-putkeen integroidut SAST-, DAST- ja SCA-skannerit, tuottavat datan automaattisesti, minkä jälkeen hallintapaneelit visualisoivat tulokset reaaliaikaisesti kehittäjille ja projektijohdolle \cite{marandi2023_ias,feio2024_empirical}.
-
-Nopeat palauteloopit varmistavat, että kriittiset löydökset ohjataan suoraan oikeille tiimeille korjattavaksi, mikä ehkäisee riskien kumuloitumisen ja ylläpitää PDCA-sykliä (Plan–Do–Check–Act) keskeytyksettä. Kun mittaus, analyysi ja palaute kytkeytyvät saumattomasti, organisaatio voi jatkuvasti hienosäätää prosessejaan ja työkalujaan ilman päällekkäisyyttä muiden DevSecOps-käytäntöjen kanssa, säilyttäen vahvan turvallisuuskulttuurin ja nopean reagointikyvyn \cite{feio2024_empirical}.
-
-\subsection*{Yhteenveto RQ1}
-
-Kirjallisuuskatsaus osoittaa, että mobiilisovellusten tietoturvatestaus voidaan integroida DevSecOps-prosessiin tehokkaimmin sijoittamalla automatisoidut SAST-, DAST- ja SCA-skannerit mahdollisimman varhain CI/CD-putkeen (shift-left-periaate). Useimmin käytettyjä CI/CD-orkestrointialustoja ovat GitHub Actions, Jenkins ja Azure DevOps, joita täydennetään Docker-konttiteknologioilla ja Infrastructure-as-Code-ratkaisuilla. Näin testaus pysyy rinnakkaisena ja kontitetussa muodossa, mikä minimoi kehityssyklin viiveet ja mahdollistaa haavoittuvuuksien korjauksen välittömästi \cite{marandi2023_ias,feio2024_empirical,kushwaha2024_cct}.
-
-Tulosten perusteella parhaiksi käytännöiksi vakiintuvat (1) shift-left-periaate ja uhkamallinnuksen automatisointi, (2) SAST-, DAST- ja SCA-työkalujen saumaton integrointi, (3) salaisuuksien tunnistus ja hallinta putkessa, (4) konttien ja IaC-skriptien turvallinen käyttö, (5) reaaliaikainen raportointi hallintapaneeleissa, (6) mobiilispesifisten työkalujen (esim. DroidSecTester, Appium) hyödyntäminen, (7) riskipohjainen testaus uhkamallien perusteella, (8) sertifiointi- ja regulaatiovaatimusten automatisoitu validointi, (9) turvallisuuskulttuurin systemaattinen kehittäminen ja (10) mittareihin perustuvat nopeat palauteloopit \cite{nikolov2024_fit,baheux2023_droidsectester,dupont2021_incremental,feio2024_empirical,kushwaha2024_cct,marandi2023_ias,aljohani2023_automating,ozdenizci2024mobilizing,byman2024continuous,chung2024_devsecops}.
-
-Yhteenvetona voidaan todeta, että mobiilisovellusten tietoturvatestaus voidaan integroida DevSecOps-prosessiin tehokkaasti hyödyntämällä automatisoituja testausvaiheita ja orkestrointialustoja osana CI/CD-putkea. Näiden ratkaisujen tueksi parhaiksi käytännöiksi vakiintuvat muun muassa "shift left"-periaate, mobiilispesifisten työkalujen käyttö ja turvallisuuskulttuurin systemaattinen kehittäminen.
-
-
-%----------------------------------------------------------------------
-\section{RQ2 – Mitkä ovat manuaalisen ja automatisoidun tietoturvatestauksen edut ja rajoitukset mobiilisovellusten DevSecOps-prosessissa?}
-\label{sec:rq2}
-
-\subsection{Lähdeviittaukset}
-Marandi \emph{et al.}\ (\citeyear{marandi2023_ias}),
-Rangnau \emph{et al.}\ (\citeyear{putra2022_devsecops}) ja
-Nikolov \emph{et al.}\ (\citeyear{rangnau2020_cst}) raportoivat automatisoinnin
-vaikutuksista manuaaliseen testaukseen (ks. liite~\ref{app:rq_matrix}).
-
-\subsection{Havainnot}
+    \subsection{Havainnot}
 % TODO
 
-\subsection{Yhteenveto RQ2}
+    \subsection{Yhteenveto RQ2}
 % TODO
 
 % kandipalaveri 12 jälkeen 6. päivä
 
 %----------------------------------------------------------------------
-\section{RQ3 – Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?}
-\label{sec:rq3}
+
+
+    \section{RQ3 – Mitä työkaluja käytetään automatisoituun ja manuaaliseen mobiilisovellusten tietoturvatestaukseen DevSecOps-prosessissa?}
+    \label{sec:rq3}
 
 % TODO: taulukko työkaluista (SAST, DAST, uhkamallinnus, obfuskointi)
-Ragnau \emph{et al.}\ (\citeyear{rangnau2020_cst}) ja
-Feio \emph{et al.}\ (\citeyear{feio2024_empirical}) ovat lähteitä
+    Ragnau \emph{et al.}\ (\citeyear{rangnau2020_cst}) ja Feio \emph{et al.}\ (\citeyear{feio2024_empirical}) ovat lähteitä
 
-\subsection{Automatisoidut työkalut}
+    \subsection{Automatisoidut työkalut}
 
-\cite{feio2024_empirical} käy hyvin läpi eri työkaluja
+    \cite{feio2024_empirical} käy hyvin läpi eri työkaluja
 
-\subsection{Manuaaliset työkalut}
+    \subsection{Manuaaliset työkalut}
 
-\subsubsection{SAST}
+    \subsubsection{SAST}
 
-\subsubsection{DAST}
+    \subsubsection{DAST}
 
-\subsubsection{SCA}
+    \subsubsection{SCA}
 
 %----------------------------------------------------------------------
-\section{RQ4 – Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?}
-\label{sec:rq4}
+
+
+    \section{RQ4 – Miten DevSecOps-prosessi vaikuttaa mobiilisovellusten käyttöönottoon ja ylläpitoon?}
+    \label{sec:rq4}
 
 % TODO: lyhyet havainnot (vähiten lähteitä)
 
-\subsection{Käyttöönotto}
+    \subsection{Käyttöönotto}
 
 %----------------------------------------------------------------------
-\section{Laadunarvio ja luotettavuus}
+
+
+    \section{Laadunarvio ja luotettavuus}
 % TODO: CASP/JBI, bias-riski, lähteiden pisteytys
 
 %----------------------------------------------------------------------
-\section{Luvun yhteenveto}
+
+
+    \section{Luvun yhteenveto}
 % TODO: kiteytä vastaukset RQ1–RQ4 tiiviiksi listaksi
 
 %======================================================================
-\chapter{Analyysi}
-\label{cha:analyysi}
-
-Yhteenveto taulukoita
-
-lisätään luvun \ref{cha:analyysi} taulukkoon sarake omalle tulkinnalle
-
-Listataan tulokset muttei kerrota mitä ne tarkoittaa / analysoida / pohdiskella
 
 
-\chapter{Yhteenveto}
-\label{cha:yhteenveto}
+    \chapter{Analyysi}
+    \label{cha:analyysi}
 
-Tehdään yöllä xd
+% Taulukossa \ref{tab:themes} on kuvattu tutkimuskysymys 1:n kirjallisuuskatsauksen tuloksia. Analyysissa tunnistettiin myös teemoja.
 
-Pyrittiin vastaamaan tähän ja tähän tutkimusongelmaan
+% Selitä ensimmäinen osa tk1 tekstinä. Toinen osa taulukkona alla jo.
 
-päälöydökset
+% teemoista jotain?? tunnistettiin teemoja
 
-tutkimuskysymykset ja lyhyt vastaus jokaiseen
+% Selitetään taulukoiden tarkoitus.
 
-rajoitteet:
-epätäydellisyyteni
-mitä olisi voinut tehdä paremmin
-olisko toinen aineisto ollut parempi
+    \begin{table}[htbp]
+        \centering
+        \footnotesize
+        \caption{Tutkimuskysymykseen 1 liittyvien löydösten analysointi}
+        \label{tab:rq1-findings}
+        \begin{tabular}{p{6.5cm}p{4cm}p{3cm}}
+            \toprule
+            \textbf{Parhaat käytännöt}                                                                                                                                                                                                                               & \textbf{Teema}                                                                                              & \textbf{Lähteet}                                                                                          \\
+            \midrule
+            1. Shift-left: Tietoturvatestaus ja -aktiviteetit (ml. uhkamallinnus) integroidaan mahdollisimman varhain ohjelmistokehityksen elinkaareen ja CI/CD-prosessiin. & Varhainen testaus, Uhkamallinnus, CI/CD-integraatio, Riskien ennaltaehkäisy & \cite{kushwaha2024_cct, feio2024_empirical, nikolov2024_fit} \\
+            \midrule
+            2. SAST-, DAST- ja SCA-testauksen automatisoitu integrointi CI/CD-putkeen jatkuvan turvallisuuden varmistamiseksi. & Automaattinen testaus (SAST, DAST, SCA), CI/CD-integraatio, Haavoittuvuuksien hallinta & \cite{kushwaha2024_cct, feio2024_empirical, marandi2023_ias} \\
+            \midrule
+            3. Salaisuuksien (API-avaimet, salasanat, sertifikaatit) turvallinen ja automatisoitu hallinta CI/CD-prosesseissa käyttäen työkaluja ja keskitettyjä palveluita. & Salaisuuksien hallinta, CI/CD-tietoturva, Pääsynhallinta, Riskienhallinta & \cite{aljohani2023_automating, byman2024continuous} \\
+            \midrule
+            4. Konttiteknologioiden (esim. Docker) ja Infrastructure-as-Code (IaC) -käytäntöjen hyödyntäminen vakioitujen, toistettavien ja turvallisten testi- ja tuotantoympäristöjen luomiseksi ja hallinnoimiseksi CI/CD-putkessa. & Konttiturvallisuus, Infrastructure-as-Code (IaC), Ympäristöjen hallinta, Automaatio, Konfiguraationhallinta & \cite{kushwaha2024_cct, feio2024_empirical, marandi2023_ias, putra2022_devsecops} \\
+            \midrule
+            5. Automaattinen tietoturvalöydösten raportointi ja visualisointi selkeiden hallintapaneelien avulla osana CI/CD-prosessia, tarjoten reaaliaikaisen näkyvyyden turvallisuustilanteeseen. & Raportointi ja visualisointi, CI/CD-integraatio, Haavoittuvuuksien seuranta, Läpinäkyvyys, Päätöksentuki & \cite{aljohani2023_automating, marandi2023_ias} \\
+            \midrule
+            6. Mobiilisovelluskehityksen erityishaasteiden (laitehajanaisuus, root-uhat, sovelluskauppojen vaatimukset) huomioiminen ja niihin vastaaminen mobiilispesifisillä työkaluilla ja prosesseilla CI/CD-putkessa. & Mobiiliturvallisuus, Root-tunnistus, regulaatio & \cite{baheux2023_droidsectester, mukti2023_passwordmanager, ozdenizci2024mobilizing, byman2024continuous} \\
+            \midrule
+            7. Automaattisen uhkamallinnuksen integrointi CI/CD-putkeen tunnistettujen uhkien järjestelmälliseksi tallentamiseksi ja riskipohjaisen, kohdennetun turvallisuustestauksen ohjaamiseksi. & Uhkamallinnus, Riskipohjainen testaus, CI/CD-integraatio, Ennakoiva turvallisuus & \cite{kushwaha2024_cct, nikolov2024_fit} \\
+            \midrule
+            8. Sertifiointi- ja sääntelyvaatimusten jatkuva huomioiminen ja integrointi DevSecOps-prosessiin, sisältäen vaatimustenmukaisuuden automaattisen validoinnin ja todistusaineiston keräämisen. & Sääntely ja standardit, Sertifiointi, Automaattinen validointi, Vaatimustenmukaisuus (Compliance) & \cite{dupont2021_incremental, byman2024continuous, gottel2023_validating} \\
+            \midrule
+            9. Organisaation turvallisuuskulttuurin systemaattinen kehittäminen ja vahvistaminen johdon sitoutumisen, jatkuvan koulutuksen, avoimen kommunikaation ja yhteistyön avulla. & Turvallisuuskulttuuri, Koulutus ja tietoisuus, Organisaatiomuutos, Yhteistyö, Johdon sitoutuminen & \cite{offerman2022_practices, chung2024_devsecops, saleem2023_survey} \\
+            \midrule
+            10. Jatkuva DevSecOps-prosessien kehittäminen tiiviin mittaamisen (keskeiset turvallisuusmittarit), nopeiden palauteloopien ja PDCA-syklin (Plan-Do-Check-Act) avulla turvallisuustason läpinäkyvyyden ja inkrementaalisen parantamisen varmistamiseksi. & Mittaaminen ja metriikat, Palauteloopit, Jatkuva parantaminen (PDCA), Prosessien optimointi, Läpinäkyvyys & \cite{chung2024_devsecops, feio2024_empirical, marandi2023_ias} \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
 
-Jatkotukimusaiheet
+    Tutkimuskysymyksen 1 tulosten analyysin pohjalta voidaan todeta, että mobiilisovellusten tietoturvatestaus voidaan integroida DevSecOps-prosessiin tehokkaimmin sijoittamalla automatisoidut SAST-, DAST- ja SCA-skannerit mahdollisimman varhain CI/CD-putkeen (shift-left-periaate). Useimmin käytettyjä CI/CD-orkestrointialustoja ovat GitHub Actions, Jenkins ja Azure DevOps, joita täydennetään Docker-konttiteknologioilla ja Infrastructure-as-Code-ratkaisuilla. Näin testaus pysyy rinnakkaisena ja kontitetussa muodossa, mikä minimoi kehityssyklin viiveet ja mahdollistaa haavoittuvuuksien korjauksen välittömästi \cite{marandi2023_ias,feio2024_empirical,kushwaha2024_cct}.
 
-Lorem ipsum dolor sit amet\citep{zafari2019survey}
+    Tulosten (taulukko \ref{tab:themes}) perusteella parhaiksi käytännöiksi vakiintuvat (1) shift-left-periaate ja uhkamallinnuksen automatisointi, (2) SAST-, DAST- ja SCA-työkalujen saumaton integrointi, (3) salaisuuksien tunnistus ja hallinta putkessa, (4) konttien ja IaC-skriptien turvallinen käyttö, (5) reaaliaikainen raportointi hallintapaneeleissa, (6) mobiilispesifisten työkalujen (esim. DroidSecTester, Appium) hyödyntäminen, (7) riskipohjainen testaus uhkamallien perusteella, (8) sertifiointi- ja regulaatiovaatimusten automatisoitu validointi, (9) turvallisuuskulttuurin systemaattinen kehittäminen ja (10) mittareihin perustuvat nopeat palauteloopit % \cite{nikolov2024_fit,baheux2023_droidsectester,dupont2021_incremental,feio2024_empirical,kushwaha2024_cct,marandi2023_ias,aljohani2023_automating,ozdenizci2024mobilizing,byman2024continuous,chung2024_devsecops}.
 
-\citet{zafari2019survey} Lorem ipsum dolor sit amet
+    Lisäksi havaittiin, että mobiilisovellusten tietoturvatestaus voidaan integroida DevSecOps-prosessiin tehokkaasti hyödyntämällä automatisoituja testausvaiheita ja orkestrointialustoja osana CI/CD-putkea. Näiden ratkaisujen tueksi parhaiksi käytännöiksi vakiintuvat muun muassa "shift left"-periaate, mobiilispesifisten työkalujen käyttö ja turvallisuuskulttuurin systemaattinen kehittäminen.
+
+    \begin{table}[htbp]
+        \centering
+        \footnotesize
+        \caption{Kirjallisuuslähteiden teema-alueiden kattavuus}
+        \label{tab:themes}
+        \begin{tabular}{p{7cm}cccc}
+            \toprule
+            \textbf{Lähde}                                  & \textbf{CI/CD} & \textbf{Security} & \textbf{Mobiili} & \textbf{DevSecOps} \\
+            \midrule
+            Afifah 2024 (Code obfuscation)                  & x              & x                 & -                & x                  \\
+            Aljohani 2023 (Unified DevSecOps framework)     & x              & x                 & -                & x                  \\
+            Baheux 2023 (Android vulnerability detection)   & -              & x                 & x                & -                  \\
+            Byman 2024 (Mobile health CD)                   & x              & x                 & x                & -                  \\
+            Chatterjee 2024 (Operational efficiency DevOps) & x              & -                 & -                & -                  \\
+            Chung 2024 (DevSecOps metrics analysis)         & x              & x                 & -                & x                  \\
+            Dupont 2021 (Incremental certification)         & x              & x                 & -                & x                  \\
+            Eramoa 2024 (DevOps in mobile)                  & x              & -                 & x                & -                  \\
+            Feio 2024 (Continuous security testing)         & x              & x                 & -                & x                  \\
+            Grasselli 2023 (Vehicle digital twin)           & -              & x                 & -                & -                  \\
+            Göttel 2023 (IEC 62443 validation)              & x              & x                 & -                & x                  \\
+            Hsu 2019 (Security automation book)             & x              & x                 & x                & x                  \\
+            Kohli 2020 (COVID app security)                 & -              & x                 & x                & -                  \\
+            Kushwaha 2024 (Financial DevSecOps)             & x              & x                 & -                & x                  \\
+            Marandi 2023 (Security scanning pipeline)       & x              & x                 & -                & x                  \\
+            Mukti 2023 (Password manager security)          & -              & x                 & x                & -                  \\
+            Nikolov 2024 (Threat modeling)                  & x              & x                 & -                & x                  \\
+            Nutalapati 2023 (Mobile security tools)         & x              & x                 & x                & -                  \\
+            Offerman 2022 (DevOps adoption effects)         & x              & -                 & -                & -                  \\
+            Ozdenizci 2024 (Mobile DevOps adoption)         & x              & x                 & x                & x                  \\
+            Putra 2022 (Static-dynamic testing)             & x              & x                 & x                & x                  \\
+            Raman 2019 (SQLi test automation)               & -              & x                 & -                & -                  \\
+            Rane 2024 (Auto vs manual testing)              & -              & x                 & -                & -                  \\
+            Rangnau 2020 (Dynamic security testing)         & x              & x                 & -                & x                  \\
+            Rohin 2018 (Mobile DevOps book)                 & x              & -                 & x                & -                  \\
+            Saleem 2023 (DevOps quality survey)             & x              & -                 & -                & -                  \\
+            Savor 2016 (Facebook continuous deployment)     & x              & -                 & -                & -                  \\
+            Schneider 2020 (Mobile banking fuzzing)         & -              & x                 & x                & -                  \\
+            Zhu 2024 (Android SAST tools)                   & -              & x                 & x                & -                  \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+%\begin{figure}[h]
+    % \centering
+%  \includegraphics[width=.8\textwidth]{figures/prisma.pdf}
+    %\caption{PRISMA-kaavio kirjallisuushaun vaiheista}
+    %\label{fig:prisma}
+%\end{figure}
+
+    \begin{table}[htbp]
+        \centering
+        \footnotesize
+        \caption{Lähteiden kattavuus tutkimuskysymyksittäin}
+        \label{tab:rq_matrix}
+        \begin{tabular}{p{7cm}cccc}
+            \toprule
+            \textbf{Lähde}                                  & \textbf{RQ1} & \textbf{RQ2} & \textbf{RQ3} & \textbf{RQ4} \\
+            \midrule
+            Rangnau 2020 (Dynamic security testing)         & +            & +            & +            & -            \\
+            Marandi 2023 (Security scanning pipeline)       & +            & +            & +            & +            \\
+            Nikolov 2024 (Threat modeling)                  & +            & +            & +            & +            \\
+            Afifah 2024 (Code obfuscation)                  & +            & -            & +            & -            \\
+            Putra 2022 (Static-dynamic testing)             & ++           & +            & +            & +            \\
+            Kushwaha 2024 (Financial DevSecOps)             & +            & +            & +            & +            \\
+            Feio 2024 (Continuous security testing)         & ++           & +            & ++           & +            \\
+            Schneider (2020 Mobile banking fuzzing)         & +            & +            & ++           & -            \\
+            Baheux 2023 (Android vulnerability detection)   & +            & -            & +            & -            \\
+            Grasselli 2023 (Vehicle digital twin)           & +            & -            & -            & +            \\
+            Mukti 2023 (Password manager security)          & -            & -            & +            & -            \\
+            Kohli 2020 (COVID app security)                 & -            & +            & +            & -            \\
+            Zhu 2024 (Android SAST tools)                   & -            & +            & ++           & -            \\
+            Rane 2024 (Auto vs manual testing)              & -            & +            & +            & -            \\
+            Raman 2019 (SQLi test automation)               & -            & +            & -            & -            \\
+            Göttel 2023 (IEC 62443 validation)              & +            & +            & +            & -            \\
+            Aljohani 2023 (Unified DevSecOps framework)     & ++           & +            & +            & +            \\
+            Dupont 2021 (Incremental certification)         & +            & +            & +            & +            \\
+            Nutalapati 2023 (Mobile security tools)         & ++           & ++           & ++           & +            \\
+            Saleem 2023 (DevOps quality survey)             & -            & -            & -            & +            \\
+            Chatterjee 2024 (Operational efficiency DevOps) & +            & -            & -            & +            \\
+            Savor 2016 (Facebook continuous deployment)     & +            & -            & -            & ++           \\
+            Offerman 2022 (DevOps adoption effects)         & +            & -            & -            & +            \\
+            Hsu 2019 (Security automation book)             & ++           & ++           & ++           & +            \\
+            Rohin 2018 (Mobile DevOps book)                 & ++           & +            & -            & ++           \\
+            Chung 2024 (DevSecOps metrics analysis)         & +            & +            & +            & +            \\
+            Ozdenizci 2024 (Mobile DevOps adoption)         & +            & +            & +            & +            \\
+            Byman 2024 (Mobile health CD)                   & +            & -            & -            & +            \\
+            Eramoa 2024 (DevOps in mobile)                  & +            & -            & -            & +            \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+
+% Yhteenveto taulukoita
+
+% lisätään luvun \ref{cha:analyysi} taulukkoon sarake omalle tulkinnalle
+
+% Saadaanko johtopäätökset linkattua RQ:hin, taulukon avulla
+
+% RQ: Johtopäätökset
+
+
+    \chapter{Yhteenveto}
+    \label{cha:yhteenveto}
+
+    Tehdään yöllä xd
+
+    Pyrittiin vastaamaan tähän ja tähän tutkimusongelmaan
+
+    päälöydökset
+
+    tutkimuskysymykset ja lyhyt vastaus jokaiseen
+
+    rajoitteet: epätäydellisyyteni mitä olisi voinut tehdä paremmin olisko toinen aineisto ollut parempi
+
+    Jatkotukimusaiheet
+
+    Lorem ipsum dolor sit amet\citep{zafari2019survey}
+
+    \citet{zafari2019survey} Lorem ipsum dolor sit amet
 
 %% Seuraavaksi tulee viiteluettelo
-\printbibliography[heading=bibintoc]
+    \printbibliography[heading=bibintoc]
 
-\backmatter % Älä poista!
+    \backmatter % Älä poista!
 %% Mahdolliset liitteet tulevat tähän
+
+
+    \chapter{Liitteet}
+
+
+    \section{Lähdeanalyysi}
+    \label{sec:source-analysis}
+    \begin{description}
+        \item[\cite{rangnau2020_cst}] Artikkelissa esitellään tapaustutkimus, jossa integroidaan kolme dynaamista tietoturvan testausmenetelmää(WAST, SAS ja BDST) Docker- ja GitLab-pohjaiseen jatkuvan integraation ja toimituksen (CI/CD) putkeen. Tutkijat määrittelevät kahdeksan keskeistä vaatimusta DevSecOps-käytännön onnistuneelle käyttöönotolle, kuten nopean rakennusajan (alle 10 minuuttia), rinnakkaiset testiajojen mahdollisuudet sekä selkeät haavoittuvuusraportit. Tutkimuksen tulokset osoittavat näiden tavoitteiden pääosin toteutuneen. Käytännön haasteina nousivat esiin erityisesti konttien hallintaan ja testitapausten konfigurointiin liittyvät ongelmat, joihin tarjotaan alustavia ratkaisuehdotuksia. Tutkimus vastaa tutkimuskysymyksiin RQ1–RQ3, jotka liittyvät tietoturvatestausten integraatioon,työkalujen vertailuun sekä automatisoidun ja manuaalisen testauksen eroihin. Tutkimuksen rajoitteina ovat keskittyminen vain web-sovellusten testaukseen (ei mobiilisovelluksiin) sekä painotus dynaamisiin testeihin ilman staattisten testien (SAST) vertailua. Artikkeli tarjoaa kehitystiimeille käytännönläheisiä suosituksia DevSecOps-käytäntöjen tehokkaaseen käyttöönottoon.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{marandi2023_ias}] Artikkelissa esitellään tapaustutkimus, jossa Docker-konttikuvien tietoturvaskannaus automatisoidaan GitHub Actions -pohjaisessa CI/CD-putkessa yhdistämällä Snyk (staattinen analyysi, SAST) ja StackHawk (dynaaminen testaus, DAST)build- ja test-stagioissa. Tulokset osoittavat, että SAST/DAST-yhdistelmä havaitsi varhaisessa kehitysvaiheessa merkittävästi enemmän haavoittuvuuksia sekä lyhensi skannauksen ja korjauksen kokonaiskestoa verrattuna manuaalisiin prosesseihin. Lisäksi reaaliaikainen dashboard-raportointi paransi kehittäjien näkyvyyttä turvallisuustilanteeseen ja nopeutti reagointia. Artikkeli vastaa RQ1: CI/CD-putken integroinnin kuvaus, RQ2: automaation edut manuaaliseen testaamiseen nähden,RQ3: työkalujen (Snyk ja StackHawk) valinta ja konfigurointi sekä RQ4: vaikutus käyttöönottoon ja ylläpitoon proaktiivisen valvonnan kautta. Laadunarvioinnissa vahvuuksina korostuvat selkeä case-toteutus ja syvä integraatio CI/CD-putkeen, kun taas rajoituksina mainitaan testauksen kohdistuminen vain yhteen web-sovellukseen (rajoitettu yleistettävyys mobiiliympäristöihin)ja manuaalisen testauksen vertailun pinta-alaisuus.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{nikolov2024_fit}] Artikkelissa esitellään tapaustutkimus, jossa uhkamallinnus integroidaan Jenkins-pohjaiseen CI/CD-putkeen automatisoidusti OWASP Threat Dragon -työkalulla. Uhkatiedot tallennetaan MySQL-tietokantaan ja niitä hyödynnetään OWASP ZAP -työkalulla tehtävässä kohdennetussa tietoturvatestauksessa. Tulokset osoittavat, että automatisointi parantaa testauksen tehokkuutta hidastamatta kehitystä. Haasteina nousevat esiin työkalujen integroinnin monimutkaisuus ja automatisoinnin rajoitteet. Artikkeli tarjoaa ratkaisuksi kehyksen tietojen automaattiselle viennille ja integroinnille osaksi DevOps-prosessia. Rajoitteina ovat mobiilisovellusten ulkopuolelle jättäminen ja kvantitatiivisen arvioinnin puute. Tutkimus vastaa RQ1: integraatio Jenkins CI/CD-putkeen, RQ2: 3 haastetta (integroinnin vaikeus, uhkamallinnuksen automatisointi ja testaustekniikoiden yhdistäminen) ja RQ3: käytetyt työkalut (Threat Dragon, MySQL, OWASP ZAP).
+    \end{description}
+
+    \begin{description}
+        \item[\cite{afifah2024_coi}] Artikkelissa esitellään tapaustutkimus, jossa kehitetään GitHub Actions -pohjainen CI/CD-putki, joka automatisoi PHP-sovellusten lähdekoodin obfuskoinnin ja salauksen (Blowfish-algoritmilla), sekä integroi staattisen (SonarQube, SAST) ja dynaamisen(OWASP ZAP, DAST) tietoturvatestauksen. Tutkimuksen tulokset osoittavat, että lähdekoodin obfuskointi suojaa tehokkaasti koodin kaappauksilta ja vaikeuttaa sen ymmärtämistä hyökkääjän näkökulmasta. Lisäksi havaittiin, että obfuskointi lisää CI/CD-prosessin suoritusaikaa maltillisesti. Käytännön haasteina nousivat esiin työkalujen integrointi CI/CD-workflow’hun ja suorituskykyerojen mittaaminen eri sovellustyypeillä, joihin ratkaisuina esitetään valmiita Docker-kuvia ja -konfiguraatioita. Tutkimus vastaa pääkysymykseen RQ1 kuvaamalla, miten tietoturvatestit ja koodisuojaus voidaan automatisoida DevSecOps-prosessissa. RQ2 ja RQ3 saavat epäsuoraa vastausta käytettyjen työkalujen ja vaikutusten kautta, mutta manuaalitestausta tai mobiilisovelluksia ei tarkastella. Tutkimuksen rajoitteina ovat konteksti rajoittuen PHP-websovelluksiin, manuaalisten testausmenetelmien puuttuminen sekä mobiiliympäristöjen ulkopuolelle jääminen.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{putra2022_devsecops}]Putran ja Kabetan (2022) tapaustutkimuksessa kehitetään ja otetaan käyttöön DevSecOps-malli ketterään kehitysprosessiin integroimalla automatisoituja tietoturvatestejä (SAST, DAST) CI/CD-putkeen verkkopohjaiselle Node.js/Express.js-sovellukselle ja Flutter-mobiilikäyttöliittymälle. Tutkimuksessa toteutettiin GitLab CI/CD -putki AWS EC2:lla, jossa Docker-kontit, GitLab Runner sekä työkalut Njsscan (SAST) ja OWASP ZAP(DAST) mahdollistivat nopean rakennus-, testaus- ja käyttöönottoprosessin. Automatisointi lyhensi julkaisusyklin 2–3 tunnista 3–4 minuuttiin ja paljasti haavoittuvuuden (CWE-327)commit-hetkellä. RQ1:een vastattiin eriyttämällä pipeline-vaiheet,käyttämällä kontteja ja ”fail-fast”-periaatetta, parhaiksi käytännöiksi nousivat automaattinen testaus enenn julkaisua ja salaisuuksien hallinta GitLab-muuttujilla. RQ2 ja RQ3 käsittelivät pääasiassa automatisoidun testauksen etuja, kuten nopeus, jatkuva testaus sekä käytettyjä työkaluja, jättäen manuaalisen testauksen rajat ja mobiilikohtaiset haasteet (esim. sovelluskauppajakelu) sivuun. RQ4:n osalta prosessi nopeutti käyttöönottoa ja vähensi ylläpitokustannuksia, vaikka mobiilispesifiä vaikuttavuutta ei kvantifioitu. Tutkimuksen vahvuuksiin kuuluu selkeä ja systemaattinen tekninen toteutus ja mittaustulokset, mutta rajoituksina ovat kapea teknologiavalikoima (Node.js/Flutter), rajallinen vertailu turvallisuusmetriikoissa sekä mobiilikontekstin pinnallinen käsittely,vaikka Flutter mainitaankin.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{kushwaha2024_cct}]Artikkelissa kuvataan Azure DevOps-ympäristöön rakennettu konttipohjainen DevSecOps-putki, jossa uhkamallinnus (Microsoft TMT) sekä automatisoidut SAST-, DAST- ja SCA-vaiheet (Codacy, OWASP ZAP, GitHub Advanced Security/CodeQL) on integroitu CI/CD-työnkulkuun Docker-kuvien kokoamisesta tuotantoon; kohteena oli haavoittuvuuksilla siemenetty finanssialan web-sovellus, jossa uhkamallinnus paljasti 26 STRIDE-riskiä, Codacy 28 staattista ongelmaa, GHAS 16 koodivirhettä ja 3 kriittistä riippuvuutta, ZAP raportoi XSS- ja SQL-injektiohälytyksiä, ja kaikki skannaukset valmistuivat muutamassa minuutissa. RQ1: Integraatio toteutuu YAML-pohjaisena monivaiheisena putkena, joka käynnistyy jokaisesta commitista; parhaat käytännöt ovat shift-left-filosofia, konttien yhtenäiset rakennusvaiheet ja salaisuuksien skannaus. RQ2: Automaatio vähentää manuaalista työtä ja tarjoaa jatkuvan kattavuuden, mutta vaatii tulosten manuaalista priorisointia ja täydentäviä penetraatiotestejä. RQ3: Mainitut työkalut ovat Codacy, OWASP ZAP, GHAS/CodeQL ja Microsoft TMT; erillisiä manuaalisia mobiilityökaluja ei käsitellä. RQ4: Putki nopeuttaa sovelluksen käyttöönottoa, pienentää tuotantoriskejä ja helpottaa ylläpitoa, mutta mobiilisovelluksia ei tarkastella. Vahvuudet: realistinen finanssi-case, integroitu Azure DevOps-ratkaisu ja kvantitatiiviset haavoittuvuustulokse. Rajoitteet: web-keskeinen rajaus ilman mobiilikontekstia, tarkkojen skannausaikojen puuttuminen ja vertailun rajoittuminen yhteen CI-alustaan.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{feio2024_empirical}] Artikkelissa esitellään empiirinen tapaustutkimus, jossa rakennetaan DevSecOps-kehys. Kahdeksanvaiheinen CI/CD-putki (Plan–Monitor) laajennetaan jatkuvalla turvallisuustestauksella, integroimalla työkaluja kuten SonarQube (SAST), OWASP Dependency-Check (SCA) ja OWASP ZAP (DAST) Jenkinsiin, mikä mahdollisti automaattisen haavoittuvuuksien tunnistamisen. Tuloksena havaittiin 1795 haavoittuvuutta, joista 47 kriittisiä, ja kehittäjät arvioivat työkalujen hyödyllisyyttä myönteisesti. RQ1: Integraatio toteutui laajentamalla DevOps-putkea uusilla testausvaiheilla ja automatisoiduilla työkaluilla. Parhaat käytännöt sisälsivät avoimen lähdekoodin työkalujen käytön sekä jatkuvan palautteen keräämisen. RQ2: Automatisoidut työkalut antavat jatkuvan kattavuuden ja nopeat tulokset, mutta eivät löydä kompleksisia logiikkavirheitä, kun taas manuaaliset (esim. penetraatiotestaus) vaativat erikoisosaamista ja puuttuivat pilotista. RQ3: Työkaluina käytettiin yleisimpiä SAST-, DAST- ja SCA-työkaluja, kuten SonarQube, OpenVAS ja ZAP. RQ4: Artikkelissa ei tarkasteltu mobiilisovelluksia, mutta DevSecOpsin käyttöönotto paransi haavoittuvuuksien tunnistusta ja kehittäjien tietoturvatietoisuutta. Laadullisesti tutkimuksen vahvuuksia olivat realistinen teollinen ympäristö, kvantitatiiviset tulokset, kehittäjäpalaute sekä työkalujen käytännön integrointi. Rajotteisiin kuuluivat mobiilikontekstin puute ja joidenkin pipeline-vaiheiden (käyttöönotto, operointi) toteuttamatta jääminen.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{schneider_2020_fuzzing}]
+        Tapaustutkimus kuvaa automatisoidun fuzzing-pohjaisen tietoturvatestauksen käyttöönottoa turkkilaisen Kuveyt Türk -pankin Mobil Şube -mobiilisovelluksen taustapalveluihin. Keskeisenä työkaluna käytettiin Fuzzino-kirjastoa integroituna olemassa olevaan Citrus- ja Apache HttpClient -pohjaiseen testikehikkoon, joka ajetaan DevOps-putkessa WCF-rajapintoihin kohdistuvina HTTP-pyyntöinä.
+
+        Yhden AllBadStrings-heuristiikan avulla generoitiin yli 50 000 fuzzattua pyyntöä, joista keskimäärin 61\,\% saavutti palvelun, 27\,\% torjuttiin WAF-palomuurissa ja 12\,\% johti virhevastaukseen ilman suoraan hyödynnettäviä haavoittuvuuksia, mutta paljastaen syötedatan validointitarpeita.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} Integraatio toteutettiin lisäämällä Fuzzino-kirjasto olemassa olevaan testausinfrastruktuuriin.
+            \item \textbf{RQ2:} Automatisoinnin etuna nähtiin kyky vastata kasvaviin vaatimuksiin ja parantaa haavoittuvuuksien löytämisen tehokkuutta.
+            \item \textbf{RQ3:} Artikkelissa mainitaan työkalut Fuzzino, Citrus, Apache HttpClient, Appium, Selenium sekä WAF-ratkaisu ja pankin omat 2FA-palvelut.
+            \item \textbf{RQ4:} DevSecOps paransi testauksen jatkuvuutta ja palautteen nopeutta, mutta käyttöönoton nopeuteen ei havaittu merkittävää vaikutusta.
+        \end{itemize}
+
+        Tutkimuksen vahvuuksina korostuivat realistinen pankkiympäristö, kvantitatiiviset tulokset ja integraation yksityiskohtaisuus. Rajoitteina mainittiin teknologiakattavuuden ja mobiiliratkaisujen rajallisuus.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{baheux2023_droidsectester}] esittelevät DroidSecTester-työkaluketjun, joka integroi kontekstia hyödyntävän mallipohjaisen tietoturvatestauksen Android-sovelluksiin nelivaiheisena DevSecOps-putkena. Työkaluketjuun kuuluvat myös FlowDroid data-analyysiin ja VPatChecker haavoittuvuuksien tunnistamiseen. Todettuna tuloksena esitetään, että GHERA-testialustalla vähintään 38 \% haavoittuvuuksista voitiin mallintaa ja tunnistaa nykyisellä haavoittuvuusmallin määrittelyllä.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} Integraatio toteutuu nelivaiheisena prosessina, jossa luodaan sovelluksen malli, rikastetaan sitä tietovirroilla FlowDroidilla, generoidaan testejä ConTestilla ja tunnistetaan haavoittuvuuksia VPatCheckerillä. Parhaat käytännöt liittyvät mallipohjaisen testauksen hyödyntämiseen tehokkuuden saavuttamiseksi ja kontekstin huomioimiseksi.
+            \item \textbf{RQ2:} Tutkimus painottuu automaatioon
+            \item \textbf{RQ3:} Artikkelissa mainitaan FlowDroid, ConTest ja VPatChecker automatisoituun testaukseen.
+            \item \textbf{RQ4:} Työkalun tavoitteena on auttaa kehittäjiä löytämään haavoittuvuuksia kehityksen aikana ja parantaa Android-ekosysteemin tietoturvaa, eikä se suoraan käsittele käyttöönottoa.
+        \end{itemize}
+
+        Vahvuuksina voidaan nähdä DroidSecTester-työkaluketjun toteutus ja kvantitatiiviset tulokset tunnistettujen haavoittuvuuksien määrästä. Rajoitteita ovat vertailun puute muihin työkaluihin haavoittuvuuksien tunnistustarkkuudessa ja Android-keskeisyys, joka rajoittaa yleistettävyyttä.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{grasselli2023_digitaltwin}] esittelevät NFV-MANO-viitekehykseen pohjautuvan menetelmän, joka mahdollistaa automaattisen digitaalisen kaksosen (DT) käyttöönoton ja hallinnan älykkäiden ajoneuvojen kyberturvallisuustestaukseen. Digitaalista kaksonen toimii kyberharjoitusalueena, jossa voidaan turvallisesti kokeilla potentiaalisia hyökkäyksiä ja vastatoimia virtuaalisessa ympäristössä. Keskeisiksi työkaluiksi mainitaan Open Source MANO (OSM) orkestraattorina, OpenStack pilvi-infrastruktuurin hallintaan sekä Kubernetes konttien hallintaan. Tutkimuksessa toteutettiin käyttötapaus, jossa DT:n avulla toteutettiin onnistunut verkkoskannaus simuloimalla infotainment-järjestelmän altistumista (eng. compromising) Bluetoothin kautta, osoittaen mitkä laitteet olivat näkyvissä haavoittuvan sovelluksen kautta. Tuloksena havaittiin, että digitaalinen kaksonen mahdollistaa joustavan ja nopean testausympäristön luomisen, mikä nopeuttaa turvatoimien kehittämistä ja validointia.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} Automatisointi ja elinkaaren hallinta digitaalisten kaksoisversioiden käyttöönotossa, liittyy osittain myös DevOps-automaatioon. % TODO: read more
+            \item \textbf{RQ2:} -
+            \item \textbf{RQ3:} Työkaluina automaattiseen testaukseen mainitaan OSM, OpenStack, Kubernetes ja cansniffer1, mutta ne eivät ole kovin relevantteja.
+            \item \textbf{RQ4:} Automatisoidun digitaalisen kaksosen havaittiin parantavan nopeuttavan riskianalyysiä ja tuotantoon vientiä ja ylläpitokatkoksia, mutta vaikutuksia mobiilisovelluksiin ei tarkastella.
+        \end{itemize}
+
+        Vahvuuksia ovat käytännönläheinen arkkitehtuuritoteutus todellisilla työkaluilla (OSM, OpenStack), realistinen käyttötapaus ajoneuvon verkkojen simulointiin sekä joustavuuden demonstrointi. Rajoituksiin kuuluvat mobiilikontekstin puute, kvantitatiivisten tulosten vähäisyys sekä rajaus telekom-alan NFV-MANO-viitekehykseen, mikä rajoittaa yleistävyyttä.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{mukti2023_passwordmanager}] Artikkeli esittelee RootPass-salasanan hallintasovelluksen, joka on toteutettu Flutterilla ja yhdistää RootBeer-kirjaston kahdeksaan heuristiikkaan perustuvan juuritunnistuksen (eng. root detection) sekä turvamekanismit: AES-256-salauksen, PBKDF2-avainjohdannuksen, Flutter Secure Storagen ja sormenjälkitunnistuksen.
+
+        Turvallisuutta mitattiin MobSF-penetraatiotestauksessa (60/100, Low Risk) ja ImmuniWeb-testillä OWASP Mobile Top 10 riskejä arvioitaessa. Tulosten mukaan RootPass saavutti korkeimman turvallisuuspisteet (60/100) verrattuna Keeperiin, LastPassiin ja Dashlaneen sekä vähemmän OWASP-riskejä (12 vs. 16–19). Root-testissä sovellus sulkeutui roottatuilla laitteilla 100 \%:n tarkkuudella.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} -
+            \item \textbf{RQ2:} -
+            \item \textbf{RQ3:} Artikkelissa mainitaan automatisoituja työkaluja kuten MobSF ja ImmuniWeb Mobile App Security Test.
+            \item \textbf{RQ4:} -
+        \end{itemize}
+
+        Vahvuuksia tutkimuksessa ovat realistinen Android-prototyyppi ja kvantitatiivinen vertailu tunnettuja sovelluksia vastaan. Rajoituksia ovat keskittyminen vain Androidiin ja root tunnistukseen, eikä varsinaisesti tietoturvatestaukseen tai DevSecOps-näkökulmaan.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{kohli2020_covid_tracer}] Artikkelissa tutkitaan neljän Android-pohjaisen COVID-19 -kontaktinjäljityssovelluksen tietoturvaa keskittyen staattiseen analyysiin ja potentiaalisten hyökkäyspintojen tunnistamiseen. Analyysissä hyödynnettiin ensisijaisesti MobSF-työkalua koodin staattiseen tarkasteluun ja Drozeria hyökkäysrajapinnan kartoittamiseen. Keskeiset tulokset osoittivat useita OWASP Mobile Top 10 ja CWE -haavoittuvuuksia testatuissa sovelluksissa.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} -
+            \item \textbf{RQ2:} Automatisoitu MobSF havaitsee noin 70 \% haavoittuvuuksista ja tarvitsee manuaalista varmistusta sekä täydentävää dynaamista testausta.
+            \item \textbf{RQ3:} Artikkeli mainitsee MobSF:n, Drozerin, ADB:n, apktoolin, Memu-emulaattorin ja suunnitellun mutta käyttämättä jääneen Burp Suiten.
+            \item \textbf{RQ4:} -
+        \end{itemize}
+
+        Artikkelin vahvuuksiin kuuluvat case-toteutus todellisilla sovelluksilla ja kvantitatiivisten tulosten esittäminen, kun taas rajoituksia ovat testauksen painottuminen staattiseen analyysiin ja rajattuminen Androidiin sekä kontaktinjäljityssovelluksiin verrattuna laajempaan mobiilisovelluskehitykseen.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{zhu2024_sast_tools}] Artikkeli keskittyy staattisten sovellusturvallisuustestaus (SAST) työkalujen vertailuun Android-ympäristössä. Tutkijat kehittävät VulsTotal-alustan, joka yhdistää 11 SAST-työkalua ja normalisoi niiden haavoittuvuusraportit. Tutkimuksessa luodaan 67 standardoitua haavoittuvuustyyppiä, joita testattiin synteettisillä (GHERA, MSTG\&PIVAA) ja CVE-pohjaisilla benchmarkeillä.
+
+        Konkreettisia tuloksia olivat työkalujen vaihteleva haavoittuvuuskattavuus (korkein 67\%, alin 22\%) ja tehokkuus eri vertailuaineistoilla, sekä tavukoodiin perustuvien työkalujen nopeampi suorituskyky.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} -
+            \item \textbf{RQ2:} -
+            \item \textbf{RQ3:} Mainitaan ja arvioidaan 11 automatisoitua SAST-työkalua Androidille.
+            \item \textbf{RQ4:} -
+        \end{itemize}
+
+        Tutkimuksen vahvuuksia ovat yhtenäisen arviointialustan luominen, kattava 11 työkalun vertailu, laaja empiirinen aineisto sekä realistiset testausympäristöt. Rajoituksena keskittyminen vain Android SAST-työkaluihin
+    \end{description}
+
+    \begin{description}
+        \item[\cite{rane2024_analysis_scanning}] vertailevat automatisoidun haavoittuvuus skannauksen ja manuaalisen penetraatiotestauksen tehokkuutta verkkosivustojen tietoturva-analyysissä. Keskeisiä tarkasteltuja työkaluja ovat automatisoidut skannerit kuten Netsparker ja penetraatiotestauksessa käytetyt työkalut kuten Burp Suite ja Nmap. Tutkimuksessa todettiin, että manuaalinen penetraatiotestaus on tarkempi ja tehokkaampi haavoittuvuuksien löytämisessä kuin automatisoitu skannaus, joka tuottaa usein vääriä positiivisia tuloksia.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} -
+            \item \textbf{RQ2:} Manuaalisen testauksen vahvuuksia ovat tarkkuus ja kyky havaita monimutkaisia haavoittuvuuksia, kuten käyttöoikeuksien korotus ja epäsuora objektiviittaus. Rajoituksena on testauksen vaatima suuri työmäärä. Automaation etuja ovat nopeus, resurssitehokkuus sekä toistettavuus, mutta sen heikkouksina korostuvat virhepositiivisten tulosten riski ja analyysin pinnallisuus.
+            \item \textbf{RQ3:} Työkaluihin kuuluivat automatisoiduille Netsparker/Invicti sekä manuaalisille Burp Suite, SQLmap, Metasploit ja Nmap.
+            \item \textbf{RQ4:} -
+        \end{itemize}
+
+        Tutkimuksen vahvuuksia ovat käytännönläheinen vertailu todellisella verkkosivustolla, kvantitatiiviset tulokset haavoittuvuuksien määristä sekä selkeä metodologinen jako automatisoitujen ja manuaalisten menetelmien välille. Rajoituksina yksittäiseen verkkopalveluun testaus, CI/CD-integraation puute ja mobiilinäkökulman sekä pitkäkestoisen seurannan puuttuminen.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{raman2019_sqli}] artikkelissa esitellään ja verrataan automatisoitua SQLiAutoScript-menetelmän manuaaliseen lähestymistapaan laajamittaisten SQL-injektioiden penetraatiotestien hallinnassa web-sovelluksissa. Keskeisenä työkaluna menetelmässä hyödynnetään sqlmapia yhdistettynä komentosarja- ja lokitustoimintoihin, testausympäristöinä toimivat Windows batch- ja Linux Bash -komentosarjat.
+
+        Vertailussa manuaaliseen testaukseen 24 kokeen otoksessa menetelmä suoritti 110 970 HTTP-kyselyä (noin 2813 \% enemmän), vähensi virheitä 66,7 \%, lyhensi yksittäisen testin ajankulun 30 \% ja lisäsi todennettuja löydöksiä 21 \%.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} Automatisoitu scriptaus mahdollistaa testien jatkuvan suorittamisen, mikä tukee epäsuorasti CI/CD-integraatiota.
+            \item \textbf{RQ2:} Automatisoitu testaus vähentää virheitä, parantaa skaalautuvuutta ja säästää aikaa, kun taas manuaalinen testaus on altis ihmisvirheille ja hidastaa suurten testimäärien käsittelyä.
+            \item \textbf{RQ3:} Työkaluina käytettiin sqlmap:ia sekä automatisoiduissa että manuaalisissa testeissä.
+            \item \textbf{RQ4:} -
+        \end{itemize}
+
+        Vahvuuksia ovat kvantitatiiviset tulokset (esim. HTTP-pyynnöt, virhemäärät), realistinen testausympäristö sekä selkeä vertailu manuaalisen ja automatisoidun lähestymistavan välillä. Rajoituksiin kuuluvat keskittyminen vain web-sovelluksiin (ei mobiilia), rajattu työkalukattavuus (vain sqlmap) ja keskittyminen SQL injektioiden testaukseen.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{gottel2023_validating}] esittävät kvalitatiivisen analyysin IEC 62443-4-2 -standardin mukaisten teollisuusautomaation ja ohjausjärjestelmien (IACS) komponenttien kyberturvavaatimusten automatisoidusta validoinnista DevSecOps-prosessissa. Analyysi kartoittaa standardin komponenttivaatimukset (CR:t) ja liittää ne CI/CD-putken vaiheisiin käyttämällä valko-, harmaa- ja mustalaatikkotestausta. Kirjoittajat tunnistavat CR-kohtaisesti sopivat kaupalliset työkalut sekä avoimen lähdekoodin vaihtoehdot.
+
+        Tuloksena syntyy kattavuusmatriisi, joka osoittaa, että suurin osa mustalaatikkotesteistä voidaan automatisoida, mutta valkolaatiikkotestauksen kattavuus on heikko. Useiden CR-kohtien validointi vaatii edelleen manuaalista työtä.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} Parhaat käytännöt: shift-left ja kaupallisten sekä avointen ratkaisuiden yhdistäminen.
+            \item \textbf{RQ2:} Artikkeli käsittelee joitain automaation etuja ja manuaalisen testauksen tarvetta.
+            \item \textbf{RQ3:} Keskeisiä työkaluja ovat CRT- ja VIT-sertifioidut kaupalliset fuzzerit ja skannerit (Acheron, Achilles, Defensics, Nessus, Raven ES, VHunter) sekä avoimen lähdekoodin ratkaisut kuten AFL++, Burp Suite, JMeter, nmap, OpenVAS, Scapy, Selenium ja SymCC.
+            \item \textbf{RQ4:} -
+        \end{itemize}
+
+        Artikkelin vahvuuksia ovat kattava työkaluvertailu sekä standardiin sidottu, yksityiskohtainen CR-tason kattavuusanalyysi. Rajoituksiin kuuluvat mobiilikontekstin puuttuminen, kvantitatiivisten tulosten vähyys sekä teollisten järjestelmien erityispiirteisiin (kuten HMI-rajapintojen rajoitukset) liittyvät haasteet.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{aljohani2023_automating}] Artikkeli esittelee yhtenäisen kehyksen DevSecOps-prosessin automatisoidulle tietoturva-analyysille. Kehikko koostuu CI-putkeen liitettävästä agentista ja mikropalvelupohjaisesta moottorista, joka automatisoi SAST- ja DAST-skannaukset Shuffle-pohjaisessa SOAR-ympäristössä Docker-kontteja käyttäen.
+
+        Tapaustutkimuksessa DVJA-verkkosovellus skannattiin GitHub Actions- ja Jenkins-putkissa Dependency-Checkin, Detect Secretesin ja Nikton avulla, ja koko suoritus vei 15 min 50 s, josta SAST 4 min 30 s (4 löydöstä) ja DAST 50 s (20 löydöstä)
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} - % TODO: Lue tarkemmin
+            \item \textbf{RQ2:} Automaattiset työkalut nopeuttavat testausta ja vähentävät manuaalista työtä, mutta rajoituksina ovat väärien positiivisten tulosten määrä ja työkalujen konfiguroinnin vaativuus.
+            \item \textbf{RQ3:} Artikkelissa mainitut työkalut ovat automatisoituja työkaluja: Dependency-Check (SAST), Detect Secrets (SAST) ja Nikto Scanner (DAST).
+            \item \textbf{RQ4:} -
+        \end{itemize}
+
+        Tutkimuksen vahvuuksia ovat konkreettinen tapaustutkimus ja viitekehyksen käytännön sovellettavuuden osoittaminen, realistisen ympäristön käyttö testauksessa sekä kvantitatiivisten tulosten (suoritusajat, löydetyt haavoittuvuudet) esittäminen. Rajoituksia ovat rajattu teknologia (vain tietyt SAST- ja DAST-työkalut) sekä mobiilisovellusten sijaan yksittäisen Java-verkkosovelluksen testaus. Artikkelissa tunnistetaan myös Nikto-työkalun puute vakavuusluokituksessa rajoitteena.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{dupont2021_incremental}] esittelevät Common Criteria (CC) -sertifiointiprosessin integrointia DevSecOps-malliin tavoitteena automatisoida tietoturvasertifioinnin todisteiden keräämistä. Prosessia havainnollistetaan palomuurikomponentin (iptables/netfilter) päivityksellä autoalan platooning-järjestelmässä. Sertifiointiputkeen sisällytettiin SAST- ja DAST-työkalut sekä GitLab CI/CD- ja Jenkins-ympäristöt. Automatisoidulla lähestymistavalla vaikutusanalyysiraporttien (IAR) valmisteluaika lyheni merkittävästi ilman laadun heikkenemistä.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} Integraatio toteutettiin mallintamalla CC- ja DevSecOps-vaiheet rinnakkain, parhaiksi käytännöiksi nousivat SARIF-standardin hyödyntäminen ja kaksivaiheinen raportointi.
+            \item \textbf{RQ2:} Automatisointi nopeutti testejä ja vähensi virheitä, mutta monimutkaiset tapaukset vaativat yhä manuaalista tarkastusta.
+            \item \textbf{RQ3:} Käytetyiksi automatisoinnin työkaluiksi nimetään SAST-työkalut Frama-C, SonarQube, Eclipse Steady, DAST-työkalut OpenSCAP, OpenVAS, OWASP ZAP, uhkamallinnustyökalut Threat Dragon ja Threagile sekä seurantaan ja operatiiviseen tietoturvaan tarkoitetut SIEM- ja SOAR-ratkaisut.
+            \item \textbf{RQ4:} % TODO: lue lähde tarkemmin ja pohdi hyödyllisyyttä.
+        \end{itemize}
+
+        Artikkelin vahvuuksia ovat konkreettinen tapaustutkimus autoteollisuuden palomuurin päivityksestä, DevSecOps-prosessin mallintaminen aktiviteettidiagrammeilla ja esitys siitä, miten automaattisesti kerättyjä todisteita (SAST, DAST) voidaan hyödyntää sertifioinnissa. Rajoituksia ovat, että tapaustutkimus keskittyy vain vaikutusanalyysivaiheeseen, mobiilisovelluskontekstin puute. Vaikka työkaluja nimetään, kvantitatiivista dataa niiden tehokkuudesta tai vertailua eri työkalujen välillä ei esitetä yksityiskohtaisesti.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{nutalapati2023_tools_techniques}] Artikkeli kuvaa automatisoidun mobiilisovellusten tietoturvatestauksen kehikkoa: rakennetaan testauskokonaisuus, joka yhdistää SAST-, DAST- ja IAST-tekniikat ja käyttää työkaluja OWASP ZAP, Burp Suite, Fortify, AppScan ja Veracode kehitysputken (CI/CD) yhteydessä. Tuloksina todetaan automatisoinnin parempi kattavuus, nopeus ja johdonmukaisuus sekä haavoittuvuuksien varhaisempi havaitseminen, mutta kvantitatiivisia mittareita ei raportoida.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} -
+            \item \textbf{RQ2:} Automaattinen testaus tuo tehokkuutta, skaalautuvuutta ja toistettavuutta, mutta kärsii vääristä positiivisista ja negatiivisista tuloksista. Manuaalinen testaus on hitaampaa ja virhealttiimpaa, mutta löytää kriittisiä ongelmia.
+            \item \textbf{RQ3:} Mainitut automatisoidut työkalut ovat OWASP ZAP, Burp Suite, Fortify, AppScan ja Veracode.
+            \item \textbf{RQ4:} -
+        \end{itemize}
+
+        Laadun vahvuuksia ovat kattava työkalujen ja tekniikoiden kartoitus, realistinen kuvaus mobiilihaasteista ja selkeä analyysi haasteista.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{saleem2023_survey}] kyselytutkimuksessa tarkastellaan DevOps-käytäntöjen vaikutusta ohjelmistojen laatuun Pakistanissa.
+
+        Tutkimuksen tulokset osoittivat, että automaatiolla on vahvin positiivinen vaikutus ohjelmiston laatuun, kun taas jatkuvalla integraatiolla ja käyttöönotolla ei ollut yhtä merkittävää vaikutusta. Kommunikaatiolla ja kollaboraatiolla sekä mittauksella ja monitoroinnilla todettiin myös olevan vahva positiivinen yhteys ohjelmiston laatuun.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} -
+            \item \textbf{RQ2:} -
+            \item \textbf{RQ3:} Artikkeli nimeää useita CI/CD työkaluja, kuten GitLab ja Jenkins
+            \item \textbf{RQ4:} Artikkeli keskittyy yleiseen ohjelmiston laatuun DevOpsissa.
+        \end{itemize}
+
+        Rajoitteena otoskoko (14 ohjelmistoyrityksestä) ja maantieteellinen alue (Pakistan).
+    \end{description}
+
+    \begin{description}
+        \item[\cite{chatterjee2024_operational_efficiency}] Tapaustutkimus tarkasteli jatkuvan integraation ja jatkuvan toimituksen (CI/CD) sekä DevOps-käytäntöjen integrointia ohjelmistotoimitusprosessiin tehokkuuden parantamiseksi.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} Artikkeli tarjoaa konkreettisen mallin CI/CD-integroinnille DevOpsiin. Parhaiksi käytännöiksi nostettiin sprinttipohjainen kehitys, monen ympäristön (Dev, Prod) käyttö sekä testauksen automatisointi.
+            \item \textbf{RQ2:} Tutkimuksessa todettiin, että automatisointi vähensi virheitä, nopeutti käyttöönottoa ja paransi laatua, kun taas manuaalinen testaus oli hidasta ja virhealtista, aiheuttaen viivästyksiä ja laadullisia ongelmia. Tietoturvaa ei tarkasteltu, mutta voidaan osittain soveltaa.
+            \item \textbf{RQ3:} Artikkeli listaa CI/CD-työkaluja, mutta ei tietoturvatestaus-työkaluja
+            \item \textbf{RQ4:} Tutkimuksen tapausesimerkki osoittaa merkittävät hyödyt automaatiosta verrattuna manuaalisiin menetelmiin: automatisoitu CI/CD-putki vähensi merkittävästi käyttöönottoaikaa, paransi ohjelmiston laatua sekä lisäsi asiakastyytyväisyyttä ja liiketoiminnan tehokkuutta.
+        \end{itemize}
+
+        Vahvuutena realistinen AWS toteutus ja selkeä liike-elämään esimerkki tapaus. Rajoitteena tutkimuksessa ei käsitellä tietoturvaa taikka mobiilisovelluksia.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{savor2016_facebook}] Artikkeli tarkastelee jatkuvaa käyttöönottoa kahdessa hyvin erilaisessa yrityksessä, Facebookissa ja OANDAssa, analysoiden sen käytäntöjä ja vaikutuksia kvantitatiivisesti ja kvalitatiivisesti usean vuoden ajalta.
+
+        Keskeisenä tuloksena todetaan, että jatkuva käyttöönotto ei estä tuottavuuden ja laadun skaalautumista insinööritiimin koon ja koodikannan kasvaessa merkittävästi. Facebookilla raportoitiin kriittisten ongelmien määrän pysyneen vakaana, vaikka julkaisumäärät kasvoivat merkittävästi.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} Artikkelissa kuvataan jatkuvan käyttöönoton prosessia, mutta tietoturvaa ei käsitellä.
+            \item \textbf{RQ2:} -
+            \item \textbf{RQ3:} Tietoturva-työkaluja (kuten SAST/DAST) ei käsitellä
+            \item \textbf{RQ4:} Jatkuva käyttöönotto nopeutti kehittäjien toimituskykyä (esim. päivittäiset vs. viikottaiset julkaisut) ja paransi motivaatiota, mutta vaati jatkuvaa työkalujen ja koulutuksen investointia. Vaikutuksia mobiilisovellusten käyttöönottoon tarkastellaan epäsuorasti.
+        \end{itemize}
+
+        Artikkelin vahvuuksia ovat kahden erikokoisen yrityksen tapaustutkimus ja pitkän aikavälin (7 ja 5 vuotta) kvantitatiivinen ja kvalitatiivinen analyysi, jotka tuottavat realistisia tuloksia skaalautuvuudesta ja laadusta. Rajoitteena mobiilikehityksen konteksti puuttuu eikä tietoturvaa käsitellä.
+
+
+    \end{description}
+
+    \begin{description}
+        \item[\cite{offerman2022_practices}] kyselytutkimus käsittelee DevOps-käytäntöjen käyttöönottoa ja vaikutuksia organisaation suorituskykyyn. Tulokset perustuvat kyselyyn, jossa selvitettiin 14 DevOps-käytännön omaksumisastetta sekä koettuja vaikutuksia ohjelmistotoimitukseen ja organisaation suorituskykyyn.
+
+        DevOps-käytäntöjen käyttöönotolla oli myönteinen vaikutus erityisesti toimitusten tiheyteen, kehitysajan lyhentymiseen ja virheiden aikaisempaan tunnistamiseen, mikä vaikutti positiivisesti koko organisaation suorituskykyyn.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} -
+            \item \textbf{RQ2:} -
+            \item \textbf{RQ3:} Keskeiset työkalut ja ympäristöt mainitaan yleisellä tasolla käytäntöjä tukevina teknologioina.
+            \item \textbf{RQ4:} Vaikutusta käyttöönottoon ja ylläpitoon tarkastellaan ohjelmistotoimituskyvyn (esim. käyttöönoton tiheys ja aika) ja yleisen organisaation suorituskyvyn kautta, ja vaikutukset koettiin pääasiassa positiivisiksi, joskin jotkin käytännöt korreloivat heikommin tai negatiivisesti tiettyihin suorituskykymittareihin.
+        \end{itemize}
+
+        Vahvuutena laaja kansainvälinen kyselytutkimus eri toimialoilla, kvantitatiivisen datan kerääminen käytäntöjen omaksumisesta ja koetuista vaikutuksista sekä kattava katsaus yleisimpiin DevOps-käytäntöihin. Rajoitteina tutkimus perustuu subjektiivisiin, itsearvioituihin tuloksiin ja tutkimuksessa ei tarkastella mobiilikontekstia tai tietoturvaa.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{hsu2019_practical}]
+    \end{description}
+
+    \begin{description}
+        \item[\cite{rohin2018_book}]
+    \end{description}
+
+    \begin{description}
+        \item[\cite{chung2024_devsecops}] laadullinen tutkimus käsittelee tärkeimpiä mittareita DevSecOpsin menestyksen arvioimiseksi ja sen etuja sekä parannusmahdollisuuksia.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} Integraatio tehdään vaiheittain tuomalla turvallisuustestit jo kehitysympäristö-tasolle ja automatisoimalla ne pipelineen.
+            \item \textbf{RQ2:} Tutkimus korostaa automatisoidun testauksen (SAST/DAST) nopeutta ja toistettavuutta, mutta huomauttaa manuaalisen pentestin tarpeesta kriittisten reunatapausten varmistamisessa. Automatisointi voi silti tuottaa vääriä positiivisia tuloksia.
+            \item \textbf{RQ3:} Mainitut työkalut sisältävät uhkamallinnus-työpajat, penetraatiotestauksen, SAST-, DAST-, IAST- ja infrastruktuuriskannerit, CI/CD-orkestraattorit sekä Quirkos-analytiikan.
+            \item \textbf{RQ4:} Jatkuva integraatio ja -julkistus (CI/CD) lyhensivät julkaisuaikoja. DevSecOps-putkeen upotetut SAST-, DAST- ja konttien konfiguraatio skannaukset pienensivät tuotanto korjausten määrää, mikä näkyi ylläpitokustannusten laskuna. Jatkuva valvonta (ylläpito → monitorointi → palaute) ja IaC-pohjaiset päivitysmekanismit tehostivat elinkaaren aikaisia päivityksiä, jolloin käyttökatkot ja rollback-tapaukset vähenevät.
+        \end{itemize}
+
+        Tutkimus hyödyntää useita eri aineistonkeruumenetelmiä (haastattelut, kirjallisuuskatsaus, video- ja lehtianalyysi)
+        Rajoituksina voidaan pitää mobiilisovelluskehityksen kontekstin puuttumista, sillä tutkimus käsittelee DevSecOpsia yleisesti ohjelmistokehityksessä.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{ozdenizci2024mobilizing}] Artikkeli tarkastelee keskikokoisen ohjelmistoyrityksen Mobile DevOps-toteutusta, jossa rakennettiin GitHub Actions- ja Jenkins-pohjainen CI/CD-putki sekä liitettiin mobiilikohtaiset testaus-, julkaisu- ja tietoturvatoiminnot.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} Tutkimus esittelee toiminnallisia strategioita tunnistettujen haasteiden ratkaisemiseksi.
+            \item \textbf{RQ2:} Automaattinen testaus tunnistaa laitekohtaisia ongelmia, mutta ei visuaalisia virheitä.
+            \item \textbf{RQ3:} Mainitut työkalut ovat Appium, Espresso, TestFlight, OWASP ZAP ja Nessus automatisoituihin tarkastuksiin sekä GitHub-koodikatselmukset ja TestFlightin beetatestaajat manuaalisiin arviointeihin.
+            \item \textbf{RQ4:} Mobiili kontekstissa hitaampi prosessi web kontekstiin verrattuna.
+        \end{itemize}
+
+        Vahvuutena on realistinen tapaustutkimus yhdessä yrityksessä ja ... Rajoitteena vain yhden yrityksen tapauksen tarkastelu.
+    \end{description}
+
+    \begin{description}
+        \item[\cite{byman2024continuous}] tutki jatkuvan toimituksen soveltamista terveysmobiilisovelluksiin ja esitteli suunnitelman sekä toteutuksen CI/CD-putkelle tähän tarkoitukseen.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:}
+            \item \textbf{RQ2:} Manuaalisen prosessin rajoituksena on alttius virheille ja epäjohdonmukaisuus, kun taas automatisoinnin etuja ovat toistettavuus, tehokkuus ja vakaus toistuviin tehtäviin.
+            \item \textbf{RQ3:} Mainittuja työkaluja ovat muun muassa GitLab CI/CD, Fastlane, Gradle, Android Studio, Google Play Console API. Tietoturvaan liittyen mainitaan SonarQube staattiseen analyysiin ja Docker Scout konttien skannaukseen
+            \item \textbf{RQ4:} Jatkuvan toimituksen prosessi mahdollistaa nopeammat päivitykset ja virheenkorjaukset.
+        \end{itemize}
+
+        Työn vahvuuksia ovat konkreettisen CI/CD-putken suunnittelu ja toteutus terveysmobiilisovellusten kontekstissa, realistisen kehitysympäristön käyttö ja automaation hyötyjen vertailu manuaaliseen prosessiin. Rajoitteina keskittyminen terveys sovelluksiin niiden poikkeuksellisten regulatiivisten vaatimusten vuoksi.
+    \end{description}
+
+
+    \begin{description}
+        \item[\cite{eramo2024empirical}] Artikkelissa tutkitaan DevOps-käytäntöjen roolia mobiilisovellusten kehityksessä analysoimalla Android-sovellusten kehitystyötä 7 441 GitHub-repositorion pohjalta. Tutkimus keskittyy commit-viestien luokitteluun ja niiden yhdistämiseen DevOps-prosessin eri vaiheisiin.
+
+        Tutkimus vastaa tutkimuskysymyksiin (RQ) seuraavasti:
+        \begin{itemize}
+            \item \textbf{RQ1:} -
+            \item \textbf{RQ2:} Automaattisen testauksen eduiksi mainittiin tehokkuuden lisääntyminen ja nopea palaute, kun taas manuaalisen testauksen etuina nähtiin sen korvaamattomuus erityisesti käytettävyystestauksessa ja monimutkaisissa skenaarioissa.
+            \item \textbf{RQ3:} -
+            \item \textbf{RQ4:} -
+        \end{itemize}
+
+        Vahvuuksina tutkimuksessa olivat realistinen ympäristö todellisten Android-sovellusten repositorioista, laaja kvantitatiivinen aineisto sekä selkeä yhteys DevOps-käytäntöihin. Rajoitteina olivat vain avoimen lähdekoodin repositorioiden analysointi ja potentiaaliset virheet manuaalisessa luokittelussa.
+    \end{description}
+
 \end{document}
 \endinput
 %%
