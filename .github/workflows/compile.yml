@@ -2,39 +2,43 @@ name: Build LaTeX PDF
 
 on:
   push:
-    branches: [ main, master ]           # change if you use master/develop
+    branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
   build_pdf:
     runs-on: ubuntu-latest
     permissions:
-      contents: write            # needed for the release step
+      contents: write   # required for deleting/creating releases
 
     steps:
-      # 1. Get the code ------------------------------------------------
+      # 1) Checkout ----------------------------------------------------
       - name: Check out repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # good practice for release steps
 
-      # 2. Compile -----------------------------------------------------
+      # 2) Compile -----------------------------------------------------
       - name: Compile kandi.tex
         uses: xu-cheng/latex-action@v3
         with:
-          working_directory: src      # <── the folder that holds your .tex
-          root_file: kandi.tex        # <── your main file
-          latexmk_use_xelatex: true   # or comment out for pdfLaTeX default
+          working_directory: src
+          root_file: kandi.tex
+          latexmk_use_xelatex: true
 
-      # 3. (Optional) expose the PDF as a run-artifact -----------------
+      # 3) Upload artifact ---------------------------------------------
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: kandi-pdf
-          path: src/kandi.pdf         # ← latex-action outputs <root>.pdf
+          path: src/kandi.pdf
 
-      # 4. (Optional) update a “latest” release ------------------------
+      # 4) Update the "latest" release --------------------------------
       - name: Delete previous 'latest' release
         uses: ame-yu/action-delete-latest-release@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true   # don't fail if no prior release exists
 
       - name: Create / update 'latest' release
         uses: ncipollo/release-action@v1
